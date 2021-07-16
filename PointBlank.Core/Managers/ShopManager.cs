@@ -84,6 +84,10 @@ namespace PointBlank.Core.Managers
                     connection.Dispose();
                     connection.Close();
                 }
+                /*if (set4p > 0)
+                {
+                    Logger.info("Items: " + set4p + " in the store invisible.");
+                }*/
             }
             catch (Exception ex)
             {

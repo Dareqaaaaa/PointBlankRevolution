@@ -24,11 +24,6 @@ namespace PointBlank.Battle
             Logger.LogYaz(@"_  /___  __ |/ / / /_/ /     _  ____/_  /_/ /", ConsoleColor.Cyan);
             Logger.LogYaz(@"/_____/  _____/  \____/      /_/     /_____/", ConsoleColor.Cyan);
             Console.WriteLine("");
-            Logger.info("Server active at " + BattleConfig.hosIp + ":" + BattleConfig.hosPort);
-            Logger.info("Synchronize infos to server: " + BattleConfig.sendInfoToServ);
-            Logger.info("Drops Limit: " + BattleConfig.maxDrop);
-            Logger.info("Ammo Limit: " + BattleConfig.useMaxAmmoInDrop);
-            Logger.info("Duration C4: (" + BattleConfig.plantDuration + "s/" + BattleConfig.defuseDuration + "s)");
             MapXml.Load();
             CharaXml.Load();
             MeleeExceptionsXml.Load();

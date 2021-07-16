@@ -29,8 +29,8 @@ namespace PointBlank.Battle.Data.Configs
             enableLog = configFile.readBoolean("EnableLog", false);
             maxDrop = configFile.readUInt16("MaxDrop", 0);
             syncPort = configFile.readUInt16("SyncPort", 0);
-            plantDuration = configFile.readFloat("PlantDuration", 1.0f);
-            defuseDuration = configFile.readFloat("DefuseDuration", 1.0f);
+            plantDuration = 5.5f;
+            defuseDuration = 6.5f;
             useHitMarker = configFile.readBoolean("UseHitMarker", false);
             useMaxAmmoInDrop = configFile.readBoolean("UseMaxAmmoInDrop", false);
             udpVersion = configFile.readString("UdpVersion", "0.0");

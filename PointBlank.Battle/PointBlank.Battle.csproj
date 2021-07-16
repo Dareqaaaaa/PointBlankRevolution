@@ -63,7 +63,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>battle.ico</ApplicationIcon>
+    <ApplicationIcon>favicon2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <RootNamespace>PointBlank.Battle</RootNamespace>
@@ -229,7 +229,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="battle.ico" />
     <Content Include="favicon2.ico" />
   </ItemGroup>
   <ItemGroup>

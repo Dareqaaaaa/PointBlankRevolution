@@ -42,7 +42,6 @@ namespace PointBlank.Auth
             RankXml.LoadAwards();
             CouponEffectManager.LoadCouponFlags();
             QuickStartXml.Load();
-            ICafeManager.GetList();
             MissionsXml.Load();
             AuthSync.Start();
             bool started = AuthManager.Start();

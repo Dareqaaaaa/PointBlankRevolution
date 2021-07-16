@@ -10,7 +10,7 @@ namespace PointBlank.Game.Data.Configs
         public static bool isTestMode, debugMode, winCashPerBattle, showCashReceiveWarn, AutoBan;
         public static UdpState udpType;
         public static float maxClanPoints;
-        public static int serverId, configId, ruleId, maxBattleLatency, maxRepeatLatency, syncPort, maxActiveClans, minRankVote, maxNickSize, minNickSize, maxBattleXP, maxBattleGP, maxBattleMY, maxChannelPlayers, gamePort, minCreateGold, minCreateRank, ICafePoint, ICafeExp;
+        public static int serverId, configId, ruleId, maxBattleLatency, maxRepeatLatency, syncPort, maxActiveClans, minRankVote, maxNickSize, minNickSize, maxBattleXP, maxBattleGP, maxBattleMY, maxChannelPlayers, gamePort, minCreateGold, minCreateRank;
 
         public static void Load()
         {
@@ -47,8 +47,6 @@ namespace PointBlank.Game.Data.Configs
             maxActiveClans = configFile.readInt32("MaxActiveClans", 0);
             maxBattleLatency = configFile.readInt32("MaxBattleLatency", 0);
             maxRepeatLatency = configFile.readInt32("MaxRepeatLatency", 0);
-            ICafePoint = configFile.readInt32("ICafePoint", 2000);
-            ICafeExp = configFile.readInt32("ICafeExp", 4000);
             ruleId = configFile.readInt32("RuleId", 0);
         }
     }

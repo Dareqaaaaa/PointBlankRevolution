@@ -51,7 +51,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     byte[] RoomsArray = GetRoomListData(p.LastRoomPage, ref RoomsCount, Rooms);
                     byte[] WaitingArray = GetPlayerListData(p.LastPlayerPage, ref PlayersCount, Waiting);
                     _client.SendPacket(new PROTOCOL_LOBBY_GET_ROOMLIST_ACK(Rooms.Count, Waiting.Count, p.LastRoomPage++, p.LastPlayerPage++, RoomsCount, PlayersCount, RoomsArray, WaitingArray));
-                    p._topups = PlayerManager.getPlayerTopups(p.player_id);
+
                     if (p._topups.Count > 0)
                     {
                         for (int i = 0; i < p._topups.Count; i++)

@@ -37,7 +37,6 @@ namespace PointBlank.Game.Network.ClientPacket
                     room.updateSlotsInfo();
                 }
 
-                p._topups = PlayerManager.getPlayerTopups(p.player_id);
                 if (p._topups.Count > 0)
                 {
                     for (int i = 0; i < p._topups.Count; i++)

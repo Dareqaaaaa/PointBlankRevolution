@@ -139,47 +139,6 @@ namespace PointBlank.Core.Managers
             return Daily;
         }
 
-        public static List<PlayerItemTopup> getPlayerTopups(long id)
-        {
-            List<PlayerItemTopup> topups = new List<PlayerItemTopup>();
-            if (id == 0)
-            {
-                return topups;
-            }
-            try
-            {
-                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
-                {
-                    NpgsqlCommand command = connection.CreateCommand();
-                    connection.Open();
-                    command.Parameters.AddWithValue("@id", id);
-                    command.CommandText = "SELECT * FROM player_topups WHERE player_id=@id";
-                    command.CommandType = CommandType.Text;
-                    NpgsqlDataReader data = command.ExecuteReader();
-                    while (data.Read())
-                    {
-                        PlayerItemTopup topup = new PlayerItemTopup();
-                        topup.ObjectId = data.GetInt64(0);
-                        topup.PlayerId = data.GetInt64(1);
-                        topup.ItemId = data.GetInt32(2);
-                        topup.ItemName = data.GetString(3);
-                        topup.Count = data.GetInt64(4);
-                        topup.Equip = data.GetInt32(5);
-                        topups.Add(topup);
-                    }
-                    command.Dispose();
-                    data.Close();
-                    connection.Dispose();
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.error(ex.ToString());
-            }
-            return topups;
-        }
-
         public static bool DeletePlayerTopup(long ObjectId, long PlayerId)
         {
             if (ObjectId == 0 || PlayerId == 0)

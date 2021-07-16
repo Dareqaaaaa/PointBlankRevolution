@@ -19,7 +19,7 @@ namespace PointBlank.Auth.Data.Model
         public CouponEffects effects;
         public uint LastRankUpDate;
         public string player_name = "", password, login, token, hwid;
-        public int tourneyLevel, _exp, _gp, clan_id, clanAccess, _money, pc_cafe, _rank, brooch, insignia, medal, blue_order, name_color, access, age;
+        public int tourneyLevel, _exp, _gp, clan_id, clanAccess, _money, pc_cafe = 0, _rank, brooch, insignia, medal, blue_order, name_color, access, age;
         public long player_id, ban_obj_id;
         public PhysicalAddress MacAddress;
         public PlayerEquipedItems _equip = new PlayerEquipedItems();
@@ -36,7 +36,6 @@ namespace PointBlank.Auth.Data.Model
         public PlayerDailyRecord Daily = new PlayerDailyRecord();
         public List<Account> _clanPlayers = new List<Account>();
         public List<Character> Characters = new List<Character>();
-        public List<PlayerItemTopup> _topups = new List<PlayerItemTopup>();
 
         public void SimpleClear()
         {
@@ -52,7 +51,6 @@ namespace PointBlank.Auth.Data.Model
             _equip = new PlayerEquipedItems();
             _mission = new PlayerMissions();
             _status = new AccountStatus();
-            _topups = new List<PlayerItemTopup>();
             Daily = new PlayerDailyRecord();
         }
 
@@ -156,7 +154,6 @@ namespace PointBlank.Auth.Data.Model
             if ((LoadType & 1) == 1)
             {
                 _titles = TitleManager.getInstance().getTitleDB(player_id);
-                _topups = PlayerManager.getPlayerTopups(player_id);
                 Characters = CharacterManager.getCharacters(player_id);
                 Daily = PlayerManager.getPlayerDailyRecord(player_id);
                 if (Daily == null)
@@ -191,14 +188,6 @@ namespace PointBlank.Auth.Data.Model
                 if (_config == null)
                 {
                     PlayerManager.CreateConfigDB(player_id);
-                }
-                if (_connection != null)
-                {
-                    ICafe = ICafeManager.GetCafe(_connection.GetIPAddress());
-                    if (ICafe)
-                    {
-                        pc_cafe = 1;
-                    }
                 }
             }
         }

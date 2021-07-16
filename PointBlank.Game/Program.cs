@@ -59,7 +59,6 @@ namespace PointBlank.Game
             MapsXml.Load();
             RandomBoxXml.LoadBoxes();
             CouponEffectManager.LoadCouponFlags();
-            ICafeManager.GetList();
             GameRuleManager.getGameRules(GameConfig.ruleId);
             GameSync.Start();
             bool Started = GameManager.Start();

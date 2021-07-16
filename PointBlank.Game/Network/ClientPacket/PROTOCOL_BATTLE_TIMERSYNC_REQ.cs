@@ -30,11 +30,11 @@ namespace PointBlank.Game.Network.ClientPacket
         public override void read()
         {
             TimeRemaining = readUD();
-            Value = readT(); // Value Hack
-            Round = readC(); // Round
-            Ping = readC(); // Ping
-            Hack = readC(); // Hack Type
-            Latency = readH(); // Latency
+            Value = readT();
+            Round = readC();
+            Ping = readC();
+            Hack = readC();
+            Latency = readH();
         }
 
         public override void run()
@@ -66,7 +66,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     {
                         if (ComDiv.updateDB("accounts", "access_level", -1, "player_id", p.player_id))
                         {
-                            BanManager.SaveAutoBan(p.player_id, p.login, p.player_name, "ใช้โปรแกรมช่วยเล่น " + Hack + " (" + Hack + ")", DateTime.Now.ToString("dd -MM-yyyy HH:mm:ss"), p.PublicIP.ToString(), "Ban from Server");
+                            BanManager.SaveAutoBan(p.player_id, p.login, p.player_name, "ใช้โปรแกรมช่วยเล่น " + Hack + " (" + Hack + ")", DateTime.Now.ToString("dd -MM-yyyy HH:mm:ss"), p.PublicIP.ToString(), "Ban from Server"); // TODO: Translate text of autoban
                             using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "แบน ผู้เล่น [" + p.player_name + "] ถาวร - ใช้โปรแกรมช่วยเล่น"))
                             {
                                 GameManager.SendPacketToAllClients(packet);

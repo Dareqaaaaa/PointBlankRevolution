@@ -659,7 +659,7 @@ namespace PointBlank.Game.Data.Model
                         slot.gp = 2;
                         slot.money = 2;
                     }
-                    int ItemExp = 0, ItemPoint = 0, CafeExp = 0, CafePoint = 0, EventExp = 0, EventPoint = 0;
+                    int ItemExp = 0, ItemPoint = 0, EventExp = 0, EventPoint = 0;
                     if (evUp != null || mapEvUse)
                     {
                         if (evUp != null)
@@ -676,8 +676,6 @@ namespace PointBlank.Game.Data.Model
                         {
                             slot.bonusFlags |= ResultIcon.Event;
                         }
-                        //slot.BonusEventExp += AllUtils.percentage(EventExp, 100);
-                        //slot.BonusEventPoint += AllUtils.percentage(EventPoint, 100);
                     }
                     PlayerBonus c = player._bonus;
                     if (c != null && c.bonuses > 0)
@@ -721,21 +719,7 @@ namespace PointBlank.Game.Data.Model
                         slot.BonusItemExp += ItemExp;
                         slot.BonusItemPoint += ItemPoint;
                     }
-                    if (player.pc_cafe == 2 || player.pc_cafe == 1)
-                    {
-                        CafeExp += player.pc_cafe == 2 ? 120 : GameConfig.ICafeExp; //120 : 60;
-                        CafePoint += player.pc_cafe == 2 ? 100 : GameConfig.ICafePoint; //100 : 40;
-                        if (player.pc_cafe == 1 && !slot.bonusFlags.HasFlag(ResultIcon.Pc))
-                        {
-                            slot.bonusFlags |= ResultIcon.Pc;
-                        }
-                        else if (player.pc_cafe == 2 && !slot.bonusFlags.HasFlag(ResultIcon.PcPlus))
-                        {
-                            slot.bonusFlags |= ResultIcon.PcPlus;
-                        }
-                        slot.BonusCafePoint += CafePoint;
-                        slot.BonusCafeExp += CafeExp;
-                    }
+
                     if (isBotMode)
                     {
                         if (slot.BonusItemExp > 300)
@@ -783,46 +767,6 @@ namespace PointBlank.Game.Data.Model
                     RankModel rank = RankXml.getRank(player._rank);
                     RankModel rank_61 = RankXml.getRank(61);
                     if (rank != null && player._exp >= (rank._onNextLevel + rank._onAllExp) && player._rank <= 50)
-                    {
-                        List<ItemsModel> items = RankXml.getAwards(player._rank);
-                        if (items.Count > 0)
-                        {
-                            for (int idx = 0; idx < items.Count; idx++)
-                            {
-                                ItemsModel Item = items[idx];
-                                if (Item._id != 0)
-                                {
-                                    player.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, player, Item));
-                                }
-                            }
-                        }
-                        player._gp += rank._onGPUp;
-                        player.LastRankUpDate = uint.Parse(finishDate.ToString("yyMMddHHmm"));
-                        player.SendPacket(new PROTOCOL_BASE_RANK_UP_ACK(++player._rank, rank._onNextLevel));
-                        query.AddQuery("last_rankup_date", (long)player.LastRankUpDate);
-                        query.AddQuery("rank", player._rank);
-                    }
-                    else if(rank != null && player._exp >= rank_61._onAllExp && player._rank == 51)
-                    {
-                        List<ItemsModel> items = RankXml.getAwards(player._rank);
-                        if (items.Count > 0)
-                        {
-                            for (int idx = 0; idx < items.Count; idx++)
-                            {
-                                ItemsModel Item = items[idx];
-                                if (Item._id != 0)
-                                {
-                                    player.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, player, Item));
-                                }
-                            }
-                        }
-                        player._gp += rank._onGPUp;
-                        player.LastRankUpDate = uint.Parse(finishDate.ToString("yyMMddHHmm"));
-                        player.SendPacket(new PROTOCOL_BASE_RANK_UP_ACK(61, rank._onNextLevel));
-                        query.AddQuery("last_rankup_date", (long)player.LastRankUpDate);
-                        query.AddQuery("rank", 61);
-                    }
-                    else if(rank != null && player._exp >= (rank._onNextLevel + rank._onAllExp) && player._rank <= 110 && player._rank >= 61)
                     {
                         List<ItemsModel> items = RankXml.getAwards(player._rank);
                         if (items.Count > 0)
@@ -959,7 +903,7 @@ namespace PointBlank.Game.Data.Model
                         slot.gp = 2;
                         slot.money = 2;
                     }
-                    int ItemExp = 0, ItemPoint = 0, CafeExp = 0, CafePoint = 0, EventExp = 0, EventPoint = 0;
+                    int ItemExp = 0, ItemPoint = 0, EventExp = 0, EventPoint = 0;
                     if (evUp != null || mapEvUse)
                     {
                         if (evUp != null)
@@ -1020,21 +964,6 @@ namespace PointBlank.Game.Data.Model
                         }
                         slot.BonusItemExp += ItemExp;
                         slot.BonusItemPoint += ItemPoint;
-                    }
-                    if (player.pc_cafe == 2 || player.pc_cafe == 1)
-                    {
-                        CafeExp += player.pc_cafe == 2 ? 120 : GameConfig.ICafeExp; //120 : 60;
-                        CafePoint += player.pc_cafe == 2 ? 100 : GameConfig.ICafePoint; //100 : 40;
-                        if (player.pc_cafe == 1 && !slot.bonusFlags.HasFlag(ResultIcon.Pc))
-                        {
-                            slot.bonusFlags |= ResultIcon.Pc;
-                        }
-                        else if (player.pc_cafe == 2 && !slot.bonusFlags.HasFlag(ResultIcon.PcPlus))
-                        {
-                            slot.bonusFlags |= ResultIcon.PcPlus;
-                        }
-                        slot.BonusCafePoint += CafePoint;
-                        slot.BonusCafeExp += CafeExp;
                     }
                     int BonusAllexp = EventExp + slot.BonusCafeExp + slot.BonusItemExp;
                     int BonusAllPoint = EventPoint + slot.BonusCafePoint + slot.BonusItemPoint;

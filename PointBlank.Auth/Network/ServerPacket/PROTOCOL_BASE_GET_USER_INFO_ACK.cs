@@ -21,7 +21,6 @@ namespace PointBlank.Auth.Network.ServerPacket
         private Account Player;
         private Clan Clan;
         private uint Error;
-        //private bool Xmas;
 
         public PROTOCOL_BASE_GET_USER_INFO_ACK(Account Player)
         {
@@ -171,16 +170,8 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeC(0);
             writeIP("127.0.0.1");
             writeD(uint.Parse(DateTime.Now.ToString("yyMMddHHmm")));
-            if (Player.Characters.Count == 0)
-            {
-                writeC(0);
-                writeC(1);
-            }
-            else
-            {
-                writeC((byte)Player.getCharacter(Player._equip._red).Slot);
-                writeC((byte)Player.getCharacter(Player._equip._blue).Slot);
-            }
+            writeC((byte)(Player.Characters.Count == 0 ? 0 : Player.getCharacter(Player._equip._red).Slot));
+            writeC((byte)(Player.Characters.Count == 0 ? 1 : Player.getCharacter(Player._equip._blue).Slot));
             writeD(Player._inventory.getItem(Player._equip._dino)._id);
             writeD((uint)Player._inventory.getItem(Player._equip._dino)._objId);
             writeD(0);
@@ -223,9 +214,10 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeD(Player._gp);
             writeD(Player._exp);
             writeD(0);
-            writeC(0);
             writeD(0);
-            writeQ(0);
+            writeD(0);
+            writeD((Player._rank == 53 || Player._rank == 54) ? 111111 : 0);
+            writeC(0);
             writeC(0);
             writeC(0);
             writeD(Player._money);

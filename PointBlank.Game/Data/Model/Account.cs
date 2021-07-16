@@ -16,7 +16,7 @@ namespace PointBlank.Game.Data.Model
 {
     public class Account
     {
-        public bool _isOnline, HideGMcolor, AntiKickGM, LoadedShop, DebugPing, ICafe = false;
+        public bool _isOnline, HideGMcolor, AntiKickGM, LoadedShop, DebugPing;
         public string player_name = "", password, login, token, hwid, FindPlayer = "";
         public long player_id, ban_obj_id;
         public uint LastRankUpDate, LastLoginDate;
@@ -273,13 +273,7 @@ namespace PointBlank.Game.Data.Model
                 {
                     Characters = CharacterManager.getCharacters(player_id);
                     _titles = TitleManager.getInstance().getTitleDB(player_id);
-                    _topups = PlayerManager.getPlayerTopups(player_id);
-                    ICafe = ICafeManager.GetCafe(_connection.GetIPAddress());
                     Daily = PlayerManager.getPlayerDailyRecord(player_id);
-                    if (ICafe)
-                    {
-                        pc_cafe = 1;
-                    }
                 }
                 if ((LoadType & 2) == 2)
                 {

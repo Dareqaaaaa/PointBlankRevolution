@@ -54,7 +54,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>auth.ico</ApplicationIcon>
+    <ApplicationIcon>favicon1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>PointBlank.Auth.Programm</StartupObject>
@@ -222,7 +222,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="auth.ico" />
     <Content Include="favicon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
