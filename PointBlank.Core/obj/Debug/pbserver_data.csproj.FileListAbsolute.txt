@@ -1,0 +1,7 @@
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\bin\Debug\pbserver_data.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\bin\Debug\pbserver_data.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\bin\Debug\Npgsql.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\bin\Debug\Npgsql.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\obj\Debug\pbserver_data.csprojResolveAssemblyReference.cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\obj\Debug\pbserver_data.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_data\obj\Debug\pbserver_data.pdb

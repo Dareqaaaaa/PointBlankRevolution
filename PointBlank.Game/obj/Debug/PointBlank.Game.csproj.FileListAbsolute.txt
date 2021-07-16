@@ -1,0 +1,161 @@
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\Npgsql.dll
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\System.ValueTuple.dll
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\obj\Debug\PointBlank.Game.csprojResolveAssemblyReference.cache
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.Cache
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Point Blank Server\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojResolveAssemblyReference.cache
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.Cache
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\Encryption.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\Npgsql.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.ValueTuple.dll
+E:\Server EVO\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\Encryption.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\Npgsql.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\System.ValueTuple.dll
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+D:\Games\Editor(C#)\Source Sell\Source Point Blank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\Encryption.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\Npgsql.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\System.ValueTuple.dll
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+C:\Users\ken\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+C:\Users\ken\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\Encryption.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\Npgsql.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\System.ValueTuple.dll
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+D:\pb\onlyme\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+D:\pb\onlyme\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+C:\Users\Administrator\Downloads\Compressed\pb2\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+C:\Users\Newa05\Desktop\pb2\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+C:\Users\Newa05\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
+E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb

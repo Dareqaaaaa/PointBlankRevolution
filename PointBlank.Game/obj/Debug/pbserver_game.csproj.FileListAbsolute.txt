@@ -1,0 +1,44 @@
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\obj\Debug\pbserver_game.csprojResolveAssemblyReference.cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\obj\Debug\Game.Properties.Resources.resources
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\obj\Debug\pbserver_game.csproj.GenerateResource.Cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\pbserver_game.exe.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\pbserver_game.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\pbserver_game.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\Npgsql.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\pbserver_data.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\pbserver_data.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\bin\Debug\Npgsql.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\obj\Debug\pbserver_game.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_game\obj\Debug\pbserver_game.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pbserver_game.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pbserver_game.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pbserver_game.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CrashReporter.NET.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CronMz.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\Npgsql.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pbserver_core.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CronMz.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pbserver_core.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CrashReporter.NET.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CrashReporter.NET.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\CrashReporter.NET.dll.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\Npgsql.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\da\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\de\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\es\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\fr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\it\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\ko\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\nl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\pl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\ru\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\sv\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\bin\Debug\tr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\pbserver_game.csprojResolveAssemblyReference.cache
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\pbserver_game.csproj.GenerateResource.Cache
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\pbserver_game.csproj.CoreCompileInputs.cache
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\pbserver_game.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_game\obj\Debug\pbserver_game.pdb

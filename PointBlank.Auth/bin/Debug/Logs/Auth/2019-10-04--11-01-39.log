@@ -1,0 +1,10 @@
+____________    ________     ________________
+___  ____/_ |  / /_  __ \    ___  __ \__  __ )
+__  __/  __ | / /_  / / /    __  /_/ /_  __  |
+_  /___  __ |/ / / /_/ /     _  ____/_  /_/ /
+/_____/  _____/  \____/      /_/     /_____/
+11:01:40 [Info] Text Encode: Batı Avrupa (Windows)
+11:01:40 [Info] Mode: Public
+11:01:40 [Debug] Active Server. (04.10.19 11:01:40)
+11:03:57 [Error] PROTOCOL_BASE_GET_CHARA_INFO_ACK: System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: PointBlank.Auth.Network.ServerPacket.PROTOCOL_BASE_GET_CHARA_INFO_ACK.write() C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\Network\ServerPacket\PROTOCOL_BASE_GET_CHARA_INFO_ACK.cs içinde: satır 48

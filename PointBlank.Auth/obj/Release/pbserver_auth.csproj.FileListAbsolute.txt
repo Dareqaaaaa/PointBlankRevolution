@@ -1,0 +1,493 @@
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\Npgsql.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\Npgsql.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_auth.exe.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_data.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_data.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\obj\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\obj\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_game.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION (BETA)\pbserver_auth\bin\Release\pbserver_game.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_auth.exe.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\Npgsql.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_data.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_game.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_data.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\pbserver_game.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\bin\Release\Npgsql.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\obj\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\pbserver_auth\obj\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.exe.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\Npgsql.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_game.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_game.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\Npgsql.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.exe
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.xml
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_core.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_core.pdb
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.exe.config
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.exe
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_auth.pdb
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\Npgsql.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_core.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_game.exe
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_core.pdb
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_game.pdb
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.xml
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\Npgsql.xml
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.exe
+E:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.pdb
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\pbserver_game.exe.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+F:\Não quero perder\Coisas do PB\Servidor\PBServer - SOCKET EDITION\db change\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_auth.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_auth.exe
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_auth.pdb
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CrashReporter.NET.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\Npgsql.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_core.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_game.exe
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_core.pdb
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_game.pdb
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pbserver_game.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CrashReporter.NET.xml
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\Npgsql.xml
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\obj\Release\pbserver_auth.exe
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\obj\Release\pbserver_auth.pdb
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CronMz.dll
+C:\Users\clark\Downloads\#\ReconPB\1802161607\pbserver_auth\bin\Release\CronMz.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_auth.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_auth.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_auth.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CrashReporter.NET.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CronMz.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\Npgsql.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_core.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_game.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CronMz.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_core.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_game.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_game.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CrashReporter.NET.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\Npgsql.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\obj\Release\pbserver_auth.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\obj\Release\pbserver_auth.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_battle.exe
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\SharpDX.dll
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_battle.pdb
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\pbserver_battle.exe.config
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+C:\Users\clark\Downloads\#\ReconPB\1803291637\pbserver_auth\bin\Release\SharpDX.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_auth.exe.config
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CrashReporter.NET.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CronMz.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\Npgsql.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_battle.exe
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_core.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_game.exe
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\SharpDX.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CronMz.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_battle.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_battle.exe.config
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_core.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_game.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pbserver_game.exe.config
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CrashReporter.NET.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\Npgsql.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\SharpDX.xml
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\obj\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1804211518\pbserver_auth\obj\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_auth.exe.config
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CrashReporter.NET.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CronMz.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\Npgsql.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_battle.exe
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_core.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_game.exe
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\SharpDX.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CronMz.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_battle.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_battle.exe.config
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_core.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_game.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pbserver_game.exe.config
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CrashReporter.NET.xml
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\Npgsql.xml
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\SharpDX.xml
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\obj\Release\pbserver_auth.csprojResolveAssemblyReference.cache
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\obj\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1805120203\pbserver_auth\obj\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_auth.exe.config
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CrashReporter.NET.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CronMz.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\Npgsql.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_battle.exe
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_core.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_game.exe
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\SharpDX.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CronMz.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_battle.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_battle.exe.config
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_core.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_game.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_game.exe.config
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CrashReporter.NET.xml
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\Npgsql.xml
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\SharpDX.xml
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\da\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\de\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\es\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\fr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\it\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\ko\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\nl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pl\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\ru\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\sv\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\tr\CrashReporter.NET.resources.dll
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\obj\Release\pbserver_auth.exe
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\obj\Release\pbserver_auth.pdb
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+C:\Users\John\Downloads\#\1805130603\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1805261550\pbserver_auth\bin\Release\CronMz.dll
+D:\#\1805261550\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1805261550\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1805261550\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1805261550\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1805261550\pbserver_auth\bin\Release\CronMz.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1805261550\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1805261550\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1805261550\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1805261550\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1805261550\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1805261550\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1805261550\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1805261550\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1805261550\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1805261550\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1805261550\pbserver_auth\obj\Release\pbserver_auth.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1805261550\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1805261550\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1805261550\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1805261550\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1806180020\pbserver_auth\bin\Release\CronMz.dll
+D:\#\1806180020\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1806180020\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1806180020\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1806180020\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1806180020\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1806180020\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1806180020\pbserver_auth\bin\Release\CronMz.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1806180020\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1806180020\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1806180020\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1806180020\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1806180020\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1806180020\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1806180020\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1806180020\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1806180020\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1806180020\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1806180020\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1806180020\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1806180020\pbserver_auth\obj\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CronMz.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CronMz.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1806180020 - (For Sale)\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1806180020 - (For Sale)\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1806180020 - (For Sale)\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1806180020 - (For Sale)\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)\pbserver_auth\obj\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CronMz.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CronMz.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)  (Yuri)\SCR\pbserver_auth\obj\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CronMz.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CronMz.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1806180020 - (For Sale)  (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe.config
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.exe
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_auth.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.exe
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.ValueTuple.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.dll
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_battle.exe.config
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_core.dll.config
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\pbserver_game.exe.config
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\CrashReporter.NET.dll.config
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.pdb
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\Npgsql.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\System.ValueTuple.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.Mathematics.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\bin\Release\SharpDX.xml
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csprojAssemblyReference.cache
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CoreCompileInputs.cache
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.csproj.CopyComplete
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.exe
+D:\#\1806180020 - (Omer)\SCR\pbserver_auth\obj\Release\pbserver_auth.pdb

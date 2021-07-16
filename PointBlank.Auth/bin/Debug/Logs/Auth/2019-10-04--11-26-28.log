@@ -1,0 +1,15 @@
+____________    ________     ________________
+___  ____/_ |  / /_  __ \    ___  __ \__  __ )
+__  __/  __ | / /_  / / /    __  /_/ /_  __  |
+_  /___  __ |/ / / /_/ /     _  ____/_  /_/ /
+/_____/  _____/  \____/      /_/     /_____/
+11:26:29 [Info] Text Encode: Batı Avrupa (Windows)
+11:26:29 [Info] Mode: Public
+11:26:29 [Debug] Active Server. (04.10.19 11:26:29)
+11:28:11 [Warning] System.InvalidCastException: Column is null
+   konum: Npgsql.NpgsqlDefaultDataReader.GetFieldValue[T](Int32 column)
+   konum: Npgsql.NpgsqlDataReader.GetString(Int32 ordinal)
+   konum: PointBlank.Core.Managers.BanManager.GetHwIdList() C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Core\Managers\BanManager.cs içinde: satır 64
+11:28:11 [Warning] PROTOCOL_BASE_LOGIN_REQ: System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: PointBlank.Auth.Network.ClientPacket.PROTOCOL_BASE_LOGIN_REQ.CheckHwId(String PlayerHwId) C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\Network\ClientPacket\PROTOCOL_BASE_LOGIN_REQ.cs içinde: satır 207
+   konum: PointBlank.Auth.Network.ClientPacket.PROTOCOL_BASE_LOGIN_REQ.run() C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\Network\ClientPacket\PROTOCOL_BASE_LOGIN_REQ.cs içinde: satır 140
