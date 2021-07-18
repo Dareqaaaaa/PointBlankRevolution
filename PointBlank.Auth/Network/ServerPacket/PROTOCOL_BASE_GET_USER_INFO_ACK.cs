@@ -92,7 +92,7 @@ namespace PointBlank.Auth.Network.ServerPacket
                     }
                 }*/
             }
-            ComDiv.updateDB("accounts", "last_login", dateNow, "player_id", Player.player_id);
+            ComDiv.updateDB("players", "last_login", dateNow, "player_id", Player.player_id);
         }
 
         public override void write()

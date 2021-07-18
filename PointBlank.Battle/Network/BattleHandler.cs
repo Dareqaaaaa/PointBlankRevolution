@@ -287,10 +287,54 @@ namespace PointBlank.Battle.Network
                 {
                     Event++;
                     ActionStateInfo Info = ActionState.ReadInfo(Receive, Action, false);
-                    ACTION_STATE State = (ACTION_STATE)Info.Action;
-                    if (State.HasFlag(ACTION_STATE.WEAPONSYNC))
+                    if (!Room.BotMode)
                     {
-                        Room.SyncInfo(Objs, 2);
+                        if (Player != null)
+                        {
+                            int weaponId = 0;
+                            byte extensions = 0;
+                            if (Info.Action.HasFlag(ACTION_STATE.WEAPONSYNC))
+                            {
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.PRIMARY))
+                                {
+                                    weaponId = Player.Primary;
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.SECONDARY))
+                                {
+                                    weaponId = Player.Secondary;
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.MELEE))
+                                {
+                                    weaponId = Player.Knife;
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.GRENADE))
+                                {
+                                    weaponId = Player.Grenade;
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.SPECIAL))
+                                {
+                                    weaponId = Player.Special;
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.MISSION))
+                                {
+                                    if (Room.RoomType == ROOM_STATE_TYPE.Bomb)
+                                    {
+                                        weaponId = 5009001;
+                                    }
+                                }
+                                if (Info.Flag.HasFlag(WEAPON_SYNC_TYPE.DUAL))
+                                {
+                                    extensions = 16;
+                                    weaponId = Player.Primary;
+                                }
+                            }
+                            Objs.Add(new ObjectHitInfo(5)
+                            {
+                                ObjId = Player.Slot,
+                                WeaponId = weaponId,
+                                Extensions = extensions
+                            });
+                        }
                     }
                     ActionState.WriteInfo(Send, Info);
                 }
@@ -308,6 +352,7 @@ namespace PointBlank.Battle.Network
                     {
                         Player.Position = new Half3(Info.RotationX, Info.RotationY, Info.RotationZ);
                     }
+
                 }
                 if (Action.Flag.HasFlag(UDP_GAME_EVENTS.UseObject))
                 {
@@ -348,19 +393,6 @@ namespace PointBlank.Battle.Network
                                         AnimId1 = 255,
                                         AnimId2 = Obj.Animation != null ? Obj.Animation.Id : 255,
                                         SpecialUse = AllUtils.GetDuration(Obj.UseDate),
-                                        /*Value = Obj._model.Value != 0 ? Obj._model.Value : 0,
-                                        ValueType = Obj._model.ValueType,
-                                        KillerId = Action.Slot*/
-
-                                        /*ObjSyncId = 1,
-                                        ObjId = Obj._id,
-                                        ObjLife = Obj._life,
-                                        AnimId1 = Obj._model._anim1,
-                                        AnimId2 = Obj._anim != null ? Obj._anim._id : 255,
-                                        SpecialUse = AllUtils.GetDuration(Obj._useDate),
-                                        Value = Obj._model.Value != 0 ? Obj._model.Value : 0,
-                                        ValueType = Obj._model.ValueType,
-                                        DestroyState = Action.Slot*/
                                     });
                                 }
                             }
@@ -448,7 +480,10 @@ namespace PointBlank.Battle.Network
                                     Assist.IsKiller = false;
                                     Assist.VictimDead = false;
                                 }
-                                DamageManager.Assists.Add(Assist);
+
+                                // TODO: Add assist
+                                //if (Assist.Killer != Assist.Victim)
+                                   // DamageManager.Assists.Add(Assist);
 
                                 if (Player.Life <= 0)
                                 {
@@ -536,6 +571,7 @@ namespace PointBlank.Battle.Network
                 if (Action.Flag.HasFlag(UDP_GAME_EVENTS.DropWeapon))
                 {
                     Event += 0x20000;
+                    DropWeaponInfo dropWeaponInfo = DropWeapon.ReadInfo(Receive, false);
                     if (Room != null && !Room.BotMode)
                     {
                         Room.DropCounter++;
@@ -543,13 +579,41 @@ namespace PointBlank.Battle.Network
                         {
                             Room.DropCounter = 0;
                         }
+                        if (Player != null)
+                        {
+                            int idStatics = AllUtils.getIdStatics(dropWeaponInfo.WeaponId, 1);
+                            if (idStatics == 1)
+                            {
+                                Player.Primary = 0;
+                            }
+                            if (idStatics == 2)
+                            {
+                                Player.Secondary = 0;
+                            }
+                        }
                     }
-                    DropWeapon.WriteInfo(Send, Receive, false, Room != null ? Room.DropCounter : 0);
+                    DropWeapon.WriteInfo(Send, dropWeaponInfo, (Room != null) ? Room.DropCounter : 0);
                 }
                 if (Action.Flag.HasFlag(UDP_GAME_EVENTS.GetWeaponForClient))
                 {
                     Event += 0x40000;
-                    GetWeaponForClient.WriteInfo(Send, Action, Receive, false);
+                    WeaponClient weaponClient = GetWeaponForClient.ReadInfo(Action, Receive, false);
+                    if (!Room.BotMode)
+                    {
+                        if (Player != null)
+                        {
+                            int idStatics2 = AllUtils.getIdStatics(weaponClient.WeaponId, 1);
+                            if (idStatics2 == 1)
+                            {
+                                Player.Primary = weaponClient.WeaponId;
+                            }
+                            if (idStatics2 == 2)
+                            {
+                                Player.Secondary = weaponClient.WeaponId;
+                            }
+                        }
+                    }
+                    GetWeaponForClient.WriteInfo(Send, weaponClient);
                 }
                 if (Action.Flag.HasFlag(UDP_GAME_EVENTS.FireData))
                 {
@@ -609,8 +673,6 @@ namespace PointBlank.Battle.Network
                                                 AnimId1 = ObjM.Animation,
                                                 AnimId2 = Obj.Animation != null ? Obj.Animation.Id : 255,
                                                 DestroyState = Obj.DestroyState,
-                                                /*Value = ObjM.Value != 0 ? ObjM.Value : 1,
-                                                ValueType = ObjM.ValueType,*/
                                             });
                                         }
                                     }
@@ -648,6 +710,7 @@ namespace PointBlank.Battle.Network
                                         {
                                             BattleSync.SendHitMarkerSync(Room, Player, (int)DeathType, (int)Hit.HitEnum, Damage);
                                         }
+
                                         AssistModel Assist = new AssistModel();
                                         User.Life -= Damage;
                                         Assist.RoomId = Room.RoomId;
@@ -664,7 +727,9 @@ namespace PointBlank.Battle.Network
                                             Assist.IsKiller = false;
                                             Assist.VictimDead = false;
                                         }
-                                        DamageManager.Assists.Add(Assist);
+                                        // TODO: Add assist
+                                        //if (Assist.Killer != Assist.Victim)
+                                            //DamageManager.Assists.Add(Assist);
                                         DamageManager.SimpleDeath(Deaths, Objs, Player, User, Damage, BasicInfo, HitPart, DeathType);
                                     }
                                     else
@@ -742,8 +807,6 @@ namespace PointBlank.Battle.Network
                                             AnimId2 = Obj.Animation != null ? Obj.Animation.Id : 255,
                                             DestroyState = Obj.DestroyState,
                                             SpecialUse = AllUtils.GetDuration(Obj.UseDate),
-                                            /*Value = ObjM.Value != 0 ? ObjM.Value : 1,
-                                            ValueType = ObjM.ValueType,*/
                                         });
                                     }
                                 }
@@ -769,6 +832,7 @@ namespace PointBlank.Battle.Network
                                         int valor = Damage;
                                         Damage = (int)Math.Ceiling(Damage / 2.7); // + 14;
                                         User.Life -= Damage;
+
                                         AssistModel Assist = new AssistModel();
                                         Assist.RoomId = Room.RoomId;
                                         Assist.Killer = Player.Slot;
@@ -784,7 +848,8 @@ namespace PointBlank.Battle.Network
                                             Assist.IsKiller = false;
                                             Assist.VictimDead = false;
                                         }
-                                        DamageManager.Assists.Add(Assist);
+                                        // TODO: Add assist
+                                        //if (Assist.Killer != Assist.Victim) DamageManager.Assists.Add(Assist);
 
                                         if (User.Life <= 0)
                                         {
@@ -798,6 +863,7 @@ namespace PointBlank.Battle.Network
                                     else
                                     {
                                         User.Life -= Damage;
+
                                         AssistModel Assist = new AssistModel();
                                         Assist.RoomId = Room.RoomId;
                                         Assist.Killer = Player.Slot;
@@ -813,7 +879,8 @@ namespace PointBlank.Battle.Network
                                             Assist.IsKiller = false;
                                             Assist.VictimDead = false;
                                         }
-                                        DamageManager.Assists.Add(Assist);
+                                        // TODO: Add assist
+                                        //if (Assist.Killer != Assist.Victim) DamageManager.Assists.Add(Assist);
                                         if (User.Life <= 0)
                                         {
                                             DamageManager.SetDeath(Deaths, User, Player, (CHARA_DEATH)Hit.DeathType);

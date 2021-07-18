@@ -16,7 +16,6 @@ namespace PointBlank.Auth
             while (true)
             {
                 Console.Title = "Point Blank - Auth [Users: " + AuthManager._socketList.Count + " Online: " + ServersXml.getServer(0)._LastCount + " Used RAM: " + (GC.GetTotalMemory(true) / 1024) + " KB]";
-                ComDiv.updateDB("onlines", "auth", ServersXml.getServer(0)._LastCount);
                 await Task.Delay(1000);
             }
         }

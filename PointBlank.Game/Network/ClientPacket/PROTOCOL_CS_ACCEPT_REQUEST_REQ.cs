@@ -53,7 +53,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         pl.clanAccess = 3;
                         SendClanInfo.Load(pl, null, 3);
 
-                        ComDiv.updateDB("accounts", "player_id", pl.player_id, new string[] { "clanaccess", "clan_id", "clandate" }, pl.clanAccess, pl.clanId, pl.clanDate);
+                        ComDiv.updateDB("players", "player_id", pl.player_id, new string[] { "clanaccess", "clan_id", "clandate" }, pl.clanAccess, pl.clanId, pl.clanDate);
 
                         PlayerManager.DeleteInviteDb(p.clanId, pl.player_id);
                         if (pl._isOnline)

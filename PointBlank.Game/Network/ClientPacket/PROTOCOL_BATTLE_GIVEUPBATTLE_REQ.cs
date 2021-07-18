@@ -188,7 +188,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     query.AddQuery("exp", p._exp);
                 }
             }
-            ComDiv.updateDB("accounts", "player_id", p.player_id, query.GetTables(), query.GetValues());
+            ComDiv.updateDB("players", "player_id", p.player_id, query.GetTables(), query.GetValues());
         }
 
         private void LeaveHostBOT_GiveBattle(Room room, Account p)

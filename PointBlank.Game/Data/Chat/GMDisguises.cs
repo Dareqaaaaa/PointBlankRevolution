@@ -91,7 +91,7 @@ namespace PointBlank.Game.Data.Chat
             {
                 return Translation.GetLabel("FakeNickAlreadyExist");
             }
-            else if (ComDiv.updateDB("accounts", "player_name", name, "player_id", player.player_id))
+            else if (ComDiv.updateDB("players", "player_name", name, "player_id", player.player_id))
             {
                 player.player_name = name;
                 player.SendPacket(new PROTOCOL_AUTH_CHANGE_NICKNAME_ACK(name));

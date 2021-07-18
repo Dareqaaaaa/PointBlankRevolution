@@ -21,7 +21,7 @@ namespace PointBlank.Game.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@valor", valor);
-                    command.CommandText = "SELECT * FROM nick_history " + moreCmd + " ORDER BY change_date LIMIT 30";
+                    command.CommandText = "SELECT * FROM logs_nick_history " + moreCmd + " ORDER BY change_date LIMIT 30";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -70,7 +70,7 @@ namespace PointBlank.Game.Data.Managers
                     command.Parameters.AddWithValue("@date", (long)history.date);
                     command.Parameters.AddWithValue("@motive", history.motive);
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "INSERT INTO nick_history(player_id,from_nick,to_nick,change_date,motive)VALUES(@owner,@oldnick,@newnick,@date,@motive)";
+                    command.CommandText = "INSERT INTO logs_nick_history(player_id,from_nick,to_nick,change_date,motive)VALUES(@owner,@oldnick,@newnick,@date,@motive)";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();

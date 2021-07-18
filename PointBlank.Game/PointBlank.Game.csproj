@@ -58,7 +58,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon3.ico</ApplicationIcon>
+    <ApplicationIcon>game.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -68,6 +68,9 @@
     <Reference Include="Encryption, Version=1.7.6613.38546, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Debug\Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Fleck, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fleck.1.2.0\lib\net45\Fleck.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Npgsql, Version=3.2.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
@@ -134,7 +137,6 @@
     <Compile Include="Data\Chat\SendCashToPlayer.cs" />
     <Compile Include="Data\Chat\SendGoldToPlayer.cs" />
     <Compile Include="Data\Chat\UnBan.cs" />
-    <Compile Include="Data\Managers\GameRuleManager.cs" />
     <Compile Include="Data\Sync\GameSync.cs" />
     <Compile Include="Data\Sync\Client\ClanSync.cs" />
     <Compile Include="Data\Sync\Client\ClanServersSync.cs" />
@@ -556,6 +558,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Rcon\RconManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -597,6 +600,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon3.ico" />
+    <Content Include="game.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -36,7 +36,14 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeB(new byte[25]);
             writeC(7);
             writeB(new byte[229]);
-            writeD(171718655);
+
+
+            short Mask1 = 0;
+            if (AuthManager.Config.ClanEnable) Mask1 += 4096;
+
+            writeH(Mask1); // playtime 256, clan 4096
+            writeH(0); // gift 256, tags 1024
+
             writeC(3); // Count Event Play Time
             writeD(600); // 600
             writeD(2400); // 2400

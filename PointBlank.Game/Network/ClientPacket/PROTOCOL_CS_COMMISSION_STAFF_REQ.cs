@@ -38,7 +38,7 @@ namespace PointBlank.Game.Network.ClientPacket
             for (int i = 0; i < countPlayers; i++)
             {
                 Account member = AccountManager.getAccount(readQ(), 0);
-                if (member != null && member.clanId == clan._id && member.clanAccess == 3 && ComDiv.updateDB("accounts", "clanaccess", 2, "player_id", member.player_id))
+                if (member != null && member.clanId == clan._id && member.clanAccess == 3 && ComDiv.updateDB("players", "clanaccess", 2, "player_id", member.player_id))
                 {
                     member.clanAccess = 2; //Aux
                     SendClanInfo.Load(member, null, 3);

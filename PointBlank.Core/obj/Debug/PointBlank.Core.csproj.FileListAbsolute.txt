@@ -90,8 +90,8 @@ E:\Progetti\Point-Blank-Revolution\PointBlank.Core\bin\Debug\PointBlank.Core.dll
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\bin\Debug\PointBlank.Core.dll
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\bin\Debug\PointBlank.Core.pdb
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.csprojAssemblyReference.cache
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.csproj.CoreCompileInputs.cache
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.csproj.CopyComplete
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.dll
 E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.pdb
+E:\Progetti\Point-Blank-Revolution\PointBlank.Core\obj\Debug\PointBlank.Core.csprojAssemblyReference.cache

@@ -123,7 +123,7 @@ namespace PointBlank.Game.Data.Chat
             {
                 return Translation.GetLabel("PlayerBanSimilarID");
             }
-            else if (ComDiv.updateDB("accounts", "access_level", -1, "player_id", victim.player_id))
+            else if (ComDiv.updateDB("players", "access_level", -1, "player_id", victim.player_id))
             {
                 if (warn)
                 {

@@ -1,0 +1,72 @@
+﻿using Fleck;
+using PointBlank.Core;
+using PointBlank.Game.Data.Configs;
+using System;
+
+namespace PointBlank.Game.Rcon
+{
+    public class RconManager
+    {
+        private static RconManager Manager;
+        public static RconManager Instance() 
+            => Manager != null ? Manager : (Manager = new RconManager());
+
+        private WebSocketServer Server;
+        public RconManager()
+        {
+            try
+            {
+                FleckLog.Level = LogLevel.Error;
+
+                Server = new WebSocketServer($"ws://{GameConfig.RconIp}:{GameConfig.RconPort}");
+                Server.Start(Client =>
+                {
+                    Client.OnMessage = Message => Receive(Message, Client);
+                });
+
+                Logger.info($"RconManager started. [ws://{GameConfig.RconIp}:{GameConfig.RconPort}]");
+            }
+            catch(Exception Exc)
+            {
+                Logger.error("RconManager start: " + Exc.ToString());
+            }
+        }
+
+        private void Receive(string Message, IWebSocketConnection Client)
+        {
+            try
+            {
+                if(!GameConfig.RconValidIps.Contains(Client.ConnectionInfo.ClientIpAddress))
+                {
+                    if(GameConfig.RconPrintNotValidIp)
+                        Logger.warning("Received message from unlisted ip: " + Client.ConnectionInfo.ClientIpAddress);
+                    return;
+                }
+
+                if (Message.Contains("|") && Message.Split('|').Length >= 2)
+                {
+                    string[] Pattern = Message.Split('|');
+
+                    int Opcode = int.Parse(Pattern[0]);
+                    string Password = Pattern[1];
+
+                    if(Password != GameConfig.RconPassword)
+                    {
+                        Logger.warning("RconManager received request with wrong password: " + Password);
+                        return;
+                    }
+
+                    switch(Opcode)
+                    {
+                        default: Logger.warning("RconManager received request with opcode: " + Opcode); break;
+                    }
+                }
+                else Logger.warning("RconManager received request with wrong message: " + Message);
+            }
+            catch (Exception Exc)
+            {
+                Logger.error("RconManager receive: " + Exc.ToString());
+            }
+        }
+    }
+}

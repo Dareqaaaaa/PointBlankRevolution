@@ -28,6 +28,10 @@ namespace PointBlank.Game
                 mainSocket.Bind(Local);
                 mainSocket.Listen((int)SocketOptionName.MaxConnections);
                 mainSocket.BeginAccept(new AsyncCallback(AcceptCallback), mainSocket);
+
+
+                Logger.info($"GameManager started. [{GameConfig.gameIp}:{GameConfig.gamePort}]");
+
                 return true;
             }
             catch (Exception ex)

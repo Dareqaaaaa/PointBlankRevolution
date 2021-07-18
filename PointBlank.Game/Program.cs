@@ -19,6 +19,8 @@ using PointBlank.Game.Data.Model;
 using PointBlank.Core.Models.Enums;
 using PointBlank.Core.Models.Room;
 using PointBlank.Core.Models.Account.Players;
+using PointBlank.Game.Rcon;
+using System.Threading;
 
 namespace PointBlank.Game
 {
@@ -27,16 +29,17 @@ namespace PointBlank.Game
         public static void Main(string[] args)
         {
             string Date = ComDiv.GetLinkerTime(Assembly.GetExecutingAssembly(), null).ToString("dd/MM/yyyy HH:mm");
-            Console.Title = "Game";
             Logger.StartedFor = "Game";
             Logger.checkDirectorys();
             Console.Clear();
-            Logger.LogYaz(@"____________    ________     ________________", ConsoleColor.Cyan);
-            Logger.LogYaz(@"___  ____/_ |  / /_  __ \    ___  __ \__  __ )", ConsoleColor.Cyan);
-            Logger.LogYaz(@"__  __/  __ | / /_  / / /    __  /_/ /_  __  |", ConsoleColor.Cyan);
-            Logger.LogYaz(@"_  /___  __ |/ / / /_/ /     _  ____/_  /_/ /", ConsoleColor.Cyan);
-            Logger.LogYaz(@"/_____/  _____/  \____/      /_/     /_____/", ConsoleColor.Cyan);
-            Console.WriteLine("");
+            Logger.LogYaz(@"
+ ██████╗  ██████╗ ██╗███╗   ██╗████████╗    ██████╗ ██╗      █████╗ ███╗   ██╗██╗  ██╗
+ ██╔══██╗██╔═══██╗██║████╗  ██║╚══██╔══╝    ██╔══██╗██║     ██╔══██╗████╗  ██║██║ ██╔╝
+ ██████╔╝██║   ██║██║██╔██╗ ██║   ██║       ██████╔╝██║     ███████║██╔██╗ ██║█████╔╝ 
+ ██╔═══╝ ██║   ██║██║██║╚██╗██║   ██║       ██╔══██╗██║     ██╔══██║██║╚██╗██║██╔═██╗ 
+ ██║     ╚██████╔╝██║██║ ╚████║   ██║       ██████╔╝███████╗██║  ██║██║ ╚████║██║  ██╗
+ ╚═╝      ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝       ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
+", ConsoleColor.Cyan);
             GameConfig.Load();
             BasicInventoryXml.Load();
             ServerConfigSyncer.GenerateConfig(GameConfig.configId);
@@ -59,26 +62,22 @@ namespace PointBlank.Game
             MapsXml.Load();
             RandomBoxXml.LoadBoxes();
             CouponEffectManager.LoadCouponFlags();
-            GameRuleManager.getGameRules(GameConfig.ruleId);
             GameSync.Start();
-            bool Started = GameManager.Start();
-            Logger.info("Text Encode: " + Config.EncodeText.EncodingName);
-            Logger.info("Mode: " + (GameConfig.isTestMode ? "Test" : "Public"));
-            Logger.debug(StartSuccess());
-            if (Started)
+            
+            if(Logger.erro)
             {
-                Game.Update();
+                Logger.error("Check your configuration.");
+                Thread.Sleep(5000);
+                Environment.Exit(0);
             }
-            Process.GetCurrentProcess().WaitForExit();
-        }
 
-        private static string StartSuccess()
-        {
-            if (Logger.erro)
-            {
-                return "Start failed.";
-            }
-            return "Active Server. (" + DateTime.Now.ToString("dd/MM/yy HH:mm:ss") + ")";
+            if (GameManager.Start())
+                Game.Update();
+
+            if (GameConfig.RconEnable)
+                RconManager.Instance();
+
+            Process.GetCurrentProcess().WaitForExit();
         }
     }
 }

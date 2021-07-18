@@ -64,7 +64,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     if (GameConfig.AutoBan)
                     {
-                        if (ComDiv.updateDB("accounts", "access_level", -1, "player_id", p.player_id))
+                        if (ComDiv.updateDB("players", "access_level", -1, "player_id", p.player_id))
                         {
                             BanManager.SaveAutoBan(p.player_id, p.login, p.player_name, "ใช้โปรแกรมช่วยเล่น " + Hack + " (" + Hack + ")", DateTime.Now.ToString("dd -MM-yyyy HH:mm:ss"), p.PublicIP.ToString(), "Ban from Server"); // TODO: Translate text of autoban
                             using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "แบน ผู้เล่น [" + p.player_name + "] ถาวร - ใช้โปรแกรมช่วยเล่น"))
@@ -100,7 +100,7 @@ namespace PointBlank.Game.Network.ClientPacket
 
             foreach (Channel ch in ChannelsXml._channels)
             {
-                ComDiv.updateDB("info_channels", "online", ch._players.Count, "channel_id", ch._id);
+                ComDiv.updateDB("channels", "online", ch._players.Count, "channel_id", ch._id);
             }
         }
 

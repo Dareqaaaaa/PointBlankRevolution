@@ -27,7 +27,7 @@ namespace PointBlank.Game.Data.Chat
                 Account pE = AccountManager.getAccount(player_id, 0);
                 if (pE != null)
                 {
-                    if (ComDiv.updateDB("accounts", "rank", rank, "player_id", pE.player_id))
+                    if (ComDiv.updateDB("players", "rank", rank, "player_id", pE.player_id))
                     {
                         RankModel model = RankXml.getRank(rank);
                         pE._rank = rank;

@@ -57,7 +57,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         p.updateCacheInfo();
                         p._status.updateServer((byte)GameConfig.serverId);
                         _client._player = p;
-                        ComDiv.updateDB("accounts", "lastip", p.PublicIP.ToString(), "player_id", p.player_id);
+                        ComDiv.updateDB("players", "lastip", p.PublicIP.ToString(), "player_id", p.player_id);
 
                         if (p._topups.Count > 0)
                         {

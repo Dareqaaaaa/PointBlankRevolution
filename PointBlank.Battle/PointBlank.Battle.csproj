@@ -63,7 +63,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon2.ico</ApplicationIcon>
+    <ApplicationIcon>battle.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <RootNamespace>PointBlank.Battle</RootNamespace>
@@ -111,6 +111,7 @@
     <Compile Include="Data\Enums\OBJECT_TYPE.cs" />
     <Compile Include="Data\Enums\CHARA_MOVES.cs" />
     <Compile Include="Data\Enums\ROOM_STATE_TYPE.cs" />
+    <Compile Include="Data\Enums\WEAPON_SYNC_TYPE.cs" />
     <Compile Include="Data\Models\AnimModel.cs" />
     <Compile Include="Data\Models\AssistModel.cs" />
     <Compile Include="Data\Models\BombPosition.cs" />
@@ -229,6 +230,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="battle.ico" />
     <Content Include="favicon2.ico" />
   </ItemGroup>
   <ItemGroup>

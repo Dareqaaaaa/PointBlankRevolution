@@ -40,7 +40,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 if (titleId > 0 && TitleManager.getInstance().updateEquipedTitle(t.ownerId, slotIdx, 0))
                 {
                     t.SetEquip(slotIdx, 0);
-                    if (TitleAwardsXml.Contains(titleId, p._equip._beret) && ComDiv.updateDB("accounts", "char_beret", 0, "player_id", p.player_id))
+                    if (TitleAwardsXml.Contains(titleId, p._equip._beret) && ComDiv.updateDB("players", "char_beret", 0, "player_id", p.player_id))
                     {
                         p._equip._beret = 0;
                         Room room = p._room;

@@ -58,7 +58,6 @@ namespace PointBlank.Game.Network.ClientPacket
                             {
                                 room.SendPacketToPlayers(packet, p.player_id);
                             }
-                            _client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 5, false, "เปิดใช้งาน: " + room.RuleFlag.ToString()));
                             _client.SendPacket(new PROTOCOL_ROOM_JOIN_ACK(0, p, leader));
                         }
                         else

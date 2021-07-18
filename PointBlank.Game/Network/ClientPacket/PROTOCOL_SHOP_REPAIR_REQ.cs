@@ -75,8 +75,8 @@ namespace PointBlank.Game.Network.ClientPacket
                         Player._gp = Point;
                         Player._money = Cash;
                         Item._count = Repair.Quantity;
-                        ComDiv.updateDB("accounts", "gp", Player._gp, "player_id", Player.player_id);
-                        ComDiv.updateDB("accounts", "money", Player._money, "player_id", Player.player_id);
+                        ComDiv.updateDB("players", "gp", Player._gp, "player_id", Player.player_id);
+                        ComDiv.updateDB("players", "money", Player._money, "player_id", Player.player_id);
                         ComDiv.updateDB("player_items", "count", Item._count, "object_id", ObjectId);
                         _client.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(3, Player, Item));
                         _client.SendPacket(new PROTOCOL_SHOP_REPAIR_ACK(Error, Item, Player));

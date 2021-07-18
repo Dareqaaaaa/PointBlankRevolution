@@ -2,6 +2,7 @@
 using PointBlank.Battle.Data.Models;
 using PointBlank.Battle.Data.Xml;
 using PointBlank.Battle.Network;
+using PointBlank.Battle.Network.Actions.Damage;
 using PointBlank.Battle.Network.Packets;
 using System;
 using System.Collections.Generic;
@@ -22,23 +23,19 @@ namespace PointBlank.Battle.Data.Sync.Client
             byte accountId = p.readC();
             int Type = 0, Number = 0, HpBonus = 0;
             bool C4Speed = false;
+
+            int wep1 = 0, wep2 = 0, wep3 = 0, wep4 = 0, wep5 = 0;
             if (syncType == 0 || syncType == 2)
             {
                 Type = p.readC();
                 Number = p.readH();
                 HpBonus = p.readC();
                 C4Speed = p.readC() == 1;
-                if (28 < p.getBuffer().Length)
-                {
-                    Logger.warning("[RespawnSync]: " + BitConverter.ToString(p.getBuffer()));
-                }
-            }
-            else
-            {
-                if (23 < p.getBuffer().Length)
-                {
-                    Logger.warning("[RespawnSync]: " + BitConverter.ToString(p.getBuffer()));
-                }
+                wep1 = p.readD();
+                wep2 = p.readD();
+                wep3 = p.readD();
+                wep4 = p.readD();
+                wep5 = p.readD();
             }
             Room room = RoomsManager.getRoom(UniqueRoomId);
             if (room == null)
@@ -52,6 +49,7 @@ namespace PointBlank.Battle.Data.Sync.Client
             {
                 Player.PlayerIdByUser = accountId; //
             }
+
             if (Player != null && Player.PlayerIdByUser == accountId)
             {
                 Player.PlayerIdByServer = accountId;
@@ -67,6 +65,12 @@ namespace PointBlank.Battle.Data.Sync.Client
                     Player.Dead = false;
                     Player.PlantDuration = BattleConfig.plantDuration;
                     Player.DefuseDuration = BattleConfig.defuseDuration;
+                    Player.Primary = wep1;
+                    Player.Secondary = wep2;
+                    Player.Knife = wep3;
+                    Player.Grenade = wep4;
+                    Player.Special = wep5;
+
                     if (C4Speed)
                     {
                         Player.PlantDuration -= AllUtils.Percentage(BattleConfig.plantDuration, 50);

@@ -29,7 +29,7 @@ namespace PointBlank.Game.Network.ClientPacket
             int YearNow = int.Parse(DateTime.Now.ToString("yyyy"));
             int Result = YearNow - (Year / 10000);
             Player.age = Result;
-            ComDiv.updateDB("accounts", "age", Result, "player_id", Player.player_id);
+            ComDiv.updateDB("players", "age", Result, "player_id", Player.player_id);
             _client.SendPacket(new PROTOCOL_BASE_SELECT_AGE_ACK(0, Result));
         }
     }

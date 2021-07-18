@@ -74,6 +74,7 @@ namespace PointBlank.Battle.Data.Xml
                 fileStream.Dispose();
                 fileStream.Close();
             }
+            Logger.info("Loaded: " + _charas.Count + " charas information");
         }
     }
 }

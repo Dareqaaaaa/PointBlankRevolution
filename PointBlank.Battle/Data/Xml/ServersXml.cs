@@ -35,7 +35,7 @@ namespace PointBlank.Battle.Data.Xml
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM info_gameservers ORDER BY id ASC";
+                    command.CommandText = "SELECT * FROM gameservers ORDER BY id ASC";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

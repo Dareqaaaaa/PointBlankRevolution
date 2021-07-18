@@ -22,7 +22,7 @@ namespace PointBlank.Core.Managers.Server
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@cfg", configId);
-                    command.CommandText = "SELECT * FROM info_login_configs WHERE config_id=@cfg";
+                    command.CommandText = "SELECT * FROM server_settings WHERE config_id=@cfg";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -39,7 +39,8 @@ namespace PointBlank.Core.Managers.Server
                             ChatColor = data.GetInt32(7),
                             AnnouceColor = data.GetInt32(8),
                             Chat = data.GetString(9),
-                            Annouce = data.GetString(10)
+                            Annouce = data.GetString(10),
+                            ClanEnable = data.GetBoolean(11)
                         };
                     }
                     command.Dispose();
@@ -58,7 +59,7 @@ namespace PointBlank.Core.Managers.Server
         public static bool updateMission(ServerConfig cfg, bool mission)
         {
             cfg.missions = mission;
-            return ComDiv.updateDB("info_login_configs", "missions", mission, "config_id", cfg.configId);
+            return ComDiv.updateDB("server_settings", "missions", mission, "config_id", cfg.configId);
         }
     }
 
@@ -66,7 +67,7 @@ namespace PointBlank.Core.Managers.Server
     {
         public int configId;
         public string UserFileList, ClientVersion, ExitURL;
-        public bool onlyGM, missions, GiftSystem;
+        public bool onlyGM, missions, GiftSystem, ClanEnable;
         public string Annouce, Chat;
         public int AnnouceColor, ChatColor;
     }

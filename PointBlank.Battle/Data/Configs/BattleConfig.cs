@@ -13,13 +13,15 @@ namespace PointBlank.Battle.Data.Configs
 
         public static void Load()
         {
+            ConfigFile configFileDatabase = new ConfigFile("Config/Database.ini");
+            dbHost = configFileDatabase.readString("Host", "localhost");
+            dbName = configFileDatabase.readString("Name", "");
+            dbUser = configFileDatabase.readString("User", "root");
+            dbPass = configFileDatabase.readString("Pass", "");
+            dbPort = configFileDatabase.readInt32("Port", 0);
+            EncodeText = Encoding.GetEncoding(configFileDatabase.readInt32("EncodingPage", 0));
+
             ConfigFile configFile = new ConfigFile("Config/Battle.ini");
-            dbHost = configFile.readString("Host", "localhost");
-            dbName = configFile.readString("Name", "");
-            dbUser = configFile.readString("User", "root");
-            dbPass = configFile.readString("Pass", "");
-            dbPort = configFile.readInt32("Port", 0);
-            EncodeText = Encoding.GetEncoding(configFile.readInt32("EncodingPage", 0));
             hosIp = configFile.readString("UdpIp", "0.0.0.0");
             serverIp = configFile.readString("ServerIp", "0.0.0.0");
             hosPort = configFile.readUInt16("UdpPort", 40000);

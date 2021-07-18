@@ -56,7 +56,7 @@ namespace PointBlank.Auth.Data.Model
 
         public void setOnlineStatus(bool online)
         {
-            if (_isOnline != online && ComDiv.updateDB("accounts", "online", online, "player_id", player_id))
+            if (_isOnline != online && ComDiv.updateDB("players", "online", online, "player_id", player_id))
             {
                 _isOnline = online;
             }
@@ -263,7 +263,7 @@ namespace PointBlank.Auth.Data.Model
                                     }
                                     else if (item._id == 1600006)
                                     {
-                                        ComDiv.updateDB("accounts", "name_color", 0, "player_id", player_id);
+                                        ComDiv.updateDB("players", "name_color", 0, "player_id", player_id);
                                         name_color = 0;
                                     }
                                     else if (item._id == 1600009)
@@ -276,7 +276,7 @@ namespace PointBlank.Auth.Data.Model
                                         if (_bonus.fakeNick.Length > 0)
                                         {
                                             ComDiv.updateDB("player_bonus", "fakenick", "", "player_id", player_id);
-                                            ComDiv.updateDB("accounts", "player_name", _bonus.fakeNick, "player_id", player_id);
+                                            ComDiv.updateDB("players", "player_name", _bonus.fakeNick, "player_id", player_id);
                                             player_name = _bonus.fakeNick;
                                             _bonus.fakeNick = "";
                                         }
@@ -331,7 +331,7 @@ namespace PointBlank.Auth.Data.Model
                     {
                         PlayerManager.updateChars(_equip, query);
                     }
-                    ComDiv.updateDB("accounts", "player_id", player_id, query.GetTables(), query.GetValues());
+                    ComDiv.updateDB("players", "player_id", player_id, query.GetTables(), query.GetValues());
                     query = null;
                 }
                 return true;

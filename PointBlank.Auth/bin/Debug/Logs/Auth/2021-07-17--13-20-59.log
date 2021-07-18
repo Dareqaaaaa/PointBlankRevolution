@@ -1,0 +1,136 @@
+____________    ________     ________________
+___  ____/_ |  / /_  __ \    ___  __ \__  __ )
+__  __/  __ | / /_  / / /    __  /_/ /_  __  |
+_  /___  __ |/ / / /_/ /     _  ____/_  /_/ /
+/_____/  _____/  \____/      /_/     /_____/
+13:20:59 [Error] System.IO.FileNotFoundException: Il file 'E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\Config\Database.ini' non è stato trovato.
+Nome file: 'E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\Config\Database.ini'
+   in System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   in System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   in System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   in System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   in System.IO.StreamReader..ctor(String path)
+   in PointBlank.Core.ConfigFile.LoadStrings() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\ConfigFile.cs:riga 30
+13:20:59 [Warning] Parameter failure: Host
+13:20:59 [Warning] Parameter failure: Name
+13:20:59 [Warning] Parameter failure: User
+13:20:59 [Warning] Parameter failure: Pass
+13:20:59 [Warning] Parameter failure: Port
+13:20:59 [Warning] Parameter failure: EncodingPage
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Server.ServerConfigSyncer.GenerateConfig(Int32 configId) in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Server\ServerConfigSyncer.cs:riga 20
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventVisitSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventVisitSyncer.cs:riga 20
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventLoginSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventLoginSyncer.cs:riga 18
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventMapSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventMapSyncer.cs:riga 17
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventPlayTimeSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventPlayTimeSyncer.cs:riga 20
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventQuestSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventQuestSyncer.cs:riga 19
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventRankUpSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventRankUpSyncer.cs:riga 17
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.Events.EventXmasSyncer.GenerateList() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\Events\EventXmasSyncer.cs:riga 17
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Xml.BasicInventoryXml.Load() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Xml\BasicInventoryXml.cs:riga 18
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Xml.ServersXml.Load() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Xml\ServersXml.cs:riga 34
+13:20:59 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Auth.Data.Xml.ChannelsXml.Load(Int32 serverId) in E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\Data\Xml\ChannelsXml.cs:riga 19
+13:21:00 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.ShopManager.Load(Int32 type) in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\ShopManager.cs:riga 31
+13:21:00 [Error] System.TypeInitializationException: L'inizializzatore di tipo di 'PointBlank.Core.Sql.SqlConnection' ha generato un'eccezione. ---> System.ArgumentOutOfRangeException: Invalid port: 0
+Nome parametro: value
+Valore effettivo: 0.
+   in Npgsql.NpgsqlConnectionStringBuilder.set_Port(Int32 value)
+   in PointBlank.Core.Sql.SqlConnection..ctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 19
+   in PointBlank.Core.Sql.SqlConnection..cctor() in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Sql\SqlConnection.cs:riga 9
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in PointBlank.Core.Sql.SqlConnection.getInstance()
+   in PointBlank.Core.Managers.ShopManager.Load(Int32 type) in E:\Progetti\Point-Blank-Revolution\PointBlank.Core\Managers\ShopManager.cs:riga 31

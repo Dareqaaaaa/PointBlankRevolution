@@ -17,7 +17,6 @@ namespace PointBlank.Game
             while (true)
             {
                 Console.Title = "Point Blank - Game [Users: " + GameManager._socketList.Count + " Online: " + ServersXml.getServer(GameConfig.serverId)._LastCount + " Used RAM: " + (GC.GetTotalMemory(true) / 1024) + " KB]";
-                ComDiv.updateDB("onlines", "game", ServersXml.getServer(GameConfig.serverId)._LastCount);
                 if (DateTime.Now.ToString("HH:mm") == "00:00")
                 {
                     foreach (Account Player in AccountManager._accounts.Values)

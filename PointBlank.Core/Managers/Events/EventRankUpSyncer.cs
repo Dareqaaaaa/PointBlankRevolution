@@ -18,7 +18,7 @@ namespace PointBlank.Core.Managers.Events
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM events_rankup";
+                    command.CommandText = "SELECT * FROM server_events_rankup";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

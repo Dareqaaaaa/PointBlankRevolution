@@ -16,6 +16,7 @@ namespace PointBlank.Battle.Data.Models
         public DateTime Date, LastPing, C4First;
         public CLASS_TYPE WeaponClass;
         public bool Dead = true, NeverRespawn = true, Integrity = true, Immortal;
+        public int Primary = 0, Secondary = 0, Knife = 0, Grenade = 0, Special = 0;
 
         public Player(int Slot)
         {

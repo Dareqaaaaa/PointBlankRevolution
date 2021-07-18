@@ -41,7 +41,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         Clan clan = ClanManager.getClan(p.clanId);
                         if (clan._id > 0 && clan.owner_id != p.player_id)
                         {
-                            if (ComDiv.updateDB("accounts", "player_id", p.player_id, new string[]
+                            if (ComDiv.updateDB("players", "player_id", p.player_id, new string[]
                             {
                                 "clan_id", "clanaccess", "clan_game_pt", "clan_wins_pt"
                             }, 0, 0, 0, 0))

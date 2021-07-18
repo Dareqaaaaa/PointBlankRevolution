@@ -99,7 +99,7 @@ namespace PointBlank.Game.Data.Model
 
         public void setOnlineStatus(bool online)
         {
-            if (_isOnline != online && ComDiv.updateDB("accounts", "online", online, "player_id", player_id))
+            if (_isOnline != online && ComDiv.updateDB("players", "online", online, "player_id", player_id))
             {
                 _isOnline = online;
             }

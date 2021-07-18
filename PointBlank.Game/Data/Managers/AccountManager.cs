@@ -38,7 +38,7 @@ namespace PointBlank.Game.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@ip", ip);
-                    command.CommandText = "SELECT player_name FROM accounts WHERE lastip=@ip";
+                    command.CommandText = "SELECT player_name FROM players WHERE lastip=@ip";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -78,7 +78,7 @@ namespace PointBlank.Game.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@value", valor);
-                    command.CommandText = "SELECT * FROM accounts WHERE " + (type == 0 ? "token" : type == 1 ? "player_name" : "player_id") + "=@value";
+                    command.CommandText = "SELECT * FROM players WHERE " + (type == 0 ? "token" : type == 1 ? "player_name" : "player_id") + "=@value";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -183,7 +183,7 @@ namespace PointBlank.Game.Data.Managers
                         parameters.Add(param);
                     }
                     loaded = string.Join(",", parameters.ToArray());
-                    command.CommandText = "SELECT player_name,player_id,rank,online,status FROM accounts WHERE player_id in (" + loaded + ") ORDER BY player_id";
+                    command.CommandText = "SELECT player_name,player_id,rank,online,status FROM players WHERE player_id in (" + loaded + ") ORDER BY player_id";
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
                     {
@@ -263,7 +263,7 @@ namespace PointBlank.Game.Data.Managers
 
         public static bool updatePlayerName(string name, long playerId)
         {
-            return ComDiv.updateDB("accounts", "player_name", name, "player_id", playerId);
+            return ComDiv.updateDB("players", "player_name", name, "player_id", playerId);
         }
     }
 }

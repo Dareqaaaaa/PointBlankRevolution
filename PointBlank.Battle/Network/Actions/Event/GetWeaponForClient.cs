@@ -33,9 +33,8 @@ namespace PointBlank.Battle.Network.Actions.Event
             p.Advance(8);
         }
 
-        public static void WriteInfo(SendPacket s, ActionModel ac, ReceivePacket p, bool genLog)
+        public static void WriteInfo(SendPacket s, WeaponClient info)
         {
-            WeaponClient info = ReadInfo(ac, p, genLog);
             s.writeC(info.WeaponFlag);
             s.writeD(info.WeaponId);
             s.writeC(info.Extensions);

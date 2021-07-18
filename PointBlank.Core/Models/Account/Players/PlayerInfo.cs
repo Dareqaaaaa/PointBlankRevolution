@@ -24,7 +24,7 @@ namespace PointBlank.Core.Models.Account.Players
 
         public void setOnlineStatus(bool state)
         {
-            if (_isOnline != state && ComDiv.updateDB("accounts", "online", state, "player_id", player_id))
+            if (_isOnline != state && ComDiv.updateDB("players", "online", state, "player_id", player_id))
             {
                 _isOnline = state;
             }

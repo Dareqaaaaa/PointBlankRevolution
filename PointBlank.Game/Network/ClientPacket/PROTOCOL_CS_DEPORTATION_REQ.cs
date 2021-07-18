@@ -40,7 +40,7 @@ namespace PointBlank.Game.Network.ClientPacket
             for (int i = 0; i < countPlayers; i++)
             {
                 Account member = AccountManager.getAccount(readQ(), 0);
-                if (member != null && member.clanId == clan._id && member._match == null && ComDiv.updateDB("accounts", "player_id", member.player_id, new string[] 
+                if (member != null && member.clanId == clan._id && member._match == null && ComDiv.updateDB("players", "player_id", member.player_id, new string[] 
                 { 
                     "clan_id", "clanaccess", "clan_game_pt", "clan_wins_pt"
                 }, 0, 0, 0, 0))

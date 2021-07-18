@@ -19,7 +19,7 @@ namespace PointBlank.Core.Models.Account
             SetData(4294967295, player_id);
             if (ch != channelId || room != roomId || clan != clanFId || server != serverId)
             {
-                ComDiv.updateDB("accounts", "status", (long)4294967295, "player_id", player_id);
+                ComDiv.updateDB("players", "status", (long)4294967295, "player_id", player_id);
             }
         }
 
@@ -69,7 +69,7 @@ namespace PointBlank.Core.Models.Account
         private void UpdateDB()
         {
             uint value = BitConverter.ToUInt32(buffer, 0);
-            ComDiv.updateDB("accounts", "status", (long)value, "player_id", player_id);
+            ComDiv.updateDB("players", "status", (long)value, "player_id", player_id);
         }
     }
 }

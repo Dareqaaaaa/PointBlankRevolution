@@ -87,7 +87,6 @@ namespace PointBlank.Game.Data.Model
             _channelId = ch._id;
             _channelType = ch._type;
             SetUniqueId();
-            GameRules = GameRuleManager.getGameRules(GameConfig.ruleId);
         }
 
         public bool thisModeHaveCD()
@@ -803,7 +802,7 @@ namespace PointBlank.Game.Data.Model
                     {
                         query.AddQuery("money", player._money);
                     }
-                    ComDiv.updateDB("accounts", "player_id", player.player_id, query.GetTables(), query.GetValues());
+                    ComDiv.updateDB("players", "player_id", player.player_id, query.GetTables(), query.GetValues());
                     ComDiv.updateDB("player_dailyrecord", "player_id", player.player_id, query2.GetTables(), query2.GetValues());
                     if (GameConfig.winCashPerBattle && GameConfig.showCashReceiveWarn)
                     {
@@ -1061,7 +1060,7 @@ namespace PointBlank.Game.Data.Model
                     {
                         query.AddQuery("money", player._money);
                     }
-                    ComDiv.updateDB("accounts", "player_id", player.player_id, query.GetTables(), query.GetValues());
+                    ComDiv.updateDB("players", "player_id", player.player_id, query.GetTables(), query.GetValues());
                     ComDiv.updateDB("player_dailyrecord", "player_id", player.player_id, query2.GetTables(), query2.GetValues());
                     if (GameConfig.winCashPerBattle && GameConfig.showCashReceiveWarn)
                     {

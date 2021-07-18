@@ -1,5 +1,7 @@
-﻿using PointBlank.Battle.Data.Models;
+﻿using PointBlank.Battle.Data.Enums;
+using PointBlank.Battle.Data.Models;
 using PointBlank.Battle.Data.Models.Event;
+using System;
 
 namespace PointBlank.Battle.Network.Actions.Event
 {
@@ -9,7 +11,9 @@ namespace PointBlank.Battle.Network.Actions.Event
         {
             ActionStateInfo info = new ActionStateInfo
             {
-                Action = p.readUD(),
+                Action = (ACTION_STATE) p.readUH(),
+                Value = p.readC(),
+                Flag = (WEAPON_SYNC_TYPE)p.readC()
             };
             if (genLog)
             {
@@ -27,7 +31,9 @@ namespace PointBlank.Battle.Network.Actions.Event
 
         public static void WriteInfo(SendPacket s, ActionStateInfo info)
         {
-            s.writeD(info.Action);
+            s.writeH((ushort)info.Action);
+            s.writeC(info.Value);
+            s.writeC((byte)info.Flag);
         }
     }
 }

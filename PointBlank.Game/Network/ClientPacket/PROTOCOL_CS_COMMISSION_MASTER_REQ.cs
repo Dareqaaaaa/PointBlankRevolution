@@ -44,9 +44,9 @@ namespace PointBlank.Game.Network.ClientPacket
                 else if (member._rank > 10)
                 {
                     Clan clan = ClanManager.getClan(clanId);
-                    if (clan._id > 0 && clan.owner_id == _client.player_id && member.clanAccess == 2 && ComDiv.updateDB("clan_data", "owner_id", memberId, "clan_id", clanId) &&
-                        ComDiv.updateDB("accounts", "clanaccess", 1, "player_id", memberId) &&
-                        ComDiv.updateDB("accounts", "clanaccess", 2, "player_id", p.player_id))
+                    if (clan._id > 0 && clan.owner_id == _client.player_id && member.clanAccess == 2 && ComDiv.updateDB("clans", "owner_id", memberId, "clan_id", clanId) &&
+                        ComDiv.updateDB("players", "clanaccess", 1, "player_id", memberId) &&
+                        ComDiv.updateDB("players", "clanaccess", 2, "player_id", p.player_id))
                     {
                         member.clanAccess = 1;
                         p.clanAccess = 2;

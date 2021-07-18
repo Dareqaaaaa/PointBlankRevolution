@@ -74,7 +74,7 @@ namespace PointBlank.Game.Data.Chat
             {
                 return Translation.GetLabel("PlayerUnbanSimilarId");
             }
-            else if (ComDiv.updateDB("accounts", "access_level", 0, "player_id", victim.player_id))
+            else if (ComDiv.updateDB("players", "access_level", 0, "player_id", victim.player_id))
             {
                 victim.access = 0;
                 return Translation.GetLabel("PlayerUnbanSuccess");

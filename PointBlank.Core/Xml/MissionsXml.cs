@@ -19,7 +19,7 @@ namespace PointBlank.Core.Xml
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM info_missions ORDER BY mission_id ASC";
+                    command.CommandText = "SELECT * FROM server_cards ORDER BY mission_id ASC";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

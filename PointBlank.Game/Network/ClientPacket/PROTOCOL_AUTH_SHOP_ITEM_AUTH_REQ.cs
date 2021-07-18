@@ -82,7 +82,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     }
                     else if (itemId == 1800050)
                     {
-                        if (ComDiv.updateDB("accounts", "escapes", 0, "player_id", p.player_id))
+                        if (ComDiv.updateDB("players", "escapes", 0, "player_id", p.player_id))
                         {
                             p._statistic.escapes = 0;
                             _client.SendPacket(new PROTOCOL_BASE_GET_MYINFO_RECORD_ACK(p._statistic));
@@ -119,7 +119,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         Clan c = ClanManager.getClan(p.clanId);
                         if (c._id > 0 && c.owner_id == _client.player_id)
                         {
-                            if (c.maxPlayers + 50 <= 250 && ComDiv.updateDB("clan_data", "max_players", c.maxPlayers + 50, "clan_id", p.clanId))
+                            if (c.maxPlayers + 50 <= 250 && ComDiv.updateDB("clans", "max_players", c.maxPlayers + 50, "clan_id", p.clanId))
                             {
                                 c.maxPlayers += 50;
                                 _client.SendPacket(new PROTOCOL_CS_REPLACE_PERSONMAX_ACK(c.maxPlayers));
@@ -139,7 +139,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         Clan c = ClanManager.getClan(p.clanId);
                         if (c._id > 0 && c._pontos != 1000)
                         {
-                            if (ComDiv.updateDB("clan_data", "pontos", 1000.0f, "clan_id", p.clanId))
+                            if (ComDiv.updateDB("clans", "pontos", 1000.0f, "clan_id", p.clanId))
                             {
                                 c._pontos = 1000;
                                 _client.SendPacket(new PROTOCOL_CS_POINT_RESET_RESULT_ACK());
@@ -157,7 +157,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     else if (itemId > 1800113 && itemId < 1800119)
                     {
                         int goldReceive = itemId == 1800114 ? 500 : (itemId == 1800115 ? 1000 : (itemId == 1800116 ? 5000 : (itemId == 1800117 ? 10000 : 30000)));
-                        if (ComDiv.updateDB("accounts", "gp", p._gp + goldReceive, "player_id", p.player_id))
+                        if (ComDiv.updateDB("players", "gp", p._gp + goldReceive, "player_id", p.player_id))
                         {
                             p._gp += goldReceive;
                             _client.SendPacket(new PROTOCOL_SHOP_PLUS_POINT_ACK(goldReceive, p._gp, 0));
@@ -169,7 +169,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     }
                     /*else if (itemId == 1800999)
                     {
-                        if (ComDiv.updateDB("accounts", "exp", p._exp + 515999, "player_id", p.player_id))
+                        if (ComDiv.updateDB("players", "exp", p._exp + 515999, "player_id", p.player_id))
                         {
                             p._exp += 515999;
                             _client.SendPacket(new PROTOCOL_SHOP_PLUS_TAG_ACK(515999, 0));

@@ -142,7 +142,7 @@ namespace PointBlank.Core
                 lock (Sync)
                 {
                     Console.ForegroundColor = color;
-                    Console.WriteLine(text);
+                    Console.WriteLine(" " + text);
                     save(text, StartedFor);
                 }
             }

@@ -1,7 +1,6 @@
 ﻿using PointBlank.Battle.Data.Configs;
 using PointBlank.Battle.Data.Enums;
 using PointBlank.Battle.Data.Xml;
-using PointBlank.Battle.Network;
 using SharpDX;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,6 @@ namespace PointBlank.Battle.Data.Models
     {
         public Player[] Players = new Player[16];
         public ObjectInfo[] Objects = new ObjectInfo[200];
-        //public DateTime LastObjsSync, LastPlayersSync;
         public uint UniqueRoomId, Seed;
         public int ObjsSyncRound, ServerRound, SourceToMap = -1, ServerId, Rule, RoomId, ChannelId, LastRound, DropCounter, Bar1 = 6000, Bar2 = 6000, Default1 = 6000, Default2 = 6000;
         public MAP_STATE_ID MapId;

@@ -950,7 +950,7 @@ namespace PointBlank.Game.Data.Utils
                         command.Parameters.AddWithValue("@friend", friend.player_id);
                         command.Parameters.AddWithValue("@owner", owner.player_id);
                         command.Parameters.AddWithValue("@state", state);
-                        command.CommandText = "INSERT INTO friends(friend_id,owner_id,state)VALUES(@friend,@owner,@state)";
+                        command.CommandText = "INSERT INTO player_friends(friend_id,owner_id,state)VALUES(@friend,@owner,@state)";
                         command.ExecuteNonQuery();
                         command.Dispose();
                         connection.Dispose();
@@ -1162,7 +1162,7 @@ namespace PointBlank.Game.Data.Utils
                             }
                             else if (item._id == 1600006)
                             {
-                                ComDiv.updateDB("accounts", "name_color", 0, "player_id", p.player_id);
+                                ComDiv.updateDB("players", "name_color", 0, "player_id", p.player_id);
                                 p.name_color = 0;
                                 if (p._room != null)
                                 {

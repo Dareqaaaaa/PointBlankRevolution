@@ -177,7 +177,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@time", time);
                     command.Parameters.AddWithValue("@ip", ip);
                     command.Parameters.AddWithValue("@hack_type", hack_type);
-                    command.CommandText = "INSERT INTO auto_ban(player_id, login, player_name, type, time, ip, hack_type) VALUES (@player_id, @login, @player_name, @type, @time, @ip, @hack_type)";
+                    command.CommandText = "INSERT INTO logs_auto_ban(player_id, login, player_name, type, time, ip, hack_type) VALUES (@player_id, @login, @player_name, @type, @time, @ip, @hack_type)";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();

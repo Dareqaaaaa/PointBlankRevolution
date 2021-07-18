@@ -35,7 +35,8 @@ namespace PointBlank.Battle.Data
                         if (str.Length != 0 && !str.StartsWith(";") && !str.StartsWith("["))
                         {
                             string[] split = str.Split('=');
-                            _topics.Add(split[0], split[1]);
+                            if(split.Length >= 2)
+                                _topics.Add(split[0], split[1]);
                         }
                     }
                     reader.Close();

@@ -46,16 +46,16 @@ namespace PointBlank.Auth.Data.Managers
                     command.Parameters.AddWithValue("@valor", valor);
                     if (type == 0)
                     {
-                        command.CommandText = "SELECT * FROM accounts WHERE token=@valor LIMIT 1";
+                        command.CommandText = "SELECT * FROM players WHERE token=@valor LIMIT 1";
                     }
                     else if (type == 1)
                     {
-                        command.CommandText = "SELECT * FROM accounts WHERE player_id=@valor LIMIT 1";
+                        command.CommandText = "SELECT * FROM players WHERE player_id=@valor LIMIT 1";
                     }
                     else if (type == 2)
                     {
                         command.Parameters.AddWithValue("@valor2", valor2);
-                        command.CommandText = "SELECT * FROM accounts WHERE login=@valor AND password=@valor2 LIMIT 1";
+                        command.CommandText = "SELECT * FROM players WHERE login=@valor AND password=@valor2 LIMIT 1";
                     }
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -160,7 +160,7 @@ namespace PointBlank.Auth.Data.Managers
                         parameters.Add(param);
                     }
                     loaded = string.Join(",", parameters.ToArray());
-                    command.CommandText = "SELECT player_name, player_id, rank, online, status FROM accounts WHERE player_id in (" + loaded + ") ORDER BY player_id";
+                    command.CommandText = "SELECT player_name, player_id, rank, online, status FROM players WHERE player_id in (" + loaded + ") ORDER BY player_id";
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
                     {
@@ -222,7 +222,7 @@ namespace PointBlank.Auth.Data.Managers
                     }
                     connection.Open();
                     command.Parameters.AddWithValue("@on", isOnline);
-                    command.CommandText = "SELECT player_name, player_id, rank, status FROM accounts WHERE player_id in (" + loaded + ") AND online=@on ORDER BY player_id";
+                    command.CommandText = "SELECT player_name, player_id, rank, status FROM players WHERE player_id in (" + loaded + ") AND online=@on ORDER BY player_id";
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
                     {
@@ -307,9 +307,9 @@ namespace PointBlank.Auth.Data.Managers
                     connection.Open();
                     command.Parameters.AddWithValue("@login", login);
                     command.Parameters.AddWithValue("@pass", password);
-                    command.CommandText = "INSERT INTO accounts (login, password) VALUES (@login, @pass)";
+                    command.CommandText = "INSERT INTO players (login, password) VALUES (@login, @pass)";
                     command.ExecuteNonQuery();
-                    command.CommandText = "SELECT * FROM accounts WHERE login=@login";
+                    command.CommandText = "SELECT * FROM players WHERE login=@login";
                     NpgsqlDataReader data = command.ExecuteReader();
                     Account acc = new Account();
                     while (data.Read())
@@ -391,9 +391,9 @@ namespace PointBlank.Auth.Data.Managers
                     command.Parameters.AddWithValue("@login", "NONE USER");
                     command.Parameters.AddWithValue("@pass", "NONE PASSWORD");
                     command.Parameters.AddWithValue("@token", Token);
-                    command.CommandText = "INSERT INTO accounts (login, password, token) VALUES (@login, @pass, @token)";
+                    command.CommandText = "INSERT INTO players (login, password, token) VALUES (@login, @pass, @token)";
                     command.ExecuteNonQuery();
-                    command.CommandText = "SELECT * FROM accounts WHERE token=@token";
+                    command.CommandText = "SELECT * FROM players WHERE token=@token";
                     NpgsqlDataReader data = command.ExecuteReader();
                     Account acc = new Account();
                     while (data.Read())

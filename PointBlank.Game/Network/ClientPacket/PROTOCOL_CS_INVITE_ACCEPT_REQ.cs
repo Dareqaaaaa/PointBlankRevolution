@@ -68,7 +68,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         if (type == 1)
                         {
                             int date = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
-                            if (ComDiv.updateDB("accounts", "player_id", player.player_id, new string[] { "clan_id", "clanaccess", "clandate" }, clan._id, 3, date))
+                            if (ComDiv.updateDB("players", "player_id", player.player_id, new string[] { "clan_id", "clanaccess", "clandate" }, clan._id, 3, date))
                             {
                                 using (PROTOCOL_CS_MEMBER_INFO_INSERT_ACK packet = new PROTOCOL_CS_MEMBER_INFO_INSERT_ACK(player))
                                 {

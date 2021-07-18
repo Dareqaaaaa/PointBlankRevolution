@@ -51,7 +51,7 @@ namespace PointBlank.Core.Managers
             {
                 return;
             }
-            ComDiv.updateDB("accounts", "effects", (long)effects, "player_id", id);
+            ComDiv.updateDB("players", "effects", (long)effects, "player_id", id);
         }
 
         public static PlayerBonus getPlayerBonusDB(long id)
@@ -356,7 +356,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@perdidas", partidas_perdidas);
                     command.Parameters.AddWithValue("@empates", partidas_empatadas);
                     command.Parameters.AddWithValue("@todaspartidas", todas);
-                    command.CommandText = "UPDATE accounts SET fights=@partidas, fights_win=@ganhas, fights_lost=@perdidas, fights_draw=@empates, totalfights_count=@todaspartidas WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET fights=@partidas, fights_win=@ganhas, fights_lost=@perdidas, fights_draw=@empates, totalfights_count=@todaspartidas WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -396,7 +396,7 @@ namespace PointBlank.Core.Managers
                         command.Parameters.AddWithValue("@cash", cash);
                         cmd += (cmd != "" ? ", " : "") + "money=@cash";
                     }
-                    command.CommandText = "UPDATE accounts SET " + cmd + " WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET " + cmd + " WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -426,7 +426,7 @@ namespace PointBlank.Core.Managers
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@owner", player_id);
                     command.Parameters.AddWithValue("@access_level", Vip);
-                    command.CommandText = "UPDATE accounts SET access_level=@access_level WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET access_level=@access_level WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -456,7 +456,7 @@ namespace PointBlank.Core.Managers
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@owner", player_id);
                     command.Parameters.AddWithValue("@pc_cafe", Vip);
-                    command.CommandText = "UPDATE accounts SET pc_cafe=@pc_cafe WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET pc_cafe=@pc_cafe WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -486,7 +486,7 @@ namespace PointBlank.Core.Managers
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@owner", player_id);
                     command.Parameters.AddWithValue("@cash", cash);
-                    command.CommandText = "UPDATE accounts SET money=@cash WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET money=@cash WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -516,7 +516,7 @@ namespace PointBlank.Core.Managers
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@owner", player_id);
                     command.Parameters.AddWithValue("@gold", gold);
-                    command.CommandText = "UPDATE accounts SET gp=@gold WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET gp=@gold WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -549,7 +549,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@kills", kills);
                     command.Parameters.AddWithValue("@hs", hs);
                     command.Parameters.AddWithValue("@total", total);
-                    command.CommandText = "UPDATE accounts SET kills_count=@kills, deaths_count=@deaths, headshots_count=@hs, totalkills_count=@total WHERE player_id=@owner";
+                    command.CommandText = "UPDATE players SET kills_count=@kills, deaths_count=@deaths, headshots_count=@hs, totalkills_count=@total WHERE player_id=@owner";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Close();
@@ -564,7 +564,7 @@ namespace PointBlank.Core.Managers
 
         public static bool updateMissionId(long player_id, int value, int index)
         {
-            return ComDiv.updateDB("accounts", "mission_id" + (index + 1), value, "player_id", player_id);
+            return ComDiv.updateDB("players", "mission_id" + (index + 1), value, "player_id", player_id);
         }
 
         public static bool isPlayerNameExist(string name)
@@ -582,7 +582,7 @@ namespace PointBlank.Core.Managers
                     connection.Open();
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@name", name);
-                    command.CommandText = "SELECT COUNT(*) FROM accounts WHERE player_name=@name";
+                    command.CommandText = "SELECT COUNT(*) FROM players WHERE player_name=@name";
                     value = Convert.ToInt32(command.ExecuteScalar());
                     command.Dispose();
                     connection.Dispose();
@@ -598,17 +598,17 @@ namespace PointBlank.Core.Managers
 
         public static bool DeleteFriend(long friendId, long pId)
         {
-            return ComDiv.deleteDB("friends", "friend_id", friendId, "owner_id", pId);
+            return ComDiv.deleteDB("player_friends", "friend_id", friendId, "owner_id", pId);
         }
 
         public static void UpdateFriendState(long ownerId, Friend friend)
         {
-            ComDiv.updateDB("friends", "state", friend.state, "owner_id", ownerId, "friend_id", friend.player_id);
+            ComDiv.updateDB("player_friends", "state", friend.state, "owner_id", ownerId, "friend_id", friend.player_id);
         }
 
         public static void UpdateFriendBlock(long ownerId, Friend friend)
         {
-            ComDiv.updateDB("friends", "removed", friend.removed, "owner_id", ownerId, "friend_id", friend.player_id);
+            ComDiv.updateDB("player_friends", "removed", friend.removed, "owner_id", ownerId, "friend_id", friend.player_id);
         }
 
         public static List<Friend> getFriendList(long ownerId)
@@ -625,7 +625,7 @@ namespace PointBlank.Core.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@owner", ownerId);
-                    command.CommandText = "SELECT * FROM friends WHERE owner_id=@owner ORDER BY friend_id";
+                    command.CommandText = "SELECT * FROM player_friends WHERE owner_id=@owner ORDER BY friend_id";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -695,7 +695,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@date", date);
                     command.Parameters.AddWithValue("@info", clan_info);
                     command.Parameters.AddWithValue("@best", "0-0");
-                    command.CommandText = "INSERT INTO clan_data(clan_name,owner_id,create_date,clan_info,best_exp,best_participation,best_wins,best_kills,best_headshot)VALUES(@name,@owner,@date,@info,@best,@best,@best,@best,@best) RETURNING clan_id";
+                    command.CommandText = "INSERT INTO clans(clan_name,owner_id,create_date,clan_info,best_exp,best_participation,best_wins,best_kills,best_headshot)VALUES(@name,@owner,@date,@info,@best,@best,@best,@best,@best) RETURNING clan_id";
                     object data = command.ExecuteScalar();
                     clanId = (int)data;
                     command.Dispose();
@@ -730,7 +730,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@limite_rank", limite_rank);
                     command.Parameters.AddWithValue("@limite_idade", limite_idade);
                     command.Parameters.AddWithValue("@limite_idade2", limite_idade2);
-                    command.CommandText = "UPDATE clan_data SET autoridade=@autoridade, limite_rank=@limite_rank, limite_idade=@limite_idade, limite_idade2=@limite_idade2 WHERE clan_id=@clan";
+                    command.CommandText = "UPDATE clans SET autoridade=@autoridade, limite_rank=@limite_rank, limite_idade=@limite_idade, limite_idade2=@limite_idade2 WHERE clan_id=@clan";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -751,7 +751,7 @@ namespace PointBlank.Core.Managers
             {
                 return false;
             }
-            return ComDiv.updateDB("clan_data", "logo", (long)logo, "clan_id", clan_id);
+            return ComDiv.updateDB("clans", "logo", (long)logo, "clan_id", clan_id);
         }
 
         public static bool updateClanPoints(int clan_id, float pontos)
@@ -760,7 +760,7 @@ namespace PointBlank.Core.Managers
             {
                 return false;
             }
-            return ComDiv.updateDB("clan_data", "pontos", pontos, "clan_id", clan_id);
+            return ComDiv.updateDB("clans", "pontos", pontos, "clan_id", clan_id);
         }
 
         public static bool updateClanExp(int clan_id, int exp)
@@ -769,7 +769,7 @@ namespace PointBlank.Core.Managers
             {
                 return false;
             }
-            return ComDiv.updateDB("clan_data", "clan_exp", exp, "clan_id", clan_id);
+            return ComDiv.updateDB("clans", "clan_exp", exp, "clan_id", clan_id);
         }
 
         public static bool updateClanRank(int clan_id, int rank)
@@ -778,7 +778,7 @@ namespace PointBlank.Core.Managers
             {
                 return false;
             }
-            return ComDiv.updateDB("clan_data", "clan_rank", rank, "clan_id", clan_id);
+            return ComDiv.updateDB("clans", "clan_rank", rank, "clan_id", clan_id);
         }
 
         public static bool updateClanBattles(int clan_id, int partidas, int vitorias, int derrotas)
@@ -798,7 +798,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@partidas", partidas);
                     command.Parameters.AddWithValue("@vitorias", vitorias);
                     command.Parameters.AddWithValue("@derrotas", derrotas);
-                    command.CommandText = "UPDATE clan_data SET partidas=@partidas, vitorias=@vitorias, derrotas=@derrotas WHERE clan_id=@clan";
+                    command.CommandText = "UPDATE clans SET partidas=@partidas, vitorias=@vitorias, derrotas=@derrotas WHERE clan_id=@clan";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Close();
@@ -826,7 +826,7 @@ namespace PointBlank.Core.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@clan", clanId);
-                    command.CommandText = "SELECT COUNT(*) FROM accounts WHERE clan_id=@clan";
+                    command.CommandText = "SELECT COUNT(*) FROM players WHERE clan_id=@clan";
                     players = Convert.ToInt32(command.ExecuteScalar());
                     command.Dispose();
                     connection.Dispose();
@@ -1333,7 +1333,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@bp4", clan.BestPlayers.Kills.GetSplit());
                     command.Parameters.AddWithValue("@bp5", clan.BestPlayers.Headshot.GetSplit());
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "UPDATE clan_data SET best_exp=@bp1, best_participation=@bp2, best_wins=@bp3, best_kills=@bp4, best_headshot=@bp5 WHERE clan_id=@id";
+                    command.CommandText = "UPDATE clans SET best_exp=@bp1, best_participation=@bp2, best_wins=@bp3, best_kills=@bp4, best_headshot=@bp5 WHERE clan_id=@id";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Dispose();
@@ -1360,7 +1360,7 @@ namespace PointBlank.Core.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@name", name);
-                    command.CommandText = "SELECT clan_id FROM clan_data WHERE clan_name=@name";
+                    command.CommandText = "SELECT clan_id FROM clans WHERE clan_name=@name";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

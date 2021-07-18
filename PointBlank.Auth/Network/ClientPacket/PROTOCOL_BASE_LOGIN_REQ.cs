@@ -108,7 +108,7 @@ namespace PointBlank.Auth.Network.ClientPacket
                         {
                             if (p.MacAddress != MacAddress)
                             {
-                                ComDiv.updateDB("accounts", "last_mac", MacAddress, "player_id", p.player_id);
+                                ComDiv.updateDB("players", "last_mac", MacAddress, "player_id", p.player_id);
                             }
                             bool macStatus, ipStatus;
                             BanManager.GetBanStatus(MacAddress.ToString(), PublicIP, out macStatus, out ipStatus);

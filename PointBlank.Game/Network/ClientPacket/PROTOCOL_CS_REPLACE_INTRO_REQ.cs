@@ -33,7 +33,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     Clan c = ClanManager.getClan(p.clanId);
                     if (c._id > 0 && c._info != clan_info && (c.owner_id == _client.player_id || p.clanAccess >= 1 && p.clanAccess <= 2))
                     {
-                        if (ComDiv.updateDB("clan_data", "clan_info", clan_info, "clan_id", c._id))
+                        if (ComDiv.updateDB("clans", "clan_info", clan_info, "clan_id", c._id))
                         {
                             c._info = clan_info;
                         }

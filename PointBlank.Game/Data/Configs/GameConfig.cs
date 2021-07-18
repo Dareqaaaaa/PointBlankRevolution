@@ -1,26 +1,31 @@
 ﻿using PointBlank.Core;
 using PointBlank.Core.Models.Enums;
+using System.Collections.Generic;
 using System.Text;
 
 namespace PointBlank.Game.Data.Configs
 {
     public static class GameConfig
     {
-        public static string passw, gameIp;
-        public static bool isTestMode, debugMode, winCashPerBattle, showCashReceiveWarn, AutoBan;
+        public static string passw, gameIp, RconIp, RconPassword;
+        public static bool RconPrintNotValidIp, RconEnable, isTestMode, debugMode, winCashPerBattle, showCashReceiveWarn, AutoBan;
         public static UdpState udpType;
         public static float maxClanPoints;
-        public static int serverId, configId, ruleId, maxBattleLatency, maxRepeatLatency, syncPort, maxActiveClans, minRankVote, maxNickSize, minNickSize, maxBattleXP, maxBattleGP, maxBattleMY, maxChannelPlayers, gamePort, minCreateGold, minCreateRank;
+        public static int RconPort, serverId, configId, ruleId, maxBattleLatency, maxRepeatLatency, syncPort, maxActiveClans, minRankVote, maxNickSize, minNickSize, maxBattleXP, maxBattleGP, maxBattleMY, maxChannelPlayers, gamePort, minCreateGold, minCreateRank;
+        public static List<string> RconValidIps;
 
         public static void Load()
         {
-            ConfigFile configFile = new ConfigFile("Config/Game.ini");
-            Config.dbHost = configFile.readString("Host", "localhost");
-            Config.dbName = configFile.readString("Name", "");
-            Config.dbUser = configFile.readString("User", "root");
-            Config.dbPass = configFile.readString("Pass", "");
-            Config.dbPort = configFile.readInt32("Port", 0);
+            ConfigFile configFileDatabase = new ConfigFile("Config/Database.ini");
+            Config.dbHost = configFileDatabase.readString("Host", "localhost");
+            Config.dbName = configFileDatabase.readString("Name", "");
+            Config.dbUser = configFileDatabase.readString("User", "root");
+            Config.dbPass = configFileDatabase.readString("Pass", "");
+            Config.dbPort = configFileDatabase.readInt32("Port", 0);
+            Config.EncodeText = Encoding.GetEncoding(configFileDatabase.readInt32("EncodingPage", 0));
 
+
+            ConfigFile configFile = new ConfigFile("Config/Game.ini");
             serverId = configFile.readInt32("ServerId", -1);
             configId = configFile.readInt32("ConfigId", 0);
             gameIp = configFile.readString("GameIp","127.0.0.1");
@@ -29,7 +34,6 @@ namespace PointBlank.Game.Data.Configs
             debugMode = configFile.readBoolean("Debug", true);
             isTestMode = configFile.readBoolean("Test", true);
             AutoBan = configFile.readBoolean("AutoBan", false);
-            Config.EncodeText = Encoding.GetEncoding(configFile.readInt32("EncodingPage", 0));
             winCashPerBattle = configFile.readBoolean("WinCashPerBattle", true);
             showCashReceiveWarn = configFile.readBoolean("ShowCashReceiveWarn", true);
             minCreateRank = configFile.readInt32("MinCreateRank", 15);
@@ -48,6 +52,21 @@ namespace PointBlank.Game.Data.Configs
             maxBattleLatency = configFile.readInt32("MaxBattleLatency", 0);
             maxRepeatLatency = configFile.readInt32("MaxRepeatLatency", 0);
             ruleId = configFile.readInt32("RuleId", 0);
+
+            RconEnable = configFile.readBoolean("RconEnable", false);
+            RconIp = configFile.readString("RconIp", "127.0.0.1");
+            RconPassword = configFile.readString("RconPassword", "");
+            RconPort = configFile.readInt32("RconPort", 39189);
+            RconPrintNotValidIp = configFile.readBoolean("RconPrintNotValidIp", false);
+
+            RconValidIps = new List<string>();
+            string Ips = configFile.readString("RconValidIps", "127.0.0.1");
+            if (Ips.Contains(";"))
+            {
+                RconValidIps.AddRange(Ips.Split(';'));
+            }
+            else RconValidIps.Add(Ips);
+
         }
     }
 }

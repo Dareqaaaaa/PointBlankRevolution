@@ -81,7 +81,7 @@ namespace PointBlank.Game.Network.ClientPacket
             {
                 Error = 0x80000000;
             }
-            if (ComDiv.updateDB("accounts", "player_id", Player.player_id, Query.GetTables(), Query.GetValues()))
+            if (ComDiv.updateDB("players", "player_id", Player.player_id, Query.GetTables(), Query.GetValues()))
             {
                 Update(Player);
             }

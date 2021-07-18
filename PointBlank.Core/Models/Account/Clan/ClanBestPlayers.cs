@@ -97,7 +97,7 @@ namespace PointBlank.Core.Models.Account.Clan
             {
                 return;
             }
-            ComDiv.updateDB("accounts", "clan_wins_pt", ++stats.ClanWins, "player_id", slot._playerId);
+            ComDiv.updateDB("players", "clan_wins_pt", ++stats.ClanWins, "player_id", slot._playerId);
 
             if (stats.ClanWins <= Wins.RecordValue)
             {
@@ -110,7 +110,7 @@ namespace PointBlank.Core.Models.Account.Clan
 
         public void SetBestParticipation(PlayerStats stats, Slot slot)
         {
-            ComDiv.updateDB("accounts", "clan_game_pt", ++stats.ClanGames, "player_id", slot._playerId);
+            ComDiv.updateDB("players", "clan_game_pt", ++stats.ClanGames, "player_id", slot._playerId);
             if (stats.ClanGames <= Participation.RecordValue)
             {
                 return;

@@ -301,6 +301,11 @@ namespace PointBlank.Game.Data.Sync
                 }
                 pk.writeC((byte)HPBonus);
                 pk.writeC(effects.HasFlag(CouponEffects.C4SpeedKit));
+                pk.writeD(slot._equip._primary);
+                pk.writeD(slot._equip._secondary);
+                pk.writeD(slot._equip._melee);
+                pk.writeD(slot._equip._grenade);
+                pk.writeD(slot._equip._special);
             }
             catch
             {
@@ -359,7 +364,7 @@ namespace PointBlank.Game.Data.Sync
                 foreach (Channel ch in ChannelsXml._channels)
                 {
                     players += ch._players.Count;
-                    ComDiv.updateDB("info_channels", "online", ch._players.Count, "channel_id", ch._id);
+                    ComDiv.updateDB("channels", "online", ch._players.Count, "channel_id", ch._id);
                 }
                 for (int server = 0; server < ServersXml._servers.Count; server++)
                 {

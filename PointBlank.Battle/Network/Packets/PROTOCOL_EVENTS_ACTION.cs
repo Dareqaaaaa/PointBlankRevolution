@@ -112,6 +112,15 @@ namespace PointBlank.Battle.Network.Packets
                         s.writeD(256);
                         s.writeH((ushort)obj.ObjLife);
                     }
+                    else if (obj.Type == 5)
+                    {
+                        s.writeC((byte)UDP_SUB_HEAD.USER); // 0
+                        s.writeH((ushort)obj.ObjId);
+                        s.writeH((short)UDP_SUB_HEAD.STAGEINFO_MISSION); // 14
+                        s.writeD(64);
+                        s.writeC(obj.Extensions);
+                        s.writeD(obj.WeaponId);
+                    }
                 }
                 return s.mstream.ToArray();
             }

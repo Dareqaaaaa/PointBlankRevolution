@@ -67,7 +67,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     clan.BestPlayers.SetDefault();
                     p.clanDate = clan.creationDate;
-                    if (ComDiv.updateDB("accounts", "player_id", p.player_id, new string[] { "clanaccess", "clandate", "clan_id" }, 1, clan.creationDate, clan._id))
+                    if (ComDiv.updateDB("players", "player_id", p.player_id, new string[] { "clanaccess", "clandate", "clan_id" }, 1, clan.creationDate, clan._id))
                     {
                         if (clan._id > 0)
                         {

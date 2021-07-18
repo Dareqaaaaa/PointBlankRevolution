@@ -27,7 +27,7 @@ namespace PointBlank.Auth.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@valor", valor);
-                    command.CommandText = "SELECT * FROM clan_data WHERE " + moreCmd + "=@valor";
+                    command.CommandText = "SELECT * FROM clans WHERE " + moreCmd + "=@valor";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -67,7 +67,7 @@ namespace PointBlank.Auth.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@clan", clanId);
-                    command.CommandText = "SELECT player_id,player_name,rank,online,status FROM accounts WHERE clan_id=@clan";
+                    command.CommandText = "SELECT player_id,player_name,rank,online,status FROM players WHERE clan_id=@clan";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -120,7 +120,7 @@ namespace PointBlank.Auth.Data.Managers
                     connection.Open();
                     command.Parameters.AddWithValue("@clan", clanId);
                     command.Parameters.AddWithValue("@on", isOnline);
-                    command.CommandText = "SELECT player_id,player_name,rank,online,status FROM accounts WHERE clan_id=@clan AND online=@on";
+                    command.CommandText = "SELECT player_id,player_name,rank,online,status FROM players WHERE clan_id=@clan AND online=@on";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

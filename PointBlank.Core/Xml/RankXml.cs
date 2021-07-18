@@ -16,14 +16,28 @@ namespace PointBlank.Core.Xml
         private static SortedList<int, List<ItemsModel>> _awards = new SortedList<int, List<ItemsModel>>();
         public static void Load()
         {
-            string path = "Data/Rank/Player.xml";
-            if (File.Exists(path))
+            try
             {
-                parse(path);
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    NpgsqlCommand command = connection.CreateCommand();
+                    connection.Open();
+                    command.CommandText = "SELECT * FROM server_ranks;";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        _ranks.Add(new RankModel(data.GetInt32(0), data.GetInt32(1), data.GetInt32(2), data.GetInt32(3)));
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
             }
-            else
+            catch(Exception exc)
             {
-                Logger.error("File not found: " + path);
+                Logger.error(exc.ToString());
             }
         }
 
@@ -70,6 +84,22 @@ namespace PointBlank.Core.Xml
                                             int.Parse(xml.GetNamedItem("NextLevel").Value),
                                             int.Parse(xml.GetNamedItem("PointUp").Value),
                                             int.Parse(xml.GetNamedItem("AllExp").Value)));
+
+                                        using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                                        {
+                                            NpgsqlCommand command = connection.CreateCommand();
+                                            connection.Open();
+                                            command.CommandText = "INSERT INTO server_ranks VALUES (@Id, @NextLevel, @PointUp, @AllExp);";
+                                            command.Parameters.AddWithValue("Id", int.Parse(xml.GetNamedItem("Id").Value));
+                                            command.Parameters.AddWithValue("NextLevel", int.Parse(xml.GetNamedItem("NextLevel").Value));
+                                            command.Parameters.AddWithValue("PointUp", int.Parse(xml.GetNamedItem("PointUp").Value));
+                                            command.Parameters.AddWithValue("AllExp", int.Parse(xml.GetNamedItem("AllExp").Value));
+                                            command.CommandType = CommandType.Text;
+                                            command.ExecuteNonQuery();
+                                            command.Dispose();
+                                            connection.Dispose();
+                                            connection.Close();
+                                        }
                                     }
                                 }
                             }
@@ -106,7 +136,7 @@ namespace PointBlank.Core.Xml
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM info_rank_awards ORDER BY rank_id ASC";
+                    command.CommandText = "SELECT * FROM server_rank_awards ORDER BY rank_id ASC";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

@@ -68,7 +68,7 @@ namespace PointBlank.Game.Network.ClientPacket
                             }
                             else
                             {
-                                if (ComDiv.updateDB("accounts", "player_name", bonus.fakeNick, "player_id", p.player_id) && ComDiv.updateDB("player_bonus", "fakenick", "", "player_id", p.player_id))
+                                if (ComDiv.updateDB("players", "player_name", bonus.fakeNick, "player_id", p.player_id) && ComDiv.updateDB("player_bonus", "fakenick", "", "player_id", p.player_id))
                                 {
                                     p.player_name = bonus.fakeNick;
                                     bonus.fakeNick = "";
@@ -107,7 +107,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         }
                         else if (item._id == 1600006)
                         {
-                            if (ComDiv.updateDB("accounts", "name_color", 0, "player_id", p.player_id))
+                            if (ComDiv.updateDB("players", "name_color", 0, "player_id", p.player_id))
                             {
                                 p.name_color = 0;
                                 _client.SendPacket(new PROTOCOL_BASE_GET_MYINFO_BASIC_ACK(p));

@@ -35,7 +35,7 @@ namespace PointBlank.Core.Xml
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM info_gameservers ORDER BY id ASC";
+                    command.CommandText = "SELECT * FROM gameservers ORDER BY id ASC";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -76,7 +76,7 @@ namespace PointBlank.Core.Xml
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@id", serverId);
-                    command.CommandText = "SELECT * FROM info_gameservers WHERE id=@id";
+                    command.CommandText = "SELECT * FROM gameservers WHERE id=@id";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

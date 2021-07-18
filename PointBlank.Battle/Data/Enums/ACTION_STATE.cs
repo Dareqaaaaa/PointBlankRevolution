@@ -9,6 +9,6 @@ namespace PointBlank.Battle.Data.Enums
     [Flags]
     public enum ACTION_STATE
     {
-        WEAPONSYNC = 0x800000
+        WEAPONSYNC = 2048
     }
 }

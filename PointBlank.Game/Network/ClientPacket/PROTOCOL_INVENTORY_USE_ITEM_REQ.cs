@@ -82,7 +82,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     Clan c = ClanManager.getClan(p.clanId);
                     if (c._id > 0 && c.owner_id == _client.player_id)
                     {
-                        if (!ClanManager.isClanNameExist(txt) && ComDiv.updateDB("clan_data", "clan_name", txt, "clan_id", p.clanId))
+                        if (!ClanManager.isClanNameExist(txt) && ComDiv.updateDB("clans", "clan_name", txt, "clan_id", p.clanId))
                         {
                             c._name = txt;
                             using (PROTOCOL_CS_REPLACE_NAME_RESULT_ACK packet = new PROTOCOL_CS_REPLACE_NAME_RESULT_ACK(txt))
@@ -125,7 +125,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 }
                 else if (!PlayerManager.isPlayerNameExist(txt))
                 {
-                    if (ComDiv.updateDB("accounts", "player_name", txt, "player_id", p.player_id))
+                    if (ComDiv.updateDB("players", "player_name", txt, "player_id", p.player_id))
                     {
                         NickHistoryManager.CreateHistory(p.player_id, p.player_name, txt, "เปลี่ยนชื่อ[ในเกม]");
                         p.player_name = txt;
@@ -158,7 +158,7 @@ namespace PointBlank.Game.Network.ClientPacket
             }
             else if (cupomId == 1600006)
             {
-                if (ComDiv.updateDB("accounts", "name_color", (int)value, "player_id", p.player_id))
+                if (ComDiv.updateDB("players", "name_color", (int)value, "player_id", p.player_id))
                 {
                     p.name_color = (int)value;
                     _client.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, p, new ItemsModel(cupomId, 3, "Name Color [Active]", 2, cuponDays, 0)));
@@ -198,7 +198,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 Clan c = ClanManager.getClan(p.clanId);
                 if (c._id > 0 && c.owner_id == _client.player_id)
                 {
-                    if (ComDiv.updateDB("clan_data", "effect", (int)value, "clan_id", p.clanId))
+                    if (ComDiv.updateDB("clans", "effect", (int)value, "clan_id", p.clanId))
                     {
                         c.effect = (int)value;
                         using (PROTOCOL_CS_REPLACE_MARKEFFECT_RESULT_ACK packet = new PROTOCOL_CS_REPLACE_MARKEFFECT_RESULT_ACK((int)value))
@@ -247,7 +247,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     erro = 0x80000000;
                 }
-                else if (ComDiv.updateDB("player_bonus", "fakenick", p.player_name, "player_id", p.player_id) && ComDiv.updateDB("accounts", "player_name", txt, "player_id", p.player_id))
+                else if (ComDiv.updateDB("player_bonus", "fakenick", p.player_name, "player_id", p.player_id) && ComDiv.updateDB("players", "player_name", txt, "player_id", p.player_id))
                 {
                     p._bonus.fakeNick = p.player_name;
                     p.player_name = txt;
@@ -280,7 +280,7 @@ namespace PointBlank.Game.Network.ClientPacket
             else if (cupomId == 1600005)
             {
                 Clan c = ClanManager.getClan(p.clanId);
-                if (c._id > 0 && c.owner_id == _client.player_id && ComDiv.updateDB("clan_data", "color", (int)value, "clan_id", c._id))
+                if (c._id > 0 && c.owner_id == _client.player_id && ComDiv.updateDB("clans", "color", (int)value, "clan_id", c._id))
                 {
                     c._name_color = (int)value;
                     _client.SendPacket(new PROTOCOL_CS_REPLACE_COLOR_NAME_RESULT_ACK((byte)c._name_color));

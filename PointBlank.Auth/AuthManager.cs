@@ -30,6 +30,9 @@ namespace PointBlank.Auth
                 mainSocket.Bind(Local);
                 mainSocket.Listen((int)SocketOptionName.MaxConnections);
                 mainSocket.BeginAccept(new AsyncCallback(AcceptCallback), mainSocket);
+
+                Logger.info("AuthManager started. [" + AuthConfig.authIp + ":" + AuthConfig.authPort + "]");
+
                 return true;
             }
             catch (Exception ex)

@@ -79,37 +79,18 @@ namespace PointBlank.Game.Network.ClientPacket
                                 if (!ServerCommands(player, room))
                                 {
                                     sender = room._slots[player._slotId];
-                                    if (SendAll)
+                                    using (PROTOCOL_ROOM_CHATTING_ACK packet = new PROTOCOL_ROOM_CHATTING_ACK((int)type, sender._id, player.UseChatGM(), text))
                                     {
-                                        for (int slotIdx = 0; slotIdx < 16; ++slotIdx)
+                                        byte[] data = packet.GetCompleteBytes("PROTOCOL_BASE_CHATTING_REQ-2");
+                                        lock (room._slots)
                                         {
-                                            Slot receiver = room._slots[slotIdx];
-                                            Account pR = room.getPlayerBySlot(receiver);
-                                            if (pR != null && SlotValidMessage(sender, receiver))
+                                            for (int slotIdx = 0; slotIdx < 16; ++slotIdx)
                                             {
-                                                pR.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 5, false, text));
-                                            }
-                                        }
-                                    }
-                                    else if (SendMe)
-                                    {
-                                        _client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 5, false, text));
-                                    }
-                                    else
-                                    {
-                                        using (PROTOCOL_ROOM_CHATTING_ACK packet = new PROTOCOL_ROOM_CHATTING_ACK((int)type, sender._id, player.UseChatGM(), text))
-                                        {
-                                            byte[] data = packet.GetCompleteBytes("PROTOCOL_BASE_CHATTING_REQ-2");
-                                            lock (room._slots)
-                                            {
-                                                for (int slotIdx = 0; slotIdx < 16; ++slotIdx)
+                                                Slot receiver = room._slots[slotIdx];
+                                                Account pR = room.getPlayerBySlot(receiver);
+                                                if (pR != null && SlotValidMessage(sender, receiver))
                                                 {
-                                                    Slot receiver = room._slots[slotIdx];
-                                                    Account pR = room.getPlayerBySlot(receiver);
-                                                    if (pR != null && SlotValidMessage(sender, receiver))
-                                                    {
-                                                        pR.SendCompletePacket(data);
-                                                    }
+                                                    pR.SendCompletePacket(data);
                                                 }
                                             }
                                         }
@@ -157,191 +138,12 @@ namespace PointBlank.Game.Network.ClientPacket
             {
                 string str = text.Substring(1);
 
-                // Command Player
-                if (!(text.StartsWith(";") || text.StartsWith(@"\") || text.StartsWith(".")))
-                {
-
-                    if (str.StartsWith("refill ") || str.StartsWith("refill"))
-                    {
-                        text = RefillManager.RefillPlayer(str);
-                    }
-
-                    if (room != null)
-                    {
-                        if (str.StartsWith("NS") && player.access >= 0 && !room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                if (!room.SniperMode && !room.ShotgunMode)
-                                {
-                                    SendAll = true;
-                                    if (room.ShotgunActive)
-                                    {
-                                        room.ShotgunActive = false;
-                                        room.RuleFlag -= 2;
-                                        text = "ปิดใช้งานโหมดห้ามใช้ ปืนลูกซอง";
-                                    }
-                                    else
-                                    {
-                                        room.ShotgunActive = true;
-                                        room.RuleFlag += 2;
-                                        text = "เปิดใช้งานโหมดห้ามใช้ ปืนลูกซอง";
-                                    }
-                                }
-                                else
-                                {
-                                    SendMe = true;
-                                    text = "ไม่สามารถใช้งานในโหมดนี้ได้";
-                                }
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        else if (str.StartsWith("NS") && player.access >= 0 && room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendMe = true;
-                                text = "คุณไม่สามารถใช้งานได้เนื่องจากคุณเปิดใช้กฎแข่งแล้ว";
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        if (str.StartsWith("NB") && player.access >= 0 && !room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                if (!room.ShotgunMode)
-                                {
-                                    SendAll = true;
-                                    if (room.BarrettActive)
-                                    {
-                                        room.BarrettActive = false;
-                                        room.RuleFlag -= 1;
-                                        text = "ปิดใช้งานโหมดห้ามใช้ ปืน Barrett M82A1 ทุกชนิด";
-                                    }
-                                    else
-                                    {
-                                        room.BarrettActive = true;
-                                        room.RuleFlag += 1;
-                                        text = "เปิดใช้งานโหมดห้ามใช้ ปืน Barrett M82A1 ทุกชนิด";
-                                    }
-                                }
-                                else
-                                {
-                                    SendMe = true;
-                                    text = "ไม่สามารถใช้งานในโหมดนี้ได้";
-                                }
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        else if (str.StartsWith("NB") && player.access >= 0 && room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendMe = true;
-                                text = "คุณไม่สามารถใช้งานได้เนื่องจากคุณเปิดใช้กฎแข่งแล้ว";
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        if (str.StartsWith("NM") && player.access >= 0 && !room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendAll = true;
-                                if (room.MaskActive)
-                                {
-                                    room.MaskActive = false;
-                                    room.RuleFlag -= 4;
-                                    text = "ปิดใช้งานโหมดห้ามใช้ หน้ากาก";
-                                }
-                                else
-                                {
-                                    room.MaskActive = true;
-                                    room.RuleFlag += 4;
-                                    text = "เปิดใช้งานโหมดห้ามใช้ หน้ากาก";
-                                }
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        else if (str.StartsWith("NM") && player.access >= 0 && room.GameRuleActive)
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendMe = true;
-                                text = "คุณไม่สามารถใช้งานได้เนื่องจากคุณเปิดใช้กฎแข่งแล้ว";
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        if (str.StartsWith("GR") && player.access >= 0 && (!room.BarrettActive && !room.ShotgunActive && !room.MaskActive))
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendAll = true;
-                                if (room.GameRuleActive)
-                                {
-                                    room.GameRuleActive = false;
-                                    room.RuleFlag -= 8;
-                                    text = "ปิดใช้งานโหมดกฎแข่ง";
-                                    room.updateSlotsInfo();
-                                }
-                                else
-                                {
-                                    room.GameRuleActive = true;
-                                    room.RuleFlag += 8;
-                                    text = "เปิดใช้งานโหมดกฎแข่ง";
-                                    room.updateSlotsInfo();
-                                }
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                        else if (str.StartsWith("GR") && player.access >= 0 && (room.BarrettActive || room.ShotgunActive || room.MaskActive) && !room.RuleFlag.HasFlag(GameRuleFlag.กฎแข่ง))
-                        {
-                            if (room.getLeader() == player)
-                            {
-                                SendMe = true;
-                                text = "คุณไม่สามารถใช้งานได้เนื่องจากคุณเปิดใช้: " + room.RuleFlag.ToString();
-                            }
-                            else
-                            {
-                                SendMe = true;
-                                text = "คุณไม่ใช่หัวห้องไม่สามารถใช้คำสั่งนี้ได้";
-                            }
-                        }
-                    }
-                }
-
                 // Command Admin
                 if (!player.HaveGMLevel() || !(text.StartsWith(";") || text.StartsWith(@"\") || text.StartsWith(".")))
                 {
                     return false;
                 }
+
                 Logger.LogCMD("[" + text + "] PlayerId: " + player.player_id + " Nick: '" + player.player_name + "' Login: '" + player.login + "' Ip: '" + player.PublicIP.ToString() + "' Date: '" + DateTime.Now.ToString("dd/MM/yy HH:mm") + "'");
                 if (str.StartsWith("help3") && (int)player.access >= 3)
                 {

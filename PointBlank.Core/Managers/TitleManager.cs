@@ -107,7 +107,7 @@ namespace PointBlank.Core.Managers
                     command.Parameters.AddWithValue("@medalhas", medalhas);
                     command.Parameters.AddWithValue("@ordensazuis", ordens_azuis);
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "UPDATE accounts SET brooch=@broche, insignia=@insignias, medal=@medalhas, blue_order=@ordensazuis WHERE player_id=@pid";
+                    command.CommandText = "UPDATE players SET brooch=@broche, insignia=@insignias, medal=@medalhas, blue_order=@ordensazuis WHERE player_id=@pid";
                     command.ExecuteNonQuery();
                     command.Dispose();
                     connection.Close();

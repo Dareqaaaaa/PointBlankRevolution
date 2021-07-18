@@ -16,13 +16,15 @@ namespace PointBlank.Auth.Data.Configs
 
         public static void Load()
         {
-            ConfigFile configFile = new ConfigFile("Config/Auth.ini");
-            Config.dbHost = configFile.readString("Host", "localhost");
-            Config.dbName = configFile.readString("Name", "");
-            Config.dbUser = configFile.readString("User", "root");
-            Config.dbPass = configFile.readString("Pass", "");
-            Config.dbPort = configFile.readInt32("Port", 0);
+            ConfigFile configFileDatabase = new ConfigFile("Config/Database.ini");
+            Config.dbHost = configFileDatabase.readString("Host", "localhost");
+            Config.dbName = configFileDatabase.readString("Name", "");
+            Config.dbUser = configFileDatabase.readString("User", "root");
+            Config.dbPass = configFileDatabase.readString("Pass", "");
+            Config.dbPort = configFileDatabase.readInt32("Port", 0);
+            Config.EncodeText = Encoding.GetEncoding(configFileDatabase.readInt32("EncodingPage", 0));
 
+            ConfigFile configFile = new ConfigFile("Config/Auth.ini");
             configId = configFile.readInt32("ConfigId", 0);
             serverId = configFile.readInt32("ServerId", -1);
             authIp = configFile.readString("AuthIp", "127.0.0.1");
@@ -31,7 +33,6 @@ namespace PointBlank.Auth.Data.Configs
             AUTO_ACCOUNTS = configFile.readBoolean("AutoAccounts", false);
             debugMode = configFile.readBoolean("Debug", true);
             isTestMode = configFile.readBoolean("Test", true);
-            Config.EncodeText = Encoding.GetEncoding(configFile.readInt32("EncodingPage", 0));
             maxChannelPlayers = configFile.readInt32("MaxChannelPlayers", 100);
             Outpost = configFile.readBoolean("Outpost", false);
             LauncherKey = configFile.readUInt64("LauncherKey", 0);

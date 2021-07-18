@@ -32,8 +32,8 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     Clan clan = ClanManager.getClan(player.clanId);
                     if (clan._id > 0 && clan.owner_id == _client.player_id &&
-                        ComDiv.deleteDB("clan_data", "clan_id", clan._id) &&
-                        ComDiv.updateDB("accounts", "player_id", player.player_id, new string[] { "clan_id", "clanaccess", "clan_game_pt", "clan_wins_pt" }, 0, 0, 0, 0) &&
+                        ComDiv.deleteDB("clans", "clan_id", clan._id) &&
+                        ComDiv.updateDB("players", "player_id", player.player_id, new string[] { "clan_id", "clanaccess", "clan_game_pt", "clan_wins_pt" }, 0, 0, 0, 0) &&
                         ClanManager.RemoveClan(clan))
                     {
                         player.clanId = 0;

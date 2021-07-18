@@ -23,7 +23,7 @@ namespace PointBlank.Game.Data.Managers
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM clan_data";
+                    command.CommandText = "SELECT * FROM clans";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -87,7 +87,7 @@ namespace PointBlank.Game.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@page", (170 * page));
-                    command.CommandText = "SELECT * FROM clan_data ORDER BY clan_id DESC OFFSET @page LIMIT 170";
+                    command.CommandText = "SELECT * FROM clans ORDER BY clan_id DESC OFFSET @page LIMIT 170";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -176,7 +176,7 @@ namespace PointBlank.Game.Data.Managers
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@clan", clan_id);
-                    command.CommandText = "SELECT player_id, player_name, name_color, rank, online, clanaccess, clandate, status FROM accounts WHERE clan_id=@clan";
+                    command.CommandText = "SELECT player_id, player_name, name_color, rank, online, clanaccess, clandate, status FROM players WHERE clan_id=@clan";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -236,7 +236,7 @@ namespace PointBlank.Game.Data.Managers
                     connection.Open();
                     command.Parameters.AddWithValue("@clan", clan_id);
                     command.Parameters.AddWithValue("@on", isOnline);
-                    command.CommandText = "SELECT player_id, player_name, name_color, rank, clanaccess, clandate, status FROM accounts WHERE clan_id=@clan AND online=@on";
+                    command.CommandText = "SELECT player_id, player_name, name_color, rank, clanaccess, clandate, status FROM players WHERE clan_id=@clan AND online=@on";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -351,7 +351,7 @@ namespace PointBlank.Game.Data.Managers
                     connection.Open();
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@name", name);
-                    command.CommandText = "SELECT COUNT(*) FROM clan_data WHERE clan_name=@name";
+                    command.CommandText = "SELECT COUNT(*) FROM clans WHERE clan_name=@name";
                     value = Convert.ToInt32(command.ExecuteScalar());
                     command.Dispose();
                     connection.Dispose();
@@ -377,7 +377,7 @@ namespace PointBlank.Game.Data.Managers
                     connection.Open();
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@logo", (long)logo);
-                    command.CommandText = "SELECT COUNT(*) FROM clan_data WHERE logo=@logo";
+                    command.CommandText = "SELECT COUNT(*) FROM clans WHERE logo=@logo";
                     value = Convert.ToInt32(command.ExecuteScalar());
                     command.Dispose();
                     connection.Dispose();

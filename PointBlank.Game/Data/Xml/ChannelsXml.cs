@@ -21,7 +21,7 @@ namespace PointBlank.Game.Data.Xml
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
                     command.Parameters.AddWithValue("@server", serverId);
-                    command.CommandText = "SELECT * FROM info_channels WHERE server_id=@server ORDER BY channel_id ASC";
+                    command.CommandText = "SELECT * FROM channels WHERE server_id=@server ORDER BY channel_id ASC";
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
                     {
@@ -72,12 +72,12 @@ namespace PointBlank.Game.Data.Xml
 
         public static bool updateNotice(int serverId, int channelId, string text)
         {
-            return ComDiv.updateDB("info_channels", "announce", text, "server_id", serverId, "channel_id", channelId);
+            return ComDiv.updateDB("channels", "announce", text, "server_id", serverId, "channel_id", channelId);
         }
 
         public static bool updateNotice(string text)
         {
-            return ComDiv.updateDB("info_channels", "announce", text);
+            return ComDiv.updateDB("channels", "announce", text);
         }
     }
 }

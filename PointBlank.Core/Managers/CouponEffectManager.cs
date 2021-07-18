@@ -19,7 +19,7 @@ namespace PointBlank.Core.Managers
                 {
                     NpgsqlCommand command = connection.CreateCommand();
                     connection.Open();
-                    command.CommandText = "SELECT * FROM info_cupons_flags";
+                    command.CommandText = "SELECT * FROM server_effect_flags";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())

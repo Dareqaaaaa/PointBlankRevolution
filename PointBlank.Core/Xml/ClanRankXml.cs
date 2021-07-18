@@ -1,7 +1,9 @@
-﻿using PointBlank.Core.Models.Account.Rank;
+﻿using Npgsql;
+using PointBlank.Core.Models.Account.Rank;
+using PointBlank.Core.Sql;
+using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Xml;
+using System.Data;
 
 namespace PointBlank.Core.Xml
 {
@@ -10,14 +12,28 @@ namespace PointBlank.Core.Xml
         private static List<RankModel> _ranks = new List<RankModel>();
         public static void Load()
         {
-            string path = "Data/Rank/Clan.xml";
-            if (File.Exists(path))
+            try
             {
-                parse(path);
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    NpgsqlCommand command = connection.CreateCommand();
+                    connection.Open();
+                    command.CommandText = "SELECT * FROM server_clan_ranks;";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        _ranks.Add(new RankModel(data.GetInt32(0), data.GetInt32(1), 0, data.GetInt32(2)));
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
             }
-            else
+            catch (Exception exc)
             {
-                Logger.error("File not found: " + path);
+                Logger.error(exc.ToString());
             }
         }
 
@@ -34,45 +50,6 @@ namespace PointBlank.Core.Xml
                     }
                 }
                 return null;
-            }
-        }
-
-        private static void parse(string path)
-        {
-            XmlDocument xmlDocument = new XmlDocument();
-            using (FileStream fileStream = new FileStream(path, FileMode.Open))
-            {
-                if (fileStream.Length == 0)
-                {
-                    Logger.error("File is empty: " + path);
-                }
-                else
-                {
-                    try
-                    {
-                        xmlDocument.Load(fileStream);
-                        for (XmlNode xmlNode1 = xmlDocument.FirstChild; xmlNode1 != null; xmlNode1 = xmlNode1.NextSibling)
-                        {
-                            if ("List".Equals(xmlNode1.Name))
-                            {
-                                for (XmlNode xmlNode2 = xmlNode1.FirstChild; xmlNode2 != null; xmlNode2 = xmlNode2.NextSibling)
-                                {
-                                    if ("Rank".Equals(xmlNode2.Name))
-                                    {
-                                        XmlNamedNodeMap xml = xmlNode2.Attributes;
-                                        _ranks.Add(new RankModel(int.Parse(xml.GetNamedItem("Id").Value), int.Parse(xml.GetNamedItem("NextLevel").Value), 0, int.Parse(xml.GetNamedItem("AllExp").Value)));
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (XmlException ex)
-                    {
-                        Logger.warning(ex.ToString());
-                    }
-                }
-                fileStream.Dispose();
-                fileStream.Close();
             }
         }
     }
