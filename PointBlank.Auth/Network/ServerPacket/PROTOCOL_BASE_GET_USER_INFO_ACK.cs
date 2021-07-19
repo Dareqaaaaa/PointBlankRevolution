@@ -78,19 +78,6 @@ namespace PointBlank.Auth.Network.ServerPacket
                     pev.NextVisitDate = 0;
                     EventVisitSyncer.ResetPlayerEvent(Player.player_id, evVisit.id);
                 }
-                /*EventXmasModel evXmas = EventXmasSyncer.getRunningEvent();
-                if (evXmas != null)
-                {
-                    if (pev.LastXmasRewardDate < evXmas.startDate)
-                    {
-                        pev.LastXmasRewardDate = 0;
-                        ComDiv.updateDB("player_events", "last_xmas_reward_date", 0, "player_id", Player.player_id);
-                    }
-                    if (!(pev.LastXmasRewardDate > evXmas.startDate && pev.LastXmasRewardDate <= evXmas.endDate))
-                    {
-                        Xmas = true;
-                    }
-                }*/
             }
             ComDiv.updateDB("players", "last_login", dateNow, "player_id", Player.player_id);
         }
@@ -98,7 +85,11 @@ namespace PointBlank.Auth.Network.ServerPacket
         public override void write()
         {
             ServerConfig cfg = AuthManager.Config;
-            EventVisitModel evVisit = EventVisitSyncer.getRunningEvent();
+            EventVisitModel ev = EventVisitSyncer.getRunningEvent();
+
+            PlayerEvent playerEvent = this.Player._event;
+            bool showEvents = (ev != null && (playerEvent.LastVisitSequence1 < ev.checks && playerEvent.NextVisitDate <= int.Parse(DateTime.Now.ToString("yyMMdd")) || playerEvent.LastVisitSequence2 < ev.checks && playerEvent.LastVisitSequence2 != playerEvent.LastVisitSequence1));
+            
             writeH(525);
             writeH(0);
             writeD(Error);
@@ -156,16 +147,49 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeC(0);
             writeD(0);
             writeC(2);
-            WriteDormantEvent();
-            WriteVisitEvent(evVisit);
+
+            writeB(new byte[375]); // Dormant event?
+            if (ev != null && (playerEvent.LastVisitSequence1 < ev.checks && playerEvent.NextVisitDate <= int.Parse(DateTime.Now.ToString("yyMMdd")) || playerEvent.LastVisitSequence2 < ev.checks && playerEvent.LastVisitSequence2 != playerEvent.LastVisitSequence1))
+            {
+                writeUnicode(ev.title, 70);
+                writeC((byte)0);
+                writeC((byte)ev.checks);
+                //writeD(ev.id);
+                writeD(1);
+                writeD(ev.startDate);
+                writeD(ev.endDate);
+                writeB(new byte[3]);
+
+                for (int index = 0; index < 32; ++index)
+                {
+                    if (index > 0 && ev.box.Count >= index)
+                    {
+                        VisitBox visitBox = ev.box[index - 1];
+                        writeC((byte)visitBox.RewardCount);
+                        writeD(visitBox.reward1.good_id);
+                        writeD(visitBox.reward2.good_id);
+                    }
+                    else
+                    {
+                        writeC(0);
+                        writeD(0);
+                        writeD(0);
+                    }
+                }
+            }
+            else
+            {
+                writeB(new byte[375]);
+            }
+
             writeC(2);
             writeD(0);
             writeC(0);
             writeD(0);
-            writeD(0);
+            writeD(showEvents ? 1 : 0);
+            writeC((byte)playerEvent.LastVisitSequence1);
             writeC(0);
-            writeC(0);
-            writeC(0);
+            writeC((byte)(showEvents ? 1 : 0));
             writeC(0);
             writeC(0);
             writeIP("127.0.0.1");
@@ -232,7 +256,7 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeD(Clan._logo);
             writeC((byte)Clan._name_color);
             writeC((byte)Clan.effect);
-            writeC((byte)Player.age);
+            writeC((byte) (AuthManager.Config.BloodEnable ? Player.age : 27));
         }
 
         private void WriteDormantEvent()

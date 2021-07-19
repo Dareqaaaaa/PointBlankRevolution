@@ -44,7 +44,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     int dateNow = int.Parse(DateTime.Now.ToString("yyMMdd"));
                     if (p._event.NextVisitDate <= dateNow)
                     {
-                        eventv = EventVisitSyncer.getEvent(eventId);
+                        eventv = EventVisitSyncer.getRunningEvent();
                         if (eventv == null)
                         {
                             erro = EventErrorEnum.VISIT_EVENT_UNKNOWN;
@@ -84,7 +84,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     erro = EventErrorEnum.VISIT_EVENT_UNKNOWN;
                 }
             Result:
-                _client.SendPacket(new PROTOCOL_BASE_ATTENDANCE_ACK(erro, eventv, p._event));
+                _client.SendPacket(new PROTOCOL_BASE_ATTENDANCE_ACK(erro, eventv, p._event, day));
             }
             catch (Exception ex)
             {

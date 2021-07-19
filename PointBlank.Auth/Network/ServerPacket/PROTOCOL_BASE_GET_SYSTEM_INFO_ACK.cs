@@ -48,7 +48,7 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeD(600); // 600
             writeD(2400); // 2400
             writeD(6000); // 6000
-            writeC(0);
+            writeC(1);
             writeH((ushort)MissionsXml._missionPage1);
             writeH((ushort)MissionsXml._missionPage2);
             writeH(29890);

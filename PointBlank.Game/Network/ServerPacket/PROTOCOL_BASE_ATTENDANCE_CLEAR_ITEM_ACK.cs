@@ -14,7 +14,7 @@ namespace PointBlank.Game.Network.ServerPacket
 
         public override void write()
         {
-            writeH(2664);
+            writeH(547);
             writeD(_erro);
         }
     }

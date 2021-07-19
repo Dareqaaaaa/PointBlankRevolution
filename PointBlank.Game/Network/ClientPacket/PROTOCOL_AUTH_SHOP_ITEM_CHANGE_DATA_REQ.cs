@@ -128,7 +128,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     if (ComDiv.updateDB("players", "player_name", Text, "player_id", p.player_id))
                     {
-                        NickHistoryManager.CreateHistory(p.player_id, p.player_name, Text, "เปลี่ยนชื่อ[ในเกม]");
+                        NickHistoryManager.CreateHistory(p.player_id, p.player_name, Text, "Name changed (items)");
                         p.player_name = Text;
                         if (p._room != null)
                         {

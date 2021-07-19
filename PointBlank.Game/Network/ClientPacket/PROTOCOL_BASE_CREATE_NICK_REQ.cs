@@ -50,7 +50,7 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     if (AccountManager.updatePlayerName(name, p.player_id))
                     {
-                        NickHistoryManager.CreateHistory(p.player_id, p.player_name, name, "สร้างตัวละคร");
+                        NickHistoryManager.CreateHistory(p.player_id, p.player_name, name, "First nick choosed");
                         p.player_name = name;
                         List<ItemsModel> awards = BasicInventoryXml.creationAwards;
                         List<ItemsModel> characters = BasicInventoryXml.Characters;

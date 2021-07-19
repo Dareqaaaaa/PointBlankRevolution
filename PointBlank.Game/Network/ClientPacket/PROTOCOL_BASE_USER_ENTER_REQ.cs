@@ -58,19 +58,6 @@ namespace PointBlank.Game.Network.ClientPacket
                         p._status.updateServer((byte)GameConfig.serverId);
                         _client._player = p;
                         ComDiv.updateDB("players", "lastip", p.PublicIP.ToString(), "player_id", p.player_id);
-
-                        if (p._topups.Count > 0)
-                        {
-                            for (int i = 0; i < p._topups.Count; i++)
-                            {
-                                PlayerItemTopup Item = p._topups[i];
-                                if (Item.ItemId != 0)
-                                {
-                                    _client.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, p, new ItemsModel(Item.ItemId, Item.ItemName, Item.Equip, Item.Count)));
-                                    PlayerManager.DeletePlayerTopup(Item.ObjectId, p.player_id);
-                                }
-                            }
-                        }
                     }
                     else
                     {

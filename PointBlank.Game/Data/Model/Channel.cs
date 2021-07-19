@@ -71,6 +71,7 @@ namespace PointBlank.Game.Data.Model
                 {
                     _players.Add(pS);
                     GameSync.UpdateGSCount(serverId);
+                    GameSync.UpdateChannelUsers(_id, _players.Count);
                     return true;
                 }
                 return false;
@@ -256,6 +257,9 @@ namespace PointBlank.Game.Data.Model
                     {
                         result = _players.Remove(p.Session);
                     }
+
+                    GameSync.UpdateChannelUsers(_id, _players.Count);
+
                     if (result)
                     {
                         GameSync.UpdateGSCount(serverId);

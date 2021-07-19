@@ -15,6 +15,8 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using PointBlank.Auth.Data.Xml;
+using System.Linq;
 
 namespace PointBlank.Auth.Data.Sync
 {
@@ -168,6 +170,18 @@ namespace PointBlank.Auth.Data.Sync
                 ServerConfigSyncer.GenerateConfig(config);
                 Logger.warning("AuthSync Configuration (Database) Refills.; Date: '" + DateTime.Now.ToString("dd/MM/yy HH:mm") + "'");
                 Logger.LogCMD("Configuration (Database) Refills.; Date: '" + DateTime.Now.ToString("dd/MM/yy HH:mm") + "'");
+            }
+            else if(opcode == 33)
+            {
+                int channelId = p.readD();
+                int count = p.readD();
+
+                Channel channel = ChannelsXml._channels.Where(x => x._id == channelId).FirstOrDefault();
+                if (channel != null)
+                {
+                    channel._players = count;
+                }
+                else Logger.warning("Channel not founded");
             }
             else
             {

@@ -40,7 +40,8 @@ namespace PointBlank.Core.Managers.Server
                             AnnouceColor = data.GetInt32(8),
                             Chat = data.GetString(9),
                             Annouce = data.GetString(10),
-                            ClanEnable = data.GetBoolean(11)
+                            ClanEnable = data.GetBoolean(11),
+                            BloodEnable = data.GetBoolean(12)
                         };
                     }
                     command.Dispose();
@@ -67,7 +68,7 @@ namespace PointBlank.Core.Managers.Server
     {
         public int configId;
         public string UserFileList, ClientVersion, ExitURL;
-        public bool onlyGM, missions, GiftSystem, ClanEnable;
+        public bool onlyGM, missions, GiftSystem, ClanEnable, BloodEnable;
         public string Annouce, Chat;
         public int AnnouceColor, ChatColor;
     }

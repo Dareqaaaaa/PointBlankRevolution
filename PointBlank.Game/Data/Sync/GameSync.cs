@@ -18,6 +18,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using PointBlank.Game.Data.Configs;
+using System.Linq;
 
 namespace PointBlank.Game.Data.Sync
 {
@@ -388,6 +389,30 @@ namespace PointBlank.Game.Data.Sync
             catch (Exception ex)
             {
                 Logger.warning("[GameSync.UpdateGSCount] " + ex.ToString());
+            }
+        }
+
+        public static void UpdateChannelUsers(int channelId, int count)
+        {
+            try
+            {
+                GameServerModel gs = ServersXml._servers.Where(x => x._id == 0).FirstOrDefault();
+
+                if (gs != null)
+                {
+                    using (SendGPacket pk = new SendGPacket())
+                    {
+                        pk.writeH(33);
+                        pk.writeD(channelId);
+                        pk.writeD(count);
+                        SendPacket(pk.mstream.ToArray(), gs.Connection);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Logger.warning("[GameSync.UpdateChannelUsers] " + ex.ToString());
             }
         }
 

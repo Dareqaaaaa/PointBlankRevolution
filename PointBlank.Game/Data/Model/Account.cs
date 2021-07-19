@@ -26,7 +26,6 @@ namespace PointBlank.Game.Data.Model
         public int Sight, FindClanId, LastRoomPage, LastPlayerPage, tourneyLevel, channelId = -1, clanAccess, clanDate, _exp, _gp, clanId, _money, brooch, insignia, medal, blue_order, _slotId = -1, name_color, _rank, pc_cafe, matchSlot = -1, age;
         public PlayerEquipedItems _equip = new PlayerEquipedItems();
         public PlayerInventory _inventory = new PlayerInventory();
-        public List<PlayerItemTopup> _topups = new List<PlayerItemTopup>();
         public List<Character> Characters = new List<Character>();
         public PlayerConfig _config;
         public GameClient _connection;
@@ -56,7 +55,6 @@ namespace PointBlank.Game.Data.Model
             _status = new AccountStatus();
             Characters = new List<Character>();
             Daily = new PlayerDailyRecord();
-            _topups.Clear();
             FriendSystem.CleanList();
             Session = null;
             _event = null;

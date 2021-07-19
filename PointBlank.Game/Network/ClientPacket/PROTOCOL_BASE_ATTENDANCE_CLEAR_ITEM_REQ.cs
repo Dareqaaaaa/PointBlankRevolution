@@ -50,7 +50,7 @@ namespace PointBlank.Game.Network.ClientPacket
                     }
                     else
                     {
-                        EventVisitModel eventv = EventVisitSyncer.getEvent(eventId);
+                        EventVisitModel eventv = EventVisitSyncer.getRunningEvent();
                         if (eventv == null)
                         {
                             erro = EventErrorEnum.VISIT_EVENT_UNKNOWN;
@@ -68,7 +68,8 @@ namespace PointBlank.Game.Network.ClientPacket
                                     p._event.NextVisitDate = int.Parse(DateTime.Now.AddDays(1).ToString("yyMMdd"));
                                     ComDiv.updateDB("player_events", "player_id", p.player_id, new string[] { "next_visit_date", "last_visit_sequence2" }, p._event.NextVisitDate, ++p._event.LastVisitSequence2);
 
-                                    _client.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, p, new ItemsModel(good._item._id, good._item._category, good._item._name, good._item._equip, chI.count)));
+                                   _client.SendPacket(new PROTOCOL_INVENTORY_GET_INFO_ACK(0, p, new ItemsModel(good._item._id, good._item._category, good._item._name, good._item._equip, chI.count)));
+                                   _client.SendPacket(new PROTOCOL_SERVER_MESSAGE_ANNOUNCE_ACK(Translation.GetLabel("AttendanceCheck")));
                                 }
                                 else
                                 {

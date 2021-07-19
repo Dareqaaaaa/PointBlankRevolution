@@ -5,7 +5,6 @@ using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
 
 namespace PointBlank.Core.Managers.Events
 {
@@ -34,8 +33,11 @@ namespace PointBlank.Core.Managers.Events
                             title = data.GetString(3),
                             checks = data.GetInt32(4)
                         };
+
                         string goods1 = data.GetString(5);
                         string counts1 = data.GetString(6);
+
+                        
                         string goods2 = data.GetString(7);
                         string counts2 = data.GetString(8);
 
@@ -44,8 +46,11 @@ namespace PointBlank.Core.Managers.Events
 
                         for (int i = 0; i < goodsarray1.Length; i++)
                         {
-                            ev.box[i].reward1.good_id = int.Parse(goodsarray1[i]);
+                            VisitBox box = new VisitBox();
+                            box.reward1.good_id = int.Parse(goodsarray1[i]);
+                            ev.box.Add(box);
                         }
+
                         for (int i = 0; i < goodsarray2.Length; i++)
                         {
                             ev.box[i].reward2.good_id = int.Parse(goodsarray2[i]);
@@ -63,9 +68,12 @@ namespace PointBlank.Core.Managers.Events
                             VisitItem item = ev.box[i].reward2;
                             item.SetCount(countarray2[i]);
                         }
-                        ev.SetBoxCounts();
+
+                        ev.SetBoxCounts(goodsarray1.Length);
+
                         _events.Add(ev);
                     }
+
                     command.Dispose();
                     data.Close();
                     connection.Dispose();
@@ -141,13 +149,6 @@ namespace PointBlank.Core.Managers.Events
         public uint startDate, endDate;
         public string title = "";
         public List<VisitBox> box = new List<VisitBox>();
-        public EventVisitModel()
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                box.Add(new VisitBox());
-            }
-        }
 
         public bool EventIsEnabled()
         {
@@ -171,9 +172,9 @@ namespace PointBlank.Core.Managers.Events
             }
         }
 
-        public void SetBoxCounts()
+        public void SetBoxCounts(int count)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < count; i++)
             {
                 box[i].SetCount();
             }
