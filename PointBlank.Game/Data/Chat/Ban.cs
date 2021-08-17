@@ -132,7 +132,7 @@ namespace PointBlank.Game.Data.Chat
                         GameManager.SendPacketToAllClients(packet);
                     }
                 }
-                victim.access = AccessLevel.Banned;
+                victim.access = (int) AccessLevel.Banned;
                 victim.SendPacket(new PROTOCOL_AUTH_ACCOUNT_KICK_ACK(2), false);
                 victim.Close(1000, true);
                 return Translation.GetLabel("PlayerBanSuccess", -1);

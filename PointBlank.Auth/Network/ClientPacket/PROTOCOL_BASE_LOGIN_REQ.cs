@@ -39,6 +39,7 @@ namespace PointBlank.Auth.Network.ClientPacket
             Token = readS(TokenSize);
             readC();
             readH();
+
             PublicIP = _client.GetIPAddress();
             GameLocale = ClientLocale.Thai;
             MacAddress = new PhysicalAddress(new byte[6]);
@@ -48,7 +49,7 @@ namespace PointBlank.Auth.Network.ClientPacket
         {
             try
             {
-                if (PublicIP == null)
+                if (PublicIP == null || Token.Trim().Length == 0)
                 {
                     _client.Close(0, true);
                 }
@@ -161,6 +162,11 @@ namespace PointBlank.Auth.Network.ClientPacket
                                         p._status.updateServer(0);
                                         p.setOnlineStatus(true);
                                         SendRefresh.RefreshAccount(p, true);
+
+
+
+                                        if (AuthConfig.ClearToken)
+                                            ComDiv.updateDB("players", "token", "", "player_id", p.player_id);
                                     }
                                 }
                                 else

@@ -392,6 +392,30 @@ namespace PointBlank.Game.Data.Sync
             }
         }
 
+        public static void UpdatePartOfAuth(int Part)
+        {
+            try
+            {
+                for (int server = 0; server < ServersXml._servers.Count; server++)
+                {
+                    GameServerModel gs = ServersXml._servers[server];
+                    if(gs._port == 39190)
+                    {
+                        using (SendGPacket pk = new SendGPacket())
+                        {
+                            pk.writeH(34);
+                            pk.writeC((byte)Part);
+                            SendPacket(pk.mstream.ToArray(), gs.Connection);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.warning("[GameSync.UpdatePartOfAuth] " + ex.ToString());
+            }
+        }
+
         public static void UpdateChannelUsers(int channelId, int count)
         {
             try

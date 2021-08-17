@@ -44,22 +44,68 @@ namespace PointBlank.Game.Network.ServerPacket
             writeC((byte)room.getSlotCount());
             writeC((byte)room._ping);
             writeH((ushort)room.weaponsFlag);
-            writeD(room.getFlag());
-            writeC(0);
-            writeC(0);
-            writeC(0);
+
+            writeC((byte)room.getFlag());
+            writeH(100);
+            writeH(200);
+            writeH(300);
+
+            writeC(5);
             writeUnicode(leader != null ? leader.player_name : "", 66);
             writeD(room.killtime);
             writeC(room.Limit);
             writeC(room.WatchRuleFlag);
             writeH(room.BalanceType);
-            writeB(new byte[16]);
+            //writeB(new byte[16]);
+            writeH(100);
+            writeH(200);
+            writeH(300);
+            writeH(400);
+            writeH(500);
+            writeH(600);
+            writeH(700);
+            writeH(800);
             writeIP(leader.PublicIP == null ? IPAddress.Parse("127.0.0.1") : leader.PublicIP);
             if (isBotMode)
             {
                 writeC(room.aiCount);
                 writeC(room.aiLevel);
             }
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
+
+            writeC(0);
+            writeH(100);
+            writeC(1);
+            writeH(200);
         }
     }
 }

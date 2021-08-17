@@ -70,6 +70,7 @@
     <Compile Include="Managers\BanManager.cs" />
     <Compile Include="Managers\CharacterManager.cs" />
     <Compile Include="Managers\Events\EventLoader.cs" />
+    <Compile Include="Managers\PermissionManager.cs" />
     <Compile Include="Managers\TicketManager.cs" />
     <Compile Include="Models\Account\AccountStatus.cs" />
     <Compile Include="Models\Account\Players\Character.cs" />

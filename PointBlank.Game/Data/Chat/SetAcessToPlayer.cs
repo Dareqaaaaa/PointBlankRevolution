@@ -30,7 +30,7 @@ namespace PointBlank.Game.Data.Chat
             {
                 try
                 {
-                    pR.access = (AccessLevel)access;
+                    pR.access = (int) (AccessLevel)access;
                     return Translation.GetLabel("SetAcessS", access, pR.player_name);
                 }
                 catch

@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Text;
+using PointBlank.Core.Managers;
 
 namespace PointBlank.Auth.Data.Managers
 {
@@ -119,10 +120,12 @@ namespace PointBlank.Auth.Data.Managers
                         account._equip.belt = data.GetInt32(62);
                         account._equip.holster = data.GetInt32(63);
                         account._equip.skin = data.GetInt32(64);
+
                         if (AddAccount(account) && account._isOnline)
-                        {
                             account.setOnlineStatus(false);
-                        }
+
+                        if (PermissionManager.GetFakeRank(account.access) != -1)
+                            account._rank = PermissionManager.GetFakeRank(account.access);
                     }
                     command.Dispose();
                     data.Dispose();

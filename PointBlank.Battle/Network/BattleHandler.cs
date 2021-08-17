@@ -15,6 +15,8 @@ using System.Net;
 using System.Net.Sockets;
 using PointBlank.Battle.Data.Configs;
 using PointBlank.Battle.Data.Models.Event;
+using PointBlank.Battle.Data.Items;
+using System.Linq;
 
 namespace PointBlank.Battle.Network
 {
@@ -457,14 +459,11 @@ namespace PointBlank.Battle.Network
                                 int KillerId = (int)((Hit.HitInfo >> 11) & 511);
                                 int HitPart = (int)((Hit.HitInfo >> 4) & 63);
                                 int Type = (int)((Hit.HitInfo >> 10) & 1); // 0 = User | 1 = Object
-                                if (Type == 1)
-                                {
+                                if (Type == 1) 
                                     ObjIdx = KillerId;
-                                }
                                 BasicInfo = Hit.WeaponId;
 
                                 Player.Life -= Damage;
-
                                 AssistModel Assist = new AssistModel();
                                 Assist.RoomId = Room.RoomId;
                                 Assist.Killer = Player.Slot;
@@ -617,6 +616,7 @@ namespace PointBlank.Battle.Network
                 }
                 if (Action.Flag.HasFlag(UDP_GAME_EVENTS.FireData))
                 {
+                    // TODO: Code fire data check
                     Event += 0x80000;
                     FireData.WriteInfo(Send, Action, Receive, false);
                 }
@@ -643,7 +643,20 @@ namespace PointBlank.Battle.Network
                             double HitDistance = Vector3.Distance(Hit.StartBullet, Hit.EndBullet);
                             if (Hit.WeaponClass == CLASS_TYPE.Knife && (MeleeExceptionsXml.Contains(AllUtils.getIdStatics(Hit.WeaponId, 3)) || HitDistance < 3) || Hit.WeaponClass != CLASS_TYPE.Knife)
                             {
-                                int Damage = AllUtils.getHitDamageNormal(Hit.HitIndex), ObjId = AllUtils.getHitWho(Hit.HitIndex), HitPart = AllUtils.getHitPart(Hit.HitIndex);
+                                int Damage = AllUtils.getHitDamageNormal(Hit.HitIndex), 
+                                    ObjId = AllUtils.getHitWho(Hit.HitIndex), 
+                                    HitPart = AllUtils.getHitPart(Hit.HitIndex);
+
+                                // Check damage
+                                Item Item = ItemManager.Items.Where(x => x.Id == Hit.WeaponId).FirstOrDefault();
+                                if (Item != null && BattleConfig.damageCheckFromItems)
+                                {
+                                    if(Damage > Item.Damage)
+                                        Damage = Item.Damage;
+                                }
+                                else if(BattleConfig.removeHitUnlisted) Damage = 0;
+
+                                // Let's go on
                                 CHARA_DEATH DeathType = CHARA_DEATH.DEFAULT;
                                 BasicInfo = Hit.WeaponId;
                                 OBJECT_TYPE HitType = AllUtils.getHitType(Hit.HitIndex);

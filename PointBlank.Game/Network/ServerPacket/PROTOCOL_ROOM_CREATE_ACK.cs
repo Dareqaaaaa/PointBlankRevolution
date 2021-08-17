@@ -1,4 +1,6 @@
-﻿using PointBlank.Core.Models.Enums;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using PointBlank.Core;
+using PointBlank.Core.Models.Enums;
 using PointBlank.Core.Network;
 using PointBlank.Game.Data.Model;
 
@@ -34,10 +36,14 @@ namespace PointBlank.Game.Network.ServerPacket
                 writeC((byte)room.getSlotCount());
                 writeC((byte)room._ping);
                 writeH((ushort)room.weaponsFlag);
-                writeD(room.getFlag());
-                writeC(0);
+
+                writeH((ushort)room.getFlag());
+                writeC((byte)room._leader);
+                writeH(700); // wins leader
+
                 writeC(0);
                 writeC(5);
+
                 writeUnicode(leader.player_name, 66);
                 writeD(room.killtime);
                 writeC(room.Limit);

@@ -45,6 +45,7 @@ namespace PointBlank.Auth
             CouponEffectManager.LoadCouponFlags();
             QuickStartXml.Load();
             MissionsXml.Load();
+            PermissionManager.Load();
             AuthSync.Start();
 
             if (Logger.erro)

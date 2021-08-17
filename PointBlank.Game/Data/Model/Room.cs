@@ -96,7 +96,8 @@ namespace PointBlank.Game.Data.Model
                     stageType == RoomType.Annihilation ||
                     stageType == RoomType.Boss ||
                     stageType == RoomType.CrossCounter ||
-                    stageType == RoomType.Convoy);
+                    stageType == RoomType.Convoy ||
+                    stageType == RoomType.Ace);
         }
 
         public bool thisModeHaveRounds()
@@ -106,7 +107,8 @@ namespace PointBlank.Game.Data.Model
                     stageType == RoomType.Destroy ||
                     stageType == RoomType.Annihilation ||
                     stageType == RoomType.Defense ||
-                    stageType == RoomType.Convoy);
+                    stageType == RoomType.Convoy ||
+                    stageType == RoomType.Ace);
         }
 
         public int getFlag()
@@ -2091,6 +2093,12 @@ namespace PointBlank.Game.Data.Model
                     if (_state == RoomState.Battle && (room_type == RoomType.Bomb || room_type == RoomType.Annihilation || room_type == RoomType.Convoy))
                     {
                         slot.espectador = true;
+                    }
+
+                    if(room_type == RoomType.Ace)
+                    {
+                        slot.espectador = (slot._id == 0 || slot._id == 1) ? false : true;
+                        Console.WriteLine("slot: " + slot._id + "; espectador: " + slot.espectador);
                     }
                 }
             }

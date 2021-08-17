@@ -7,7 +7,7 @@ namespace PointBlank.Battle.Data.Configs
         public static string dbName, dbHost, dbUser, dbPass, hosIp, serverIp, udpVersion;
         public static int dbPort;
         public static ushort hosPort, maxDrop, syncPort;
-        public static bool isTestMode, sendInfoToServ, sendFailMsg, enableLog, useMaxAmmoInDrop, useHitMarker;
+        public static bool isTestMode, sendInfoToServ, sendFailMsg, enableLog, useMaxAmmoInDrop, useHitMarker, removeHitUnlisted, damageCheckFromItems;
         public static float plantDuration, defuseDuration;
         public static Encoding EncodeText;
 
@@ -36,6 +36,10 @@ namespace PointBlank.Battle.Data.Configs
             useHitMarker = configFile.readBoolean("UseHitMarker", false);
             useMaxAmmoInDrop = configFile.readBoolean("UseMaxAmmoInDrop", false);
             udpVersion = configFile.readString("UdpVersion", "0.0");
+
+
+            removeHitUnlisted = configFile.readBoolean("RemoveHitUnlistedItems", false);
+            damageCheckFromItems = configFile.readBoolean("DamageCheckFromItems", false);
         }
     }
 }

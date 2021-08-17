@@ -81,12 +81,12 @@ namespace PointBlank.Game.Network.ClientPacket
                         killer.Score = 65535;
                         if (ComDiv.updateDB("players", "access_level", -1, "player_id", player.player_id))
                         {
-                            BanManager.SaveAutoBan(player.player_id, player.login, player.player_name, "ใช้โปรปั้มบอท", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"), player.PublicIP.ToString(), "Ban from Server"); // TODO: Translate text of autoban
-                            using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "แบนผู้เล่น [" + player.player_name + "] ถาวร - ใช้โปรปั้มบอท"))
+                            BanManager.SaveAutoBan(player.player_id, player.login, player.player_name, "Auto-kill", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"), player.PublicIP.ToString(), "Ban from Server");
+                            using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "User '" + player.player_name + "' banned for auto kill"))
                             {
                                 GameManager.SendPacketToAllClients(packet);
                             }
-                            player.access = AccessLevel.Banned;
+                            player.access = (int) AccessLevel.Banned;
                             player.SendPacket(new PROTOCOL_AUTH_ACCOUNT_KICK_ACK(2), false);
                             player.Close(1000, true);
                         }

@@ -31,6 +31,7 @@ namespace PointBlank.Auth.Network.ClientPacket
                 _client.SendPacket(new PROTOCOL_BASE_STEPUP_MODE_INFO_ACK());
                 _client.SendPacket(new PROTOCOL_BASE_CHANNELTYPE_CONDITION_ACK());
                 _client.SendPacket(new PROTOCOL_BASE_GET_SYSTEM_INFO_ACK());
+
                 if (player == null || !AuthManager.Config.GiftSystem)
                 {
                     return;

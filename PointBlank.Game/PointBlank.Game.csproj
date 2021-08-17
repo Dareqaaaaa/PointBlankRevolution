@@ -102,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Chat\RefillManager.cs" />
+    <Compile Include="Data\Command\CommandManager.cs" />
+    <Compile Include="Data\Command\Commands\CommandsCommand.cs" />
+    <Compile Include="Data\Command\Commands\GiftCommand.cs" />
+    <Compile Include="Data\Command\Commands\TestCommand.cs" />
+    <Compile Include="Data\Command\Commands\UpdateCommand.cs" />
+    <Compile Include="Data\Command\ICommand.cs" />
     <Compile Include="Data\Configs\GameConfig.cs" />
     <Compile Include="Data\Chat\AFKInteraction.cs" />
     <Compile Include="Data\Chat\ChangeChannelNotice.cs" />
@@ -169,6 +175,8 @@
     <Compile Include="Network\ClientPacket\PROTOCOL_AUTH_SHOP_USE_GIFTCOUPON_REQ.cs" />
     <Compile Include="Network\ClientPacket\PROTOCOL_BASE_DAILY_RECORD_REQ.cs" />
     <Compile Include="Network\ClientPacket\PROTOCOL_BASE_GET_USER_BASIC_INFO_REQ.cs" />
+    <Compile Include="Network\ClientPacket\PROTOCOL_BATTLE_ACE_MODE_SLOT_REQ.cs" />
+    <Compile Include="Network\ClientPacket\PROTOCOL_ROOM_GET_ACEMODE_PLAYERINFO_REQ.cs" />
     <Compile Include="Network\ClientPacket\PROTOCOL_BATTLE_TIMEOUTCLIENT_REQ.cs" />
     <Compile Include="Network\ClientPacket\PROTOCOL_BATTLE_USER_SOPETYPE_REQ.cs" />
     <Compile Include="Network\ClientPacket\PROTOCOL_CHAR_DELETE_CHARA_REQ.cs" />
@@ -208,6 +216,7 @@
     <Compile Include="Network\ServerPacket\PROTOCOL_BASE_GET_MYINFO_BASIC_ACK.cs" />
     <Compile Include="Network\ServerPacket\PROTOCOL_BASE_SELECT_AGE_ACK.cs" />
     <Compile Include="Network\ServerPacket\PROTOCOL_BATTLEBOX_GET_LIST_ACK.cs" />
+    <Compile Include="Network\ServerPacket\PROTOCOL_ROOM_GET_ACEMODE_PLAYERINFO_ACK.cs" />
     <Compile Include="Network\ServerPacket\PROTOCOL_BATTLE_TIMEOUTCLIENT_ACK.cs" />
     <Compile Include="Network\ServerPacket\PROTOCOL_BATTLE_USER_SOPETYPE_ACK.cs" />
     <Compile Include="Network\ServerPacket\PROTOCOL_CHAR_CHANGE_EQUIP_ACK.cs" />
@@ -558,7 +567,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Rcon\Packets\RconSendPoints.cs" />
+    <Compile Include="Rcon\Packets\RconSendMoney.cs" />
     <Compile Include="Rcon\RconManager.cs" />
+    <Compile Include="Rcon\RconReceive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

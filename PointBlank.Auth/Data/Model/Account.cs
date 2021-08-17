@@ -10,6 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using PointBlank.Core;
+using PointBlank.Core.Models.Servers;
+using PointBlank.Core.Sql;
+using Npgsql;
+using System.Data;
 
 namespace PointBlank.Auth.Data.Model
 {
@@ -36,6 +40,7 @@ namespace PointBlank.Auth.Data.Model
         public PlayerDailyRecord Daily = new PlayerDailyRecord();
         public List<Account> _clanPlayers = new List<Account>();
         public List<Character> Characters = new List<Character>();
+        public List<QuickStart> Quickstarts = new List<QuickStart>();
 
         public void SimpleClear()
         {
@@ -45,6 +50,7 @@ namespace PointBlank.Auth.Data.Model
             _event = null;
             _connection = null;
             _inventory = new PlayerInventory();
+            Quickstarts = new List<QuickStart>();
             Characters = new List<Character>();
             FriendSystem = new FriendSystem();
             _clanPlayers = new List<Account>();
@@ -124,6 +130,100 @@ namespace PointBlank.Auth.Data.Model
             else
             {
                 _mission = m;
+            }
+        }
+
+        public void LoadQuickstarts()
+        {
+            try
+            {
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    NpgsqlCommand command = connection.CreateCommand();
+                    connection.Open();
+                    command.Parameters.AddWithValue("@owner", player_id);
+                    command.CommandText = "SELECT * FROM player_quickstart WHERE owner_id=@owner;";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(1),
+                            Rule = data.GetInt32(2),
+                            StageOptions = data.GetInt32(3),
+                            Type = data.GetInt32(4)
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(5),
+                            Rule = data.GetInt32(6),
+                            StageOptions = data.GetInt32(7),
+                            Type = data.GetInt32(8)
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(9),
+                            Rule = data.GetInt32(10),
+                            StageOptions = data.GetInt32(11),
+                            Type = data.GetInt32(12)
+                        });
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
+
+                
+
+                if (Quickstarts.Count == 0)
+                {
+                    Logger.warning("Null, let's create them!");
+
+                    using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                    {
+                        NpgsqlCommand command = connection.CreateCommand();
+                        connection.Open();
+                        command.Parameters.AddWithValue("@owner", player_id);
+                        command.CommandText = "INSERT INTO player_quickstart (owner_id) VALUES (@owner);";
+                        command.CommandType = CommandType.Text;
+                        command.ExecuteNonQuery();
+                        command.Dispose();
+                        connection.Dispose();
+                        connection.Close();
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = 0,
+                            Rule = 0,
+                            StageOptions = 0,
+                            Type = 0
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = 0,
+                            Rule = 0,
+                            StageOptions = 0,
+                            Type = 0
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = 0,
+                            Rule = 0,
+                            StageOptions = 0,
+                            Type = 0
+                        });
+                    }
+                }
+            }
+            catch(Exception err)
+            {
+                Logger.error(err.ToString());
             }
         }
 
@@ -356,6 +456,11 @@ namespace PointBlank.Auth.Data.Model
         public bool HaveAcessLevel()
         {
             return access > 0;
+        }
+
+        public bool HavePermission(string Permission)
+        {
+            return PermissionManager.HavePermission(Permission, access);
         }
     }
 }

@@ -107,11 +107,6 @@ namespace PointBlank.Game.Network.ClientPacket
         public override void run()
         {
             _client.SendPacket(new PROTOCOL_ROOM_CREATE_ACK(erro, room, p));
-            //_client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 4, false, "ถ้าต้องการเปิดห้ามใช้ลูกซอง - พิม /NS ลงในช่องแชท"));
-            //_client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 5, false, "ถ้าต้องการเปิดห้ามใช้ลูกบาเรต - พิม /NB ลงในช่องแชท"));
-            //_client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 6, false, "ถ้าต้องการเปิดห้ามใช้หน้ากาก - พิม /NM ลงในช่องแชท"));
-            //_client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 7, false, "ถ้าต้องการเปิดใช้งานกฎแข่ง - พิม /GR ลงในช่องแชท"));
-            //_client.SendPacket(new PROTOCOL_LOBBY_CHATTING_ACK("Room", 0, 8, false, "หากต้องการปิดให้พิมคำสั่งนั้นๆ อีกครั้งลงในช่องแชท"));
         }
     }
 }

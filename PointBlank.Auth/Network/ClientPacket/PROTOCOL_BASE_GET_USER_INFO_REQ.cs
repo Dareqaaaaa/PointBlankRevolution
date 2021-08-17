@@ -27,6 +27,7 @@ namespace PointBlank.Auth.Network.ClientPacket
                     Player.LoadInventory();
                     Player.LoadMissionList();
                     Player.DiscountPlayerItems();
+                    Player.LoadQuickstarts();
                     _client.SendPacket(new PROTOCOL_BASE_GET_USER_INFO_ACK(Player));
                 }
             }

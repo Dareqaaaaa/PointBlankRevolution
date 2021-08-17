@@ -17,6 +17,7 @@ using System.Net.Sockets;
 using System.Threading;
 using PointBlank.Auth.Data.Xml;
 using System.Linq;
+using PointBlank.Core.Managers;
 
 namespace PointBlank.Auth.Data.Sync
 {
@@ -182,6 +183,22 @@ namespace PointBlank.Auth.Data.Sync
                     channel._players = count;
                 }
                 else Logger.warning("Channel not founded");
+            }
+            else if(opcode == 34)
+            {
+                int type = p.readC();
+                switch (type)
+                {
+                    case 1:
+                        EventLoader.ReloadAll();
+                        Logger.warning("Events reloaded: " + DateTime.Now.ToString("dd/MM/yy HH:mm"));
+                        break;
+                    case 2:
+                        PermissionManager.Load();
+                        Logger.warning("Permissions reloaded: " + DateTime.Now.ToString("dd/MM/yy HH:mm"));
+                        break;
+                    default: Logger.warning("Updating null part: " + type); break;
+                }
             }
             else
             {

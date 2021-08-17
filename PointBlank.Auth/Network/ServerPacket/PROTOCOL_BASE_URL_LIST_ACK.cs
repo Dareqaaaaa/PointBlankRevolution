@@ -12,8 +12,9 @@ namespace PointBlank.Auth.Network.ServerPacket
 
         public override void write()
         {
-            string URL1 = "http://pb-abc.com/";
-            string URL2 = "https://www.facebook.com/SuppakornChawruahuk";
+            // TODO: Make out url configurable
+            string URL1 = "";
+            string URL2 = "";
 
             writeH(673);
             writeC(1);

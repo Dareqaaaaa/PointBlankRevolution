@@ -28,66 +28,206 @@ namespace PointBlank.Core.Managers
         {
             try
             {
+                // Load normal weapons / characters / items
                 using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
                 {
                     connection.Open();
                     NpgsqlCommand command = connection.CreateCommand();
-                    command.CommandText = "SELECT * FROM shop";
+                    command.CommandText = "SELECT * FROM item_goods";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
                     {
-                        GoodItem good = new GoodItem
-                        {
-                            id = data.GetInt32(0),
-                            price_gold = data.GetInt32(3),
-                            price_cash = data.GetInt32(4),
-                            auth_type = data.GetInt32(6),
-                            buy_type2 = data.GetInt32(7),
-                            buy_type3 = data.GetInt32(8),
-                            tag = data.GetInt32(9),
-                            title = data.GetInt32(10),
-                            visibility = data.GetInt32(11)
-                        };
 
-                        good._item.SetItemId(data.GetInt32(1));
-                        good._item._name = data.GetString(2);
-                        good._item._count = data.GetInt32(5);
-                        int Static = ComDiv.getIdStatics(good._item._id, 1);
-                        if (type == 1 || type == 2 && Static == 16)
+                        int ItemId = data.GetInt32(0);
+                        string[] Counts = data.GetString(3).Contains(",") ? data.GetString(3).Split(',') : new string[1] { data.GetString(3) };
+                        string[] PricesMoney = data.GetString(4).Contains(",") ? data.GetString(4).Split(',') : new string[1] { data.GetString(4) };
+                        string[] PricesPoints = data.GetString(5).Contains(",") ? data.GetString(5).Split(',') : new string[1] { data.GetString(5) };
+                        
+                        if(!(Counts.Length == PricesMoney.Length && PricesMoney.Length == PricesPoints.Length))
                         {
-                            ShopAllList.Add(good);
-                            if (good.visibility != 2 && good.visibility != 4)
+                            Logger.warning("Loading goods with invalid counts / moneys / points sizes.");
+                            continue;
+                        }
+
+                        int Idx = 0;
+                        foreach(string Count in Counts)
+                        {
+                            Idx++;
+
+                            int CountInt;
+                            if(!int.TryParse(Count, out CountInt))
                             {
-                                ShopBuyableList.Add(good);
+                                Logger.warning("Loading goods with count != int32 (" + ItemId.ToString() + ")");
+                                continue;
                             }
-                            if (!ShopUniqueList.ContainsKey(good._item._id) && good.auth_type > 0)
+
+                            int PointInt;
+                            if(!int.TryParse(PricesPoints[Idx - 1], out PointInt))
                             {
-                                ShopUniqueList.Add(good._item._id, good);
-                                if (good.visibility == 4)
+                                Logger.warning("Loading goods with point != int32 (" + ItemId.ToString() + ")");
+                                continue;
+                            }
+
+                            int MoneyInt;
+                            if(!int.TryParse(PricesMoney[Idx - 1], out MoneyInt))
+                            {
+                                Logger.warning("Loading goods with money != int32 (" + ItemId.ToString() + ")");
+                                continue;
+                            }
+
+                            int Discount = data.GetInt32(9);
+                            string Name = data.GetString(1);
+                            GoodItem good = new GoodItem();
+                            good.id = int.Parse(ItemId.ToString() + "0" + Idx.ToString());
+                            good.price_gold = PointInt;
+                            good.price_cash = MoneyInt;
+                            if(Discount > 0 && good.price_cash > 0) good.price_cash = (int)Math.Round(((double)good.price_cash / 100) * (100 - Discount));                            
+                            if(Discount > 0 && good.price_gold > 0) good.price_gold = (int)Math.Round(((double)good.price_gold / 100) * (100 - Discount));
+                            good.tag = Discount > 0 ? 5 : data.GetInt32(7);
+                            good.title = data.GetInt32(6);
+                            good.auth_type = data.GetInt32(2);
+                            good.buy_type2 = 1;
+                            good.buy_type3 = good.auth_type == 1 ? 2 : 1;
+                            good.visibility = data.GetBoolean(8) ? 0 : 2;
+                            good._item.SetItemId(ItemId);
+                            good._item._name = good.auth_type == 1 ? (Name + " (" + CountInt + " qty)") : (good.auth_type == 2 ? (Name + " (" + (CountInt / 3600) + " hours)") : Name);
+                            good._item._count = CountInt;
+
+                            int Static = ComDiv.getIdStatics(good._item._id, 1);
+                            if (type == 1 || type == 2 && Static == 16)
+                            {
+                                ShopAllList.Add(good);
+                                if (good.visibility != 2 && good.visibility != 4)
                                 {
-                                    set4p++;
+                                    ShopBuyableList.Add(good);
+                                }
+                                if (!ShopUniqueList.ContainsKey(good._item._id) && good.auth_type > 0)
+                                {
+                                    ShopUniqueList.Add(good._item._id, good);
+                                    if (good.visibility == 4)
+                                    {
+                                        set4p++;
+                                    }
                                 }
                             }
                         }
                     }
-                    if (type == 1)
-                    {
-                        LoadItemRepair();
-                        LoadDataMatching1Goods(0);
-                        LoadDataMatching2(1);
-                        LoadDataItems();
-                        LoadDataItemRepairs();
-                    }
+                    
                     command.Dispose();
                     data.Close();
                     connection.Dispose();
                     connection.Close();
                 }
-                /*if (set4p > 0)
+
+                // Load effect items
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
                 {
-                    Logger.info("Items: " + set4p + " in the store invisible.");
-                }*/
+                    connection.Open();
+                    NpgsqlCommand command = connection.CreateCommand();
+                    command.CommandText = "SELECT * FROM item_goods_effects";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+
+                        int ItemId = data.GetInt32(0);
+                        string[] Counts = data.GetString(2).Contains(",") ? data.GetString(2).Split(',') : new string[1] { data.GetString(2) };
+                        string[] PricesMoney = data.GetString(3).Contains(",") ? data.GetString(3).Split(',') : new string[1] { data.GetString(3) };
+                        string[] PricesPoints = data.GetString(4).Contains(",") ? data.GetString(4).Split(',') : new string[1] { data.GetString(4) };
+
+                        if (!(Counts.Length == PricesMoney.Length && PricesMoney.Length == PricesPoints.Length))
+                        {
+                            Logger.warning("Loading effects with invalid counts / moneys / points sizes.");
+                            continue;
+                        }
+
+                        int Idx = 0;
+                        foreach (string Count in Counts)
+                        {
+                            Idx++;
+
+                            int CountInt;
+                            if (!int.TryParse(Count, out CountInt))
+                            {
+                                Logger.warning("Loading effects with count != int32 (" + ItemId.ToString() + ")");
+                                continue;
+                            }
+
+                            int PointInt;
+                            if (!int.TryParse(PricesPoints[Idx - 1], out PointInt))
+                            {
+                                Logger.warning("Loading effects with point != int32 (" + ItemId.ToString() + ")");
+                                continue;
+                            }
+
+                            int MoneyInt;
+                            if (!int.TryParse(PricesMoney[Idx - 1], out MoneyInt))
+                            {
+                                Logger.warning("Loading effects with money != int32 (" + ItemId.ToString() + ")");
+                                continue;
+                            }
+
+                            if (CountInt >= 100)
+                                CountInt = 99;
+
+                            int RealId = int.Parse(ItemId.ToString().Substring(0, 2) + CountInt.ToString("D2") + ItemId.ToString().Substring(4, 3));
+
+                            GoodItem good = new GoodItem();
+                            good.id = int.Parse(RealId.ToString() + "0" + Idx.ToString());
+                            good.price_gold = PointInt;
+                            good.price_cash = MoneyInt;
+
+                            int Discount = data.GetInt32(7);
+                            if (Discount > 0 && good.price_cash > 0) good.price_cash = (int)Math.Round(((double)good.price_cash / 100) * (100 - Discount));
+                            if (Discount > 0 && good.price_gold > 0) good.price_gold = (int)Math.Round(((double)good.price_gold / 100) * (100 - Discount));
+                            good.tag = Discount > 0 ? 5 : data.GetInt32(5);
+                            good.title = 0;
+                            good.auth_type = 1;
+                            good.buy_type2 = 1;
+                            good.buy_type3 = 2;
+                            good.visibility = data.GetBoolean(6) ? 0 : 2;
+                            good._item.SetItemId(RealId);
+                            good._item._name = data.GetString(1) + " (" + CountInt + " days)";
+                            good._item._count = 1;
+
+                            int Static = ComDiv.getIdStatics(good._item._id, 1);
+                            if (type == 1 || type == 2 && Static == 16)
+                            {
+                                ShopAllList.Add(good);
+                                if (good.visibility != 2 && good.visibility != 4)
+                                {
+                                    ShopBuyableList.Add(good);
+                                }
+                                if (!ShopUniqueList.ContainsKey(good._item._id) && good.auth_type > 0)
+                                {
+                                    ShopUniqueList.Add(good._item._id, good);
+                                    if (good.visibility == 4)
+                                    {
+                                        set4p++;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
+
+                LoadSets(type);
+
+                if (type == 1)
+                {
+                    LoadItemRepair();
+                    LoadDataMatching1Goods(0);
+                    LoadDataMatching2(1);
+                    LoadDataItems();
+                    LoadDataItemRepairs();
+                }
             }
             catch (Exception ex)
             {
@@ -103,7 +243,7 @@ namespace PointBlank.Core.Managers
                 {
                     connection.Open();
                     NpgsqlCommand command = connection.CreateCommand();
-                    command.CommandText = "SELECT * FROM shop_item_repair";
+                    command.CommandText = "SELECT * FROM item_repair";
                     command.CommandType = CommandType.Text;
                     NpgsqlDataReader data = command.ExecuteReader();
                     while (data.Read())
@@ -130,6 +270,99 @@ namespace PointBlank.Core.Managers
             catch (Exception ex)
             {
                 Logger.error(ex.ToString());
+            }
+        }
+
+        private static void LoadSets(int type)
+        { 
+            try
+            {
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    connection.Open();
+                    NpgsqlCommand command = connection.CreateCommand();
+                    command.CommandText = "SELECT * FROM item_goods_sets WHERE visible = 't';";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        int SetId = data.GetInt32(0);
+                        string SetName = data.GetString(1);
+                        LoadSet(SetId, type);
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
+            }
+            catch(Exception e)
+            {
+                Logger.error(e.ToString());
+            }
+        }
+
+        private static void LoadSet(int SetId, int type)
+        {
+            try
+            {
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    connection.Open();
+                    NpgsqlCommand command = connection.CreateCommand();
+                    command.CommandText = "SELECT * FROM item_goods_sets_items WHERE set_id = '" + SetId + "';";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        int ItemId = data.GetInt32(1);
+                        string ItemName = data.GetString(2);
+                        int Consume = data.GetInt32(3);
+                        int Count = data.GetInt32(4);
+                        int Moneys = data.GetInt32(5);
+                        int Points = data.GetInt32(6);
+
+                        GoodItem good = new GoodItem();
+                        good.id = SetId;
+                        good.price_gold = Points;
+                        good.price_cash = Moneys;
+                        good.tag = 2;
+                        good.title = 0;
+                        good.auth_type = 0;
+                        good.buy_type2 = 1;
+                        good.buy_type3 = Consume == 1 ? 2 : 1;
+                        good.visibility = 0;
+                        good._item.SetItemId(ItemId);
+                        good._item._name = ItemName;
+                        good._item._count = Count;
+
+                        int Static = ComDiv.getIdStatics(good._item._id, 1);
+                        if (type == 1 || type == 2 && Static == 16)
+                        {
+                            ShopAllList.Add(good);
+                            if (good.visibility != 2 && good.visibility != 4)
+                            {
+                                ShopBuyableList.Add(good);
+                            }
+                            if (!ShopUniqueList.ContainsKey(good._item._id) && good.auth_type > 0)
+                            {
+                                ShopUniqueList.Add(good._item._id, good);
+                                if (good.visibility == 4)
+                                {
+                                    set4p++;
+                                }
+                            }
+                        }
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.error(e.ToString());
             }
         }
 

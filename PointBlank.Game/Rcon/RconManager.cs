@@ -1,6 +1,7 @@
 ﻿using Fleck;
 using PointBlank.Core;
 using PointBlank.Game.Data.Configs;
+using PointBlank.Game.Rcon.Packets;
 using System;
 
 namespace PointBlank.Game.Rcon
@@ -56,9 +57,19 @@ namespace PointBlank.Game.Rcon
                         return;
                     }
 
+                    RconReceive Receive = null;
                     switch(Opcode)
                     {
+                        case 1: Receive = new RconSendMoney(); break;
+                        case 2: Receive = new RconSendPoints(); break;
                         default: Logger.warning("RconManager received request with opcode: " + Opcode); break;
+                    }
+
+                    if(Receive != null)
+                    {
+                        Receive.Init(Pattern);
+                        Receive.Run();
+                        Receive = null;
                     }
                 }
                 else Logger.warning("RconManager received request with wrong message: " + Message);

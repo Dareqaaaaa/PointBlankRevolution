@@ -8,6 +8,7 @@ using PointBlank.Game.Data.Model;
 using PointBlank.Game.Network.ServerPacket;
 using System;
 using System.Collections.Generic;
+using System.Net;
 
 namespace PointBlank.Game.Network.ClientPacket
 {
@@ -88,8 +89,15 @@ namespace PointBlank.Game.Network.ClientPacket
             p.writeC((byte)room.getSlotCount());
             p.writeC((byte)room._ping);
             p.writeH((ushort)room.weaponsFlag);
-            p.writeD(room.getFlag());
-            p.writeH(0);
+            p.writeH((ushort)room.getFlag());
+            p.writeC((byte) room._leader);
+            p.writeH(200);
+            p.writeC(0);
+
+            /*writeH((ushort)room.getFlag());
+                    writeC(0);
+                    writeH(700); // wins leader
+             */
         }
 
         private void WritePlayerData(Account pl, SendGPacket p)

@@ -77,14 +77,6 @@ namespace PointBlank.Game.Network.ClientPacket
                     {
                         count = Match.Limit;
                     }
-                    /*for (int i = 0; i < MapModel.Matchs.Count; i++)
-                    {
-                        MapMatch Match = MapModel.Matchs[i];
-                        if (Match.Id == (int)room.mapId && MapModel.getRule(Match.Mode).Rule == room.rule)
-                        {
-                            count = Match.Limit;
-                        }
-                    }*/
                     if (count == 8 && (redPlayers >= 4 || bluePlayers >= 4) && ch._type != 4)
                     {
                         _client.SendPacket(new PROTOCOL_ROOM_UNREADY_4VS4_ACK());

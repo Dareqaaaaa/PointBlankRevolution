@@ -157,9 +157,8 @@ namespace PointBlank.Auth
                 }
                 _client.BeginSend(data, 0, data.Length, SocketFlags.None, new AsyncCallback(SendCallback), _client);
             }
-            catch //(Exception ex)
+            catch
             {
-                //Logger.error(ex.ToString());
                 Close(0, true);
             }
         }
@@ -193,9 +192,8 @@ namespace PointBlank.Auth
                 }
                 list.Clear();
             }
-            catch// (Exception ex)
+            catch
             {
-                //Logger.error(ex.ToString());
                 Close(0, true);
             }
         }
@@ -235,9 +233,8 @@ namespace PointBlank.Auth
                     list.Clear();
                 }
             }
-            catch //(Exception ex)
+            catch
             {
-                //Logger.error(ex.ToString());
                 Close(0, true);
             }
         }
@@ -403,6 +400,11 @@ namespace PointBlank.Auth
         private void RunPacket(byte[] buff, byte[] simple)
         {
             ushort Opcode = BitConverter.ToUInt16(buff, 0);
+            if(firstPacketId == 0)
+            {
+
+            }
+
             FirstPacketCheck(Opcode);
             if (closed)
             {

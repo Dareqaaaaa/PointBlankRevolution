@@ -24,7 +24,8 @@ namespace PointBlank.Battle.Network
                 UdpClient.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                 UdpClient.Client.Bind(LocalEP);
                 UdpClient.BeginReceive(AcceptCallback, UdpState);
-                Logger.debug("Active Server. (" + DateTime.Now.ToString("dd/MM/yy HH:mm:ss") + ")");
+
+                Logger.info("BattleManager started. [" + BattleConfig.hosIp + ":" + BattleConfig.hosPort + "]");
             }
             catch (Exception ex)
             {

@@ -11,11 +11,18 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using PointBlank.Game.Data.Configs;
+using Org.BouncyCastle.Crypto.Generators;
+using System.Data;
+using Npgsql;
+using PointBlank.Core.Sql;
+using PointBlank.Core;
+using PointBlank.Core.Models.Servers;
 
 namespace PointBlank.Game.Data.Model
 {
     public class Account
     {
+        public int testBytes = 0;
         public bool _isOnline, HideGMcolor, AntiKickGM, LoadedShop, DebugPing;
         public string player_name = "", password, login, token, hwid, FindPlayer = "";
         public long player_id, ban_obj_id;
@@ -32,7 +39,7 @@ namespace PointBlank.Game.Data.Model
         public Room _room;
         public PlayerBonus _bonus;
         public Match _match;
-        public AccessLevel access;
+        public int access;
         public PlayerDailyRecord Daily = new PlayerDailyRecord();
         public PlayerMissions _mission = new PlayerMissions();
         public PlayerStats _statistic = new PlayerStats();
@@ -41,7 +48,8 @@ namespace PointBlank.Game.Data.Model
         public AccountStatus _status = new AccountStatus();
         public PlayerEvent _event;
         public DateTime LastLobbyEnter, LastPingDebug;
-        
+        public List<QuickStart> Quickstarts = new List<QuickStart>();
+
         public Account()
         {
             LastLobbyEnter = DateTime.Now;
@@ -55,6 +63,7 @@ namespace PointBlank.Game.Data.Model
             _status = new AccountStatus();
             Characters = new List<Character>();
             Daily = new PlayerDailyRecord();
+            Quickstarts = new List<QuickStart>();
             FriendSystem.CleanList();
             Session = null;
             _event = null;
@@ -222,6 +231,56 @@ namespace PointBlank.Game.Data.Model
             }
         }
 
+        public void LoadQuickstarts()
+        {
+            try
+            {
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    NpgsqlCommand command = connection.CreateCommand();
+                    connection.Open();
+                    command.Parameters.AddWithValue("@owner", player_id);
+                    command.CommandText = "SELECT * FROM player_quickstart WHERE owner_id=@owner;";
+                    command.CommandType = CommandType.Text;
+                    NpgsqlDataReader data = command.ExecuteReader();
+                    while (data.Read())
+                    {
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(1),
+                            Rule = data.GetInt32(2),
+                            StageOptions = data.GetInt32(3),
+                            Type = data.GetInt32(4)
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(5),
+                            Rule = data.GetInt32(6),
+                            StageOptions = data.GetInt32(7),
+                            Type = data.GetInt32(8)
+                        });
+
+                        Quickstarts.Add(new QuickStart()
+                        {
+                            MapId = data.GetInt32(9),
+                            Rule = data.GetInt32(10),
+                            StageOptions = data.GetInt32(11),
+                            Type = data.GetInt32(12)
+                        });
+                    }
+                    command.Dispose();
+                    data.Close();
+                    connection.Dispose();
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                Logger.error(err.ToString());
+            }
+        }
+
         public void LoadMissionList()
         {
             PlayerMissions m = MissionManager.getInstance().getMission(player_id, _mission.mission1, _mission.mission2, _mission.mission3, _mission.mission4);
@@ -323,6 +382,13 @@ namespace PointBlank.Game.Data.Model
         public bool HaveAcessLevel()
         {
             return (int)access > 0;
+        }
+
+        public bool HavePermission(string Permission)
+        {
+            if (PermissionManager.HavePermission(Permission, access))
+                return true;
+            return false;
         }
     }
 }

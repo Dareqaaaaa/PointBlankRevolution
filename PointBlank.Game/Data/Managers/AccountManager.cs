@@ -101,7 +101,7 @@ namespace PointBlank.Game.Data.Managers
                         account._statistic.deaths_count = data.GetInt32(14);
                         account._statistic.headshots_count = data.GetInt32(15);
                         account._statistic.escapes = data.GetInt32(16);
-                        account.access = (AccessLevel)data.GetInt32(17);
+                        account.access = data.GetInt32(17);
                         account.SetPublicIP(data.GetString(18));
                         account.LastRankUpDate = (uint)data.GetInt64(20);
                         account._money = data.GetInt32(21);

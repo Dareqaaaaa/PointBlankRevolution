@@ -9,7 +9,7 @@ namespace PointBlank.Auth.Data.Configs
     public static class AuthConfig
     {
         public static string authIp;
-        public static bool isTestMode, Outpost, AUTO_ACCOUNTS, debugMode;
+        public static bool isTestMode, Outpost, AUTO_ACCOUNTS, debugMode, ClearToken;
         public static int syncPort, configId, maxNickSize, minNickSize, minTokenSize, authPort, serverId, maxChannelPlayers;
         public static ulong LauncherKey;
         public static List<ClientLocale> GameLocales;
@@ -39,6 +39,7 @@ namespace PointBlank.Auth.Data.Configs
             minNickSize = configFile.readInt32("MinNickSize", 0);
             maxNickSize = configFile.readInt32("MaxNickSize", 0);
             minTokenSize = configFile.readInt32("MinTokenSize", 0);
+            ClearToken = configFile.readBoolean("ClearToken", true);
             GameLocales = new List<ClientLocale>();
             string strLocales = configFile.readString("GameLocales", "None");
             foreach (string splitedLocale in strLocales.Split(','))

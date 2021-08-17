@@ -1,4 +1,5 @@
 ﻿using PointBlank.Battle.Data.Configs;
+using PointBlank.Battle.Data.Items;
 using PointBlank.Battle.Data.Sync;
 using PointBlank.Battle.Data.Xml;
 using PointBlank.Battle.Network;
@@ -25,10 +26,12 @@ namespace PointBlank.Battle
  ██║     ╚██████╔╝██║██║ ╚████║   ██║       ██████╔╝███████╗██║  ██║██║ ╚████║██║  ██╗
  ╚═╝      ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝       ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
 ", ConsoleColor.Cyan);
+
             MapXml.Load();
             CharaXml.Load();
             MeleeExceptionsXml.Load();
             ServersXml.Load();
+            ItemManager.Load();
             BattleSync.Start();
             BattleManager.Connect();
 

@@ -21,6 +21,7 @@ using PointBlank.Core.Models.Room;
 using PointBlank.Core.Models.Account.Players;
 using PointBlank.Game.Rcon;
 using System.Threading;
+using PointBlank.Game.Data.Command;
 
 namespace PointBlank.Game
 {
@@ -63,7 +64,9 @@ namespace PointBlank.Game
             RandomBoxXml.LoadBoxes();
             CouponEffectManager.LoadCouponFlags();
             GameSync.Start();
-            
+            PermissionManager.Load();
+            CommandManager.Load();
+
             if(Logger.erro)
             {
                 Logger.error("Check your configuration.");

@@ -1,11 +1,14 @@
-﻿using PointBlank.Core;
+﻿using Npgsql;
+using PointBlank.Core;
 using PointBlank.Core.Models.Enums;
 using PointBlank.Core.Models.Room;
 using PointBlank.Core.Models.Servers;
+using PointBlank.Core.Sql;
 using PointBlank.Game.Data.Model;
 using PointBlank.Game.Network.ServerPacket;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace PointBlank.Game.Network.ClientPacket
 {
@@ -24,6 +27,7 @@ namespace PointBlank.Game.Network.ClientPacket
         public override void read()
         {
             Select = readC();
+            Logger.warning(Select.ToString());
             for (int i = 0; i < 3; i++)
             {
                 QuickStart Quick = new QuickStart();
@@ -44,6 +48,25 @@ namespace PointBlank.Game.Network.ClientPacket
                 {
                     return;
                 }
+
+                p.Quickstarts[Select] = Quicks[Select];
+
+                using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
+                {
+                    NpgsqlCommand command = connection.CreateCommand();
+                    connection.Open();
+
+                    command.CommandText = "UPDATE player_quickstart SET " +
+                        "map_" + Select + " = '" + Quicks[Select].MapId + "', rule_" + Select + " = '" + Quicks[Select].Rule + "', stage_" + Select + " = '" + Quicks[Select].StageOptions + "', type_" + Select + " = '" + Quicks[Select].Type + "' WHERE owner_id = '" + p.player_id + "';";
+
+                    command.CommandType = CommandType.Text;
+
+                    command.ExecuteNonQuery();
+                    command.Dispose();
+                    connection.Dispose();
+                    connection.Close();
+                }
+
                 Channel ch;
                 if (p != null && p.player_name.Length > 0 && p._room == null && p._match == null && p.getChannel(out ch))
                 {

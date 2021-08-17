@@ -112,6 +112,8 @@
     <Compile Include="Data\Enums\CHARA_MOVES.cs" />
     <Compile Include="Data\Enums\ROOM_STATE_TYPE.cs" />
     <Compile Include="Data\Enums\WEAPON_SYNC_TYPE.cs" />
+    <Compile Include="Data\Items\Item.cs" />
+    <Compile Include="Data\Items\ItemManager.cs" />
     <Compile Include="Data\Models\AnimModel.cs" />
     <Compile Include="Data\Models\AssistModel.cs" />
     <Compile Include="Data\Models\BombPosition.cs" />

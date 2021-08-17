@@ -66,12 +66,12 @@ namespace PointBlank.Game.Network.ClientPacket
                     {
                         if (ComDiv.updateDB("players", "access_level", -1, "player_id", p.player_id))
                         {
-                            BanManager.SaveAutoBan(p.player_id, p.login, p.player_name, "ใช้โปรแกรมช่วยเล่น " + Hack + " (" + Hack + ")", DateTime.Now.ToString("dd -MM-yyyy HH:mm:ss"), p.PublicIP.ToString(), "Ban from Server"); // TODO: Translate text of autoban
-                            using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "แบน ผู้เล่น [" + p.player_name + "] ถาวร - ใช้โปรแกรมช่วยเล่น"))
+                            BanManager.SaveAutoBan(p.player_id, p.login, p.player_name, "Hack detected. 1: " + Hack + " (2: " + Value + ")", DateTime.Now.ToString("dd -MM-yyyy HH:mm:ss"), p.PublicIP.ToString(), "Ban from Server");
+                            using (PROTOCOL_LOBBY_CHATTING_ACK packet = new PROTOCOL_LOBBY_CHATTING_ACK("Server", 0, 1, false, "User '" + p.player_name + "' banned for possible hack"))
                             {
                                 GameManager.SendPacketToAllClients(packet);
                             }
-                            p.access = AccessLevel.Banned;
+                            p.access = (int) AccessLevel.Banned;
                             p.SendPacket(new PROTOCOL_AUTH_ACCOUNT_KICK_ACK(2), false);
                             p.Close(1000, true);
                         }
@@ -136,20 +136,16 @@ namespace PointBlank.Game.Network.ClientPacket
             else
             {
                 double secs = (DateTime.Now - room.LastPingSync).TotalSeconds;
-                if (secs < 7)
-                {
+                if (secs < 7) 
                     return;
-                }
 
                 byte[] Pings = new byte[16];
                 for (int i = 0; i < 16; i++)
-                {
                     Pings[i] = (byte)room._slots[i].ping;
-                }
+
                 using (PROTOCOL_BATTLE_SENDPING_ACK packet = new PROTOCOL_BATTLE_SENDPING_ACK(Pings))
-                {
                     room.SendPacketToPlayers(packet, SlotState.BATTLE, 0);
-                }
+
                 room.LastPingSync = DateTime.Now;
             }
         }

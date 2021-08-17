@@ -99,10 +99,10 @@ namespace PointBlank.Auth.Network.ServerPacket
             }
             writeC((byte)Player.Characters.Count);
             writeH(210);
-            writeC((byte)QuickStartXml.QucikStarts.Count);
-            for (int i = 0; i < QuickStartXml.QucikStarts.Count; i++)
+            writeC((byte) Player.Quickstarts.Count);
+            for (int i = 0; i < Player.Quickstarts.Count; i++)
             {
-                QuickStart Quick = QuickStartXml.QucikStarts[i];
+                QuickStart Quick = Player.Quickstarts[i];
                 writeC((byte)Quick.MapId);
                 writeC((byte)Quick.Rule);
                 writeC((byte)Quick.StageOptions);
@@ -240,7 +240,7 @@ namespace PointBlank.Auth.Network.ServerPacket
             writeD(0);
             writeD(0);
             writeD(0);
-            writeD((Player._rank == 53 || Player._rank == 54) ? 111111 : 0);
+            writeD(Player.HavePermission("observer_enabled") ? 111111 : 0);
             writeC(0);
             writeC(0);
             writeC(0);

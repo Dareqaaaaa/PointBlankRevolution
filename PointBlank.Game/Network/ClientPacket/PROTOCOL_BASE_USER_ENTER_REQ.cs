@@ -50,6 +50,7 @@ namespace PointBlank.Game.Network.ClientPacket
                         p.LoadInventory();
                         p.LoadMissionList();
                         p.LoadPlayerBonus();
+                        p.LoadQuickstarts();
                         EnableQuestMission(p);
                         p._inventory.LoadBasicItems();
                         p.SetPublicIP(_client.GetAddress());
