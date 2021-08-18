@@ -8,6 +8,10 @@ Point Blank Revolution is an emulator for client 3.24. This is a project for per
 - A lot of bug fixes
 - Easier shop setups and management
 
+# Bug reports
+If you find any problems report them that I will try to correct them as soon as possible.
+If you want to contribute, make a pull-request and I will check whether to accept it.
+
 # Changelogs 1.2.0.0-stable
 ```
 - Removed useless logs from battle server (that make my eyes blood)
