@@ -164,24 +164,3 @@ C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\obj\Debug\PointBlank.Au
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.csproj.CopyComplete
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.exe
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Auth.exe.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Auth.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Auth.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Battle.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Core.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Game.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\SharpDX.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Battle.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Battle.exe.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Core.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Core.dll.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Game.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\PointBlank.Game.exe.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\SharpDX.xml
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.csprojAssemblyReference.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.csproj.CoreCompileInputs.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.csproj.CopyComplete
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\obj\Debug\PointBlank.Auth.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Auth\bin\Debug\Fleck.dll

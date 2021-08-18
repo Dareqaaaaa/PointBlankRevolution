@@ -101,14 +101,3 @@ C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Battle\obj\Debug\PointBlank.
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.csproj.CopyComplete
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.exe
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\PointBlank.Battle.exe.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\PointBlank.Battle.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\PointBlank.Battle.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\SharpDX.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\bin\Debug\SharpDX.xml
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.csprojAssemblyReference.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.csproj.CoreCompileInputs.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.csproj.CopyComplete
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Battle\obj\Debug\PointBlank.Battle.pdb

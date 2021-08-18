@@ -167,6 +167,7 @@ namespace PointBlank.Game.Network.ClientPacket
                             erro = 0x80000000;
                         }
                     }
+
                     /*else if (itemId == 1800999)
                     {
                         if (ComDiv.updateDB("players", "exp", p._exp + 515999, "player_id", p.player_id))

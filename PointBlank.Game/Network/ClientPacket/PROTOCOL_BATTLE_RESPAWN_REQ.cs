@@ -128,7 +128,6 @@ namespace PointBlank.Game.Network.ClientPacket
                     Slot slot = r.getSlot(p._slotId);
                     if (slot != null && slot.state == SlotState.BATTLE)
                     {
-                        Logger.warning("slot spet: " + slot.espectador);
                         if (slot._deathState.HasFlag(DeadEnum.Dead) || slot._deathState.HasFlag(DeadEnum.UseChat))
                         {
                             slot._deathState = DeadEnum.Alive;
@@ -185,10 +184,6 @@ namespace PointBlank.Game.Network.ClientPacket
                         {
                             GameSync.SendUDPPlayerSync(r, slot, p.effects, 2);
                         }
-                        /*if (r.weaponsFlag != WeaponsFlag)
-                        {
-                            Logger.warning("WeaponFlag [Room: " + r.weaponsFlag + " Player: " + WeaponsFlag + "]");
-                        }*/
                     }
                 }
             }

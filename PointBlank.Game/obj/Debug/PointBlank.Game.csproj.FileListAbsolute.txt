@@ -146,17 +146,3 @@ C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Co
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
 C:\Users\PC\Desktop\PointBlank Evolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Game.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\PointBlank.Core.dll.config
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csprojAssemblyReference.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.Properties.Resources.resources
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.GenerateResource.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CoreCompileInputs.cache
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.csproj.CopyComplete
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.exe
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\obj\Debug\PointBlank.Game.pdb
-E:\Progetti\Point-Blank-Revolution\PointBlank.Game\bin\Debug\Fleck.dll

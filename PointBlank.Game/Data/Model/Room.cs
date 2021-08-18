@@ -2094,12 +2094,6 @@ namespace PointBlank.Game.Data.Model
                     {
                         slot.espectador = true;
                     }
-
-                    if(room_type == RoomType.Ace)
-                    {
-                        slot.espectador = (slot._id == 0 || slot._id == 1) ? false : true;
-                        Console.WriteLine("slot: " + slot._id + "; espectador: " + slot.espectador);
-                    }
                 }
             }
             updateSlotsInfo();

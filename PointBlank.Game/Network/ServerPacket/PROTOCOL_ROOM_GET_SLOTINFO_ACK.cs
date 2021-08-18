@@ -53,11 +53,11 @@ namespace PointBlank.Game.Network.ServerPacket
                             writeC((byte)pR.pc_cafe);
                             writeC((byte)pR.tourneyLevel);
                             writeD((uint)pR.effects);
-                            writeD(3); // 0
+                            writeD(0);
                             writeC((byte)clan.effect);
                             writeH((ushort)(clan._name.Length * 2));
                             writeUnicode(clan._name, false);
-                            writeC(3); // 0
+                            writeC(0);
                             writeC(210);
                         }
                         else
@@ -69,7 +69,6 @@ namespace PointBlank.Game.Network.ServerPacket
                             writeB(new byte[15]);
                         }
                     }
-
                     if (room.room_type == RoomType.FreeForAll)
                     {
                         for (int Id = 0; Id < 16; Id++)

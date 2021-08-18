@@ -181,8 +181,6 @@ namespace PointBlank.Auth.Data.Model
 
                 if (Quickstarts.Count == 0)
                 {
-                    Logger.warning("Null, let's create them!");
-
                     using (NpgsqlConnection connection = SqlConnection.getInstance().conn())
                     {
                         NpgsqlCommand command = connection.CreateCommand();

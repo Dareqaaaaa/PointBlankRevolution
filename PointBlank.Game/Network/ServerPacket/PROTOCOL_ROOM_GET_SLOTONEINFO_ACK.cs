@@ -34,8 +34,8 @@ namespace PointBlank.Game.Network.ServerPacket
                 return;
             }
             writeH(3846);
-            writeH(40); // 0
-            writeC(1); // 0
+            writeH(0);
+            writeC(0);
             writeC((byte)p._room._slots[p._slotId].state);
             writeC((byte)p.getRank());
             writeD(clan._id);
@@ -45,24 +45,18 @@ namespace PointBlank.Game.Network.ServerPacket
             writeC((byte)p.pc_cafe);
             writeC((byte)p.tourneyLevel);
             writeD((uint)p.effects);
-            writeD(14); // 0
+            writeD(0);
             writeC((byte)clan.effect);
             writeUnicode(clan._name, 34);
-            writeC(16); // 0
+            writeC(0);
             writeC(210);
             writeC((byte)p._slotId);
             writeUnicode(p.player_name, 66);
             writeC((byte)p.name_color);
             writeC((byte)p._bonus.muzzle);
-            writeC(10); // 0
-            writeC(20); // 255
-            writeC(30); // 255
-            writeH(50);
-            writeH(50);
-            writeH(50);
-            writeH(50);
-            writeH(50);
-            writeH(50);
+            writeC(0);
+            writeC(255);
+            writeC(255);
         }
     }
 }
