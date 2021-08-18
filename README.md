@@ -13,6 +13,8 @@ If you find any problems report them that I will try to correct them as soon as 
 If you want to contribute, make a pull-request and I will check whether to accept it.
 
 # Changelogs 1.2.0.0-stable
+Download build: https://www.sendspace.com/file/61w90g
+
 ```
 - Removed useless logs from battle server (that make my eyes blood)
 - Removed top-ups
